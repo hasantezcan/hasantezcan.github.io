@@ -10,7 +10,7 @@ disqus:
 
 google-ID: 'UA-80213386-1'
 
-content:
+menu:
 - {name: 'Blog', path: 'menu', url: 'blog.html'}
 - {name: 'About', path: 'menu', url: 'about.html'}
 - {name: 'Contact', path: 'menu', url: 'contact.html'}
