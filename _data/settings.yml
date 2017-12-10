@@ -1,5 +1,5 @@
-title:  Lagrange
-tagline:  a minimalist Jekyll theme
+title: DTRANSPOSED
+tagline:  data science, AI, technology
 
 # Authors documented under _data
 
@@ -11,14 +11,14 @@ disqus:
 google-ID: 'UA-80213386-1'
 
 menu:
+- {name: 'Blog', path: 'menu', url: 'blog.html'}
 - {name: 'About', path: 'menu', url: 'about.html'}
-- {name: 'Writing', path: 'menu', url: 'writing.html'}
 - {name: 'Contact', path: 'menu', url: 'contact.html'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
-- {icon: 'github', link: 'https://www.github.com/lenpaul'}
-- {icon: 'twitter', link: 'https://twitter.com/paululele'}
-- {icon: 'linkedin', link: 'http://www.linkedin.com/in/lenpaul/'}
-- {icon: 'envelope', link: 'mailto:l.nguyen.paul@gmail.com'}
+- {icon: 'github', link: 'https://www.github.com/dtransposed'}
+- {icon: 'facebook', link: 'https://facebook.com/damian.boqunowicz'}
+- {icon: 'linkedin', link: 'http://www.linkedin.com/in/dbogunowicz/'}
+- {icon: 'envelope', link: 'mailto:damian.bogunowicz@gmail.com'}
 - {icon: 'rss-square', link: 'feed.xml'}
