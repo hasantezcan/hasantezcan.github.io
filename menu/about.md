@@ -2,4 +2,6 @@
 layout: page
 title: About
 --- 
-I am a M.Sc student on the Technical Univeristy of Munich. Holding a B.Sc in General Engineering Science I am currently expanding my area of interest into the fields of Machine Learning, Data Science, Robotics, Computer Vision and AI.
+
+Hello, my name is Damian and I am a student, currently based in Munich, Germany. After completing my degree in the field of mechanical engineering I have decided to expand my interests into the field of machine learning, data science and AI. 
+This website is designed to be my personal testing grounds for various projects, assignments, observations and reflexions.    
