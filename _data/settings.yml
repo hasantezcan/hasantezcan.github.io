@@ -6,7 +6,7 @@ tagline:  data science, AI, technology
 # Change to true for Disqus comments
 disqus:
   comments: true
-  disqus_shortname: 'dtransposed'
+  disqus_shortname: 'https-dtransposed-github-io'
 
 google-ID: 'UA-80213386-1'
 
