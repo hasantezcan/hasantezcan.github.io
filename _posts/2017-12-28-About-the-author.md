@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "About the Author"
-author: "Paul Le"
+title: "Bayesian thinking- what can we learn reasoning from the machines?"
+author: "Damian Bogunowicz"
 categories: journal
 tags: [documentation,sample]
 image:
-  feature: cutting.jpg
+  feature: thinker.jpg
   credit:
   creditlink:
 ---
