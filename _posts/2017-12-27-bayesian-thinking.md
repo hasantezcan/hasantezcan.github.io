@@ -8,10 +8,6 @@ tags: [AI, Bayes' theorem, mathematics, psychology]
 image: thinker.jpg
 ---
 
-{:refdef: style="text-align: center;"}
-![My Image](/assets/1/thinker.jpg)
-{: refdef}
-<em>Source: http://www.visitphilly.com</em>
 
 Bayes' rule may be one of the numerous formulas students are introduced to during A-Level maths course. I believe that most pupils (including myself back in the days) usually learn it by heart, use it without thought during their statistics exam and quickly forget it. But Bayesian reasoning may actually be one of the most important mathematical tools we could apply in real life. It is a powerful mean to test and enhance our thinking so that we can overcome common fallacies of reasoning.
 
