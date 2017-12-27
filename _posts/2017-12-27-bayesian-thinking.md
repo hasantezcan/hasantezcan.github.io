@@ -1,15 +1,12 @@
-
 ---
 layout: post
-title: "Bayesian thinking- what can we learn about reasoning from the machines?"
-author: "Damian Bogunowicz"
-categories: journal
+title:  "Bayesian thinking- what can we learn about reasoning from the machines?"
+date:   2017-12-28 12:32:15 +0100
+categories: blog
 tags: [AI, Bayes' theorem, mathematics, psychology]
-image:
-  feature: thinker.jpg
-  credit: "fili"
+image: thinker
+credit: Death to Stock Photo
 ---
-
 
 Bayes' rule may be one of the numerous formulas students are introduced to during A-Level maths course. I believe that most pupils (including myself back in the days) usually learn it by heart, use it without thought during their statistics exam and quickly forget it. But Bayesian reasoning may actually be one of the most important mathematical tools we could apply in real life. It is a powerful mean to test and enhance our thinking so that we can overcome common fallacies of reasoning.
 
@@ -111,4 +108,3 @@ people are more likely to reflect on the new prior, since now it makes the Red C
 {:.no_toc}
 
 Bayes' theorem is used widely in the field of artificial intelligence. There are numerous algorithms which base on this concept, such as Naive Bayes Classifier or Bayesian Networks. How a computer thinks is naturally very different from our reasoning. In the end, a human brain is one of the most astonishing gifts we have received from the nature. While being a superior to computers in many ways, it is very susceptible to prejudice, cognitive errors, erroneous generalizations and various mental shortcuts. That is why, when we are about to express our opinion or give a judgement, it may be helpful to step back, restrain our train of thought and question our state of knowledge. This can be done by taking advantage of hard, statistical facts to refine our reasoning. There are some more great examples [in the short video by Julia Galef](https://www.youtube.com/watch?v=BrK7X_XlGB8&t), which further demonstrate how to evaluate thought processes using the Bayesian legacy.
-
