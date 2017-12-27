@@ -7,7 +7,7 @@ categories: journal
 tags: [AI, Bayes' theorem, mathematics, psychology]
 image:
   feature: thinker.jpg
-  credit: fili
+  credit: "fili"
 ---
 
 
