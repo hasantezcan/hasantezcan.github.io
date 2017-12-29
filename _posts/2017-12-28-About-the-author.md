@@ -25,26 +25,20 @@ Well, you don't know much about my bag. When I am about to pick a random ball, y
 
 Now, we have some new data which we can take into consideration. Since we know that 16 was present in our bag of numbers, we are may start reasoning, that we are more likely to expect 6 (since 16 and 6 have a common digit) or 17 (since it lies on a number line just next to 16) then say, 99. The actual results of this experiment are presented in the figure below.
 
-{:refdef: style="text-align: center;"}
-![My Image](/assets/1/Picture1.jpg)
-{: refdef}
+$$ P( D=0 | B=1) = \frac{P(B=1|D=0)P(D=0)}{P(B=1)} $$
 <em>Source: Machine Learning: A Probabilistic Perspective (Kevin P. Murphy)</em>
 
 >Now, let's choose four numbers. There they are- 16, 8, 2 and 64. Now, given theose numbers, what would be the most likely number to come up next?
 
 Now we get even more numbers. We may try to take advantage of the new data and match those values to some pattern or a rule. Which rule governs our set of numbers? Well, all numbers chosen are even. Should we expect an even number then? All numbers are also powers of 2! So maybe 32 would fit our prediction nicely? The following figure shows that those are all very good candidates for a prediction.
 
-{:refdef: style="text-align: center;"}
-![My Image](/assets/1/Picture2.jpg)
-{: refdef}
+$$ P( D=0 | B=1) = \frac{P(B=1|D=0)P(D=0)}{P(B=1,D=0)\cdot P(B=1,D=1)} $$
 
 >Last example. The selected numbers are 16, 23, 19 and 20. What's coming up next?
 
 Now the reasonable answer would be 17, 22 or 21, because the new data indicates that numbers in the bag have values close to to 20. The other possible predictions are as shown in the chart.
 
-{:refdef: style="text-align: center;"}
-![My Image](/assets/1/Picture3.jpg)
-{: refdef}
+$$ P( D=0 | B=1) = \frac{5\cdot 0.999}{5\cdot 0.999+ 100\cdot 0.001}=0.98 $$
 
 In every scenario I have presented, we follow the same reasoning. Firstly, we have some the initial knowledge (we pick randomly from the set of integers from 1 to 100). Secondly, we are given some new data, which improves our current state of knowledge and can help us to make a correct guess.
 
