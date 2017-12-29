@@ -25,20 +25,26 @@ Well, you don't know much about my bag. When I am about to pick a random ball, y
 
 Now, we have some new data which we can take into consideration. Since we know that 16 was present in our bag of numbers, we are may start reasoning, that we are more likely to expect 6 (since 16 and 6 have a common digit) or 17 (since it lies on a number line just next to 16) then say, 99. The actual results of this experiment are presented in the figure below.
 
-$$ P( D=0 | B=1) = \frac{P(B=1|D=0)P(D=0)}{P(B=1)} $$
+{:refdef: style="text-align: center;"}
+![My Image](/assets/1/Picture1.jpg)
+{: refdef}
 <em>Source: Machine Learning: A Probabilistic Perspective (Kevin P. Murphy)</em>
 
 >Now, let's choose four numbers. There they are- 16, 8, 2 and 64. Now, given theose numbers, what would be the most likely number to come up next?
 
 Now we get even more numbers. We may try to take advantage of the new data and match those values to some pattern or a rule. Which rule governs our set of numbers? Well, all numbers chosen are even. Should we expect an even number then? All numbers are also powers of 2! So maybe 32 would fit our prediction nicely? The following figure shows that those are all very good candidates for a prediction.
 
-$$ P( D=0 | B=1) = \frac{P(B=1|D=0)P(D=0)}{P(B=1,D=0)\cdot P(B=1,D=1)} $$
+{:refdef: style="text-align: center;"}
+![My Image](/assets/1/Picture2.jpg)
+{: refdef}
 
 >Last example. The selected numbers are 16, 23, 19 and 20. What's coming up next?
 
 Now the reasonable answer would be 17, 22 or 21, because the new data indicates that numbers in the bag have values close to to 20. The other possible predictions are as shown in the chart.
 
-$$ P( D=0 | B=1) = \frac{5\cdot 0.999}{5\cdot 0.999+ 100\cdot 0.001}=0.98 $$
+{:refdef: style="text-align: center;"}
+![My Image](/assets/1/Picture3.jpg)
+{: refdef}
 
 In every scenario I have presented, we follow the same reasoning. Firstly, we have some the initial knowledge (we pick randomly from the set of integers from 1 to 100). Secondly, we are given some new data, which improves our current state of knowledge and can help us to make a correct guess.
 
@@ -55,9 +61,7 @@ In our current situation, we would like to know the answer to the following ques
 
 The mathematical formulation of the question can be expressed as finding the probability <em>P(D=0|B=1)</em>. The first answer that comes to mind is obviously 5%, right? I have just said, that there is 5% chance of the test being wrong. Well, let's take advantage of the Bayes' theorem to clarify this conundrum.
 
-{:refdef: style="text-align: center;"}
-![My Image](/assets/1/1.jpg)
-{: refdef}
+$$ P( D=0 | B=1) = \frac{P(B=1|D=0)P(D=0)}{P(B=1)} $$
 
 To solve our problem we need to evaluate two values <em>P(D=0)</em> and <em>P(B=1)</em>. While <em>P(B=1)</em> can be easily calculated, the most important element of the equation is the term <em>P(D=0)</em>.
 
@@ -70,13 +74,9 @@ The probability of test being positive <em>P(B=1)</em>,  is the sum of two facto
 
 Now using Bayes' theorem and product rule for the denominator we may solve our equation.
 
-{:refdef: style="text-align: center;"}
-![My Image](/assets/1/2.jpg)
-{: refdef}
+$$ P( D=0 | B=1) = \frac{P(B=1|D=0)P(D=0)}{P(B=1,D=0)\cdot P(B=1,D=1)} $$
 
-{:refdef: style="text-align: center;"}
-![My Image](/assets/1/3.jpg)
-{: refdef}
+$$ P( D=0 | B=1) = \frac{5\cdot 0.999}{5\cdot 0.999+ 100\cdot 0.001}=0.98 $$
 
 This means that there is 98% chance that the driver is sober, given that the test indicates otherwise! Suprising, isn't it? When we think about it for a while, it actually does make sense. There are so few people who are drunk driving, that a policeman must be aware of the fact, that most drivers who are pulled over and get identified as drunk, are most likely sober. But what if we happen to be pulled over by an officer who is not aware of that fact? The solution is straightforward. **Ask the policeman to redo the test and simply breath into a second device**. Mathematically it is equivalent to redoing our calculations. The only difference is, we use our old solution as a new base value. The new prior is richer in information and will deliver a better reflection of the reality. The new probability equals 71% and will continue to decrease with every new test. So the conclusion is: if you are sure that you are sober and the breathalyser indicates otherwise, ask for as many test as you possibly can and you are bound to be all right.
 That is a suprising and very neat mathematical lesson we could apply in real-life situation. Now, let's add some psychology to our story...
