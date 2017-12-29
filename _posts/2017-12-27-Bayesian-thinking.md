@@ -2,7 +2,7 @@
 layout: post
 title: "Bayesian thinking- what can we learn reasoning from the machines?"
 author: "Damian Bogunowicz"
-categories: journal
+categories: blog
 tags: [AI, Bayes' theorem, mathematics, psychology]
 image:
   feature: thinker.jpg
