@@ -74,7 +74,7 @@ The probability of test being positive <em>P(B=1)</em>,  is the sum of two facto
 
 Now using Bayes' theorem and product rule for the denominator we may solve our equation.
 
-$$ P( D=0 | B=1) = \frac{P(B=1|D=0)P(D=0)}{P(B=1,D=0)\cdot P(B=1,D=1)} $$
+$$ P( D=0 | B=1) = \frac{P(B=1|D=0)P(D=0)}{P(B=1,D=0)+P(B=1,D=1)} $$
 
 $$ P( D=0 | B=1) = \frac{5\cdot 0.999}{5\cdot 0.999+ 100\cdot 0.001}=0.98 $$
 
