@@ -29,13 +29,6 @@ layout: default
     {{ site.data.authors.primary.name }}
   {% endif %}
 </span>
-{% for post in site.posts %}
-  {% unless post.draft %}
-    <li>{% post.title %}</li>
-  {% endunless %}
-{% endfor %}
-{% include social-sharing.html %}
-
 {% include related-posts.html %}
 
 {% if site.data.settings.disqus.comments %}
