@@ -5,7 +5,7 @@ author: "Damian Bogunowicz"
 categories: blog
 tags: [AI, hidden markov model, tutorial, python, programming, psychology]
 image:
-  feature: groundhog.jpg
+  feature: warehouse.jpg
   credit:
   creditlink:
 ---
