@@ -4,6 +4,7 @@ title: "Practical tutorial- Robot localization using Hidden Markov Models"
 author: "Damian Bogunowicz"
 categories: blog
 tags: [AI, hidden markov model, tutorial, python, programming, psychology]
+draft: true
 image:
   feature: warehouse.jpg
   credit:
