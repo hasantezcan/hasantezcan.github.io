@@ -8,6 +8,11 @@ image: warehouse.jpg
 ---
 In year 2003 the team of scientists from the Carnegie Mellon university [has created a mobile robot](https://www.cs.cmu.edu/~thrun/3D/mines/groundhog/index.html) called <em>Groundhog</em>, which could explore and create the map of the abandoned coal mines. The rover explored tunnels, which were too toxic for people to enter and where oxygen levels were too low for humans to remain concious. The task was not easy: navigate in the environment, which the robot has not seen before, and simultanously discover and create a map of those unknown tunnels.
 
+{:refdef: style="text-align: center;"}
+![alt text](https://www.cs.cmu.edu/~thrun/3D/mines/groundhog/full/mine_img_290.jpg )
+{: refdef}
+<em>The groundhog robot enters the abandoned coal mine. (source: www.cs.cmu.edu)</em>
+
 Fifteen years later, the problem of constructing a map of an uknown environment, while keeping track of agent's location within it (the so called SLAM task- Simultaneous Localization And Mapping), is still being scrutinized by the researchers. This notion is not only used in the fields of self-driving cars or rovers, but is also present in case of domestic robots such as iRobot's Roomba. In the year 2017 Amazon [has doubled the number of its robotic fleet](https://www.technologyreview.com/the-download/609672/amazons-investment-in-robots-is-eliminating-human-jobs/). So far, the robo-workers are there to move packages through the gigantic warehouses, but it is only a matter of time until advanced robots will work hand in hand with actual people, performing more complicated tasks. This shows that given current state of the technology, the ability for robots to understand their position in the environment is indispensable.
 
 {:refdef: style="text-align: center;"}
