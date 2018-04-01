@@ -20,6 +20,12 @@ title: Home
 </div>
 {% endfor %}
 
+{% for post in site.posts %}
+  {% unless post.draft %}
+    <li>{% post.title %}</li>
+  {% endunless %}
+{% endfor %}
+
 <!-- Pagination links -->
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
