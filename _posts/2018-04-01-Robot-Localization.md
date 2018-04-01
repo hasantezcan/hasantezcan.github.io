@@ -12,7 +12,7 @@ image:
 In year 2003 the team of scientists from the Carnegie Mellon university [has created a mobile robot](https://www.cs.cmu.edu/~thrun/3D/mines/groundhog/index.html) called <em>Groundhog</em>, which could explore and create the map of the abandoned coal mines. The rover explored tunnels, which were too toxic for people to enter and where oxygen levels were too low for humans to remain concious. The task was not easy: navigate in the environment, which the robot has not seen before, and simultanously discover and create a map of those unknown tunnels.
 
 {:refdef: style="text-align: center;"}
-![alt text](https://www.cs.cmu.edu/~thrun/3D/mines/groundhog/full/mine_img_290.jpg )
+![alt text](https://www.cs.cmu.edu/~thrun/3D/mines/groundhog/full/mine_img_290.jpg ){:height="80%" width="80%"}
 {: refdef}
 <em>The groundhog robot enters the abandoned coal mine. (source: www.cs.cmu.edu)</em>
 
