@@ -4,7 +4,10 @@ title: "Practical tutorial- Robot localization using Hidden Markov Models"
 author: "Damian Bogunowicz"
 categories: blog
 tags: [AI, hidden markov model, tutorial, python, programming, psychology]
-image: warehouse.jpg
+image:
+  feature: warehouse.jpg
+  credit:
+  creditlink:
 ---
 In year 2003 the team of scientists from the Carnegie Mellon university [has created a mobile robot](https://www.cs.cmu.edu/~thrun/3D/mines/groundhog/index.html) called <em>Groundhog</em>, which could explore and create the map of the abandoned coal mines. The rover explored tunnels, which were too toxic for people to enter and where oxygen levels were too low for humans to remain concious. The task was not easy: navigate in the environment, which the robot has not seen before, and simultanously discover and create a map of those unknown tunnels.
 
