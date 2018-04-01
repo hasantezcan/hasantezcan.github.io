@@ -282,4 +282,4 @@ Model2.plot_state()
 prediction_2 = Model2.prediction()
 Model2.plot_state()
 ```
-Source of the cover image: http://www.bleum.com
+<em>Source of the cover image: http://www.bleum.com</em>
