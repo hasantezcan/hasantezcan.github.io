@@ -50,10 +50,11 @@ The agent can move within an area of 6 square tiles. In the mini-warehouse there
 <em>Figure 2: Probabilistic graphical model </em>
 
 ### Sensors
-Just as we humans can localizate ourselves using senses, robots use sensors. Our agent is equipped with the sensing system composed of a compass and a proximity sensor, which detects obstacles in four directions: north, south, east and west. The sensor values are conditionally independent given the position of the robot. Moreover, the device is not perfect, the sensor has an error rate of $$ e=0.25 $$.
+Just as we humans can localizate ourselves using senses, robots use sensors. Our agent is equipped with the sensing system composed of a compass and a proximity sensor, which detects obstacles in four directions: north, south, east and west. The sensor values are conditionally independent given the position of the robot. Moreover, the device is not perfect, the sensor has an error rate of $$ e=25% $$.
 
 ### Hidden Markov Models
-The Hidden Markov Model (HMM) is a simple way to model sequential data. There exists some state $$X$$ that changes over time. It is assumed that this state at time <em>t</em> depends only on previous state in time <em>t-1</em> and not on the events that occurred before (this is known as Markov property). We wish to estimate this state $$X$$. Unfortunately, we cannot directly observe it, the state is not directly visible (hidden). However, we can observe a piece of information correlated with the state, the evidence $$E$$, which helps us to estimate $$X$$.
+The Hidden Markov Model (HMM) is a simple way to model sequential data. There exists some state $$X$$ that changes over time. It is assumed that this state at time <em>t</em> depends only on previous state in time <em>t-1</em> and not on the events that occurred before ( why
+known as Markov property). We wish to estimate this state $$X$$. Unfortunately, we cannot directly observe it, the state is not directly visible (hidden). However, we can observe a piece of information correlated with the state, the evidence $$E$$, which helps us to estimate $$X$$.
 
 {:refdef: style="text-align: center;"}
 ![alt text](https://raw.githubusercontent.com/dtransposed/dtransposed.github.io/master/assets/2/31.png "Example"){:height="80%" width="80%"}
@@ -114,7 +115,7 @@ $$ T\mathbf = \begin{pmatrix}
     			\end{pmatrix} $$
                 
 ## Initial state
-We do not know the initial position of the robot. The logical approach is to assume a uniform probability distribution over all tiles of the grid. Since our environment consists of 6 states, we can say that for any of those 6 states (let's call this hypothetical state <em>i </em>), the probability that the agent starts its adventure in square  <em>i </em> is:
+To make the problem more interesting, let's assume that we do not know the initial position of the robot. The logical approach is to assume a uniform probability distribution over all tiles of the grid. Since our environment consists of 6 states, we can say that for any of those 6 states (let's call this hypothetical state <em>i </em>), the probability that the agent starts its adventure in square  <em>i </em> is:
 
 $$ {P(X_0=i)=1/6} $$
 
@@ -187,10 +188,10 @@ We can see, that given our sensor data, we may deduce the most possible location
 {: refdef}
 <em>Figure 7: Filtering in HMM for time steps 1,2,3 and then prediction for 4,5 </em>
 
-Here, we try to estimate where the robot might be, while lacking the evidence for time steps 4 and 5. When the agent fails to deliver the evidence, we predict its position basing solely on its previous state. That is why our model evaluates, that in time step 4 the robot has very high probability of being in tiles neighbouring to the state in the time step 3. Then, in time step 5, the model is pretty confident that the robot returns to $$S_3$$, however it gives quite high probabilities to all the other scenarios.
+Here, we try to estimate where the robot might be, while lacking the evidence for time steps 4 and 5. When the agent fails to deliver the evidence, we predict its position basing solely on its previous state. That is why our model evaluates that in time step 4, the robot has very high probability of being in tiles neighbouring to the state in the time step 3. Then, in time step 5, the model is pretty confident that the robot returns to $$S_3$$, however it gives quite high probabilities to all the other scenarios.
 
 ## Alternative possible solutions 
-It is important to stress that our implementation treats every timestep sequentially. To find the most likely __sequence of states__ for a Markov Hidden Model, we should implement the Viterbi algorithm. Filtering and prediction give us marginal probability for each individual state, while Viterbi gives probability of the most likely sequence of states. So our HMM implementation tells evaluates the probability of robot being in some state for each time step; Viterbi would give the most likely sequence of states, and the probability of this sequence. Another cool tool which we can use to localize a robot is particle filtering- a very elegant and efficient algorithm. I can highly recommend [a great video](https://www.youtube.com/watch?v=aUkBa1zMKv4) by Andreas Svensson to get an intuition on how the particle filtering works.
+It is important to stress that our implementation treats every timestep sequentially. To find the most likely __sequence of states__ for a Markov Hidden Model, we should implement the Viterbi algorithm. Filtering and prediction give us marginal probability for each individual state, while Viterbi gives probability of the most likely sequence of states. So our HMM implementation evaluates the probability of robot being in some state for each time step; Viterbi would give the most likely sequence of states, and the probability of this sequence. Another cool tool which we can use to localize a robot is particle filtering- a very elegant and efficient algorithm. I can highly recommend [a great video](https://www.youtube.com/watch?v=aUkBa1zMKv4) by Andreas Svensson to get an intuition on how the particle filtering works.
 
 ## The code in Python
 
