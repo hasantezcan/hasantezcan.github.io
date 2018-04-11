@@ -6,7 +6,7 @@ categories: blog
 tags: [AI, hidden markov model, tutorial, python, programming, psychology]
 image: warehouse.jpg
 ---
-In year 2003 the team of scientists from the Carnegie Mellon university [has created a mobile robot](https://www.cs.cmu.edu/~thrun/3D/mines/groundhog/index.html) called <em>Groundhog</em>, which could explore and create the map of the abandoned coal mines. The rover explored tunnels, which were too toxic for people to enter and where oxygen levels were too low for humans to remain concious. The task was not easy: navigate in the environment, which the robot has not seen before, and simultanously discover and create a map of those unknown tunnels.
+In year 2003 the team of scientists from the Carnegie Mellon university [has created a mobile robot](https://www.cs.cmu.edu/~thrun/3D/mines/groundhog/index.html) called <em>Groundhog</em>, which could explore and create the map of an abandoned coal mine. The rover explored tunnels, which were too toxic for people to enter and where oxygen levels were too low for humans to remain concious. The task was not easy: navigate in the environment, which the robot has not seen before, and simultanously discover and create a map of those unknown tunnels.
 
 {:refdef: style="text-align: center;"}
 ![alt text](https://www.cs.cmu.edu/~thrun/3D/mines/groundhog/full/mine_img_290.jpg ){:height="80%" width="80%"}
@@ -42,7 +42,7 @@ To fully define a case we need to specify two pieces of information:
 {: refdef}
 <em>Figure 1: Environment of the robot </em>
 
-The agent can move within an area of 6 square tiles. In the mini-warehouse there is one shelf located between tiles $$S_1$$ and $$S_6$$ and a second shelf between $$S_6$$ and $$S_5$$. In the AI jargon one may say, that the environment of the agent consists of six descrete states. The time is also descrete. At each subsequent time step the robot changes his position with a probability of 80% and moves randomly to a different neighboring tile. As soon as the robot makes a move, we receive four readings from the sensing system.
+The agent can move within an area of 6 square tiles. In the mini-warehouse there is one shelf located between tiles $$S_1$$ and $$S_6$$ and a second shelf between $$S_6$$ and $$S_5$$. In the technical jargon one may say, that the environment of the agent consists of six descrete states. The time is also descrete. At each subsequent time step the robot is programmed to change its position with a probability of 80% and moves randomly to a different neighboring tile. As soon as the robot makes a move, we receive four readings from the sensing system.
 
 {:refdef: style="text-align: center;"}
 ![alt text](https://raw.githubusercontent.com/dtransposed/dtransposed.github.io/master/assets/2/28.png "Example"){:height="100%" width="100%"}
