@@ -10,34 +10,47 @@ image: underthehood.jpg
 Table of contents 
 
 ## Introduction
-Since I have learned about LSTM networks, I have always wanted to apply and learn how to apply this architecture in pratice. I am finally working on a project which requires a deeper understanding of the mathematical foundations behind LSTM models. I have been been investigating how Keras implements LSTMs and found out that the way it is done is as intuitive as I thought and there are some interesting differences between the theory I have learned at the university lectures and the actual implementation applied by developers.
+Since I have learned about long short-term memory (LSTM) networks, I have always wanted to apply those algorithms in practice. Recently I had a chance to work on a project which requires deeper understanding of the mathematical foundations behind LSTM models. I have been investigating how LSTMs are implemented in the source code of Keras library in Python. To my surprise, I found out that the implementation is not as straightforward as I thought. There are some interesting differences between the theory I have learned at the university and the actual source code in Keras.
+
 The great Richard Feynman said once: 
 >What I cannot create, I do not understand.
 
-To my mind, this means that one of the best methods to comprehend a concept is to get our hands dirty and apply the method from the scratch. By doing so, one gets a deeper understanding of a concept and hopefully is able to share the knowledge with others. Well, let's see  get it started! 
+To my mind, this means that one of the best methods to comprehend a concept is to get our hands dirty and make something from the scratch. By doing so, one gets a deeper understanding of a concept and hopefully is able to share the knowledge with others. This is the exact purpose of this article so let's get to it!
 
-The goal of this tutorial is to perform a forward pass through LSTM network using two methods. The first approach is to use a model compiled using Keras library. The second method is to extract weights from Keras model and implement the forward pass  ourselves using only numpy library. I will only scratch the surface when it comes to the theory behind LSTM networks, since it has been already beautiful explained in [the blog post by Christopher Olah](http://colah.github.io/posts/2015-08-Understanding-LSTMs/). I would recommend to further read a [very elegant tutorial by Aidan Gomez](https://medium.com/@aidangomez/let-s-do-this-f9b699de31d9), where the author shows a numerical example of a forward and backward prop in a LSTM network. The final implementation can be found at the end of the blog post. The code is written in Python.
+The goal of this tutorial is to perform a forward pass through LSTM network using two methods. The first approach is to use a model compiled using Keras library. The second method is to extract weights from Keras model and implement the forward pass ourselves using only numpy library. I will only scratch the surface when it comes to the theory behind LSTM networks. For people who are allergic to research papers (otherwise please refer to <em>Hochreiter, S.; Schmidhuber, J. (1997). "Long Short-Term Memory"</em>) the concept has been beautifully explained in [the blog post by Christopher Olah](http://colah.github.io/posts/2015-08-Understanding-LSTMs/). I would recommend to further read a [very elegant tutorial by Aidan Gomez](https://medium.com/@aidangomez/let-s-do-this-f9b699de31d9), where the author shows a numerical example of a forward and backward pass in a LSTM network. The final implementation (code in Python) can be found at the end of this article.
 
 ## Architecture and the parameters of the LSTM network
 
-Firstly, let's discuss what actually happens during a forward propagation in an LSTM network. A model takes a sequence of __samples__ (observations) as an input and returns a single number (result) as an output. I call one sequence of observations a __batch__. Thus, a single batch is an input sequence to the network. 
-__Timesteps__ is a parameter which defines the length of a sequence. This means that the number of timesteps is equal to a number of samples in a batch. Additionally, since our input has only one feature, the dimension of our input is by default set to one.
+Firstly, let's discuss how an input to the network looks like. A model takes a sequence of __samples__ (observations) as an input and returns a single number (result) as an output. I call one sequence of observations a __batch__. Thus, a single batch is an input sequence to the network. 
+Parameter __timesteps__ defines the length of a sequence. This means that the number of timesteps is equal to the number of samples in a batch. Additionally, since our input has only one feature, the dimension of the input is set to one.
 
-Mathematically, we may say that a batch $$x$$ is a vector $$x\in \Bbb{R}^{n}$$, where $$n$$ is timesteps parameter and the model outputs a value $$y\in \Bbb{R}$$.  
+Mathematically, we may say that a batch $$x$$ is a vector $$x\in \Bbb{R}^{n}$$, where $$n$$ is equal to timesteps parameter and the model outputs a value $$y\in \Bbb{R}$$.  
 
-According to the  [classification done by Andrej Karpathy](http://karpathy.github.io/2015/05/21/rnn-effectiveness), we call this a many-to-one model. Let's say that that our timesteps parameter equals 3. This means that an arbitary sequence of a length three $$\begin{bmatrix}a\\b\\c\end{bmatrix}$$ returns a single value $$y$$ as shown below:
+According to the  [classification done by Andrej Karpathy](http://karpathy.github.io/2015/05/21/rnn-effectiveness), we call this a <em> many-to-one model </em>. Let's say that that our timesteps parameter equals 3. This means that an arbitary sequence of a length three $$\begin{bmatrix}x_{1}\\x_{2}\\x_{3}\end{bmatrix}$$ returns a single value $$y$$ as shown below:
 
-<em>Figure 1: Our example of many-to-one implementation </em>
+{:refdef: style="text-align: center;"}
+![alt text](https://raw.githubusercontent.com/dtransposed/dtransposed.github.io/assets/3/Figure_1.png "Example")
+{: refdef}
+<em>Figure 1: Our example of many-to-one LSTM implementation </em>
 
-Finally, we define the number of LSTM layers and amount of hidden units in every layer. All in all our parameters are set to:
-- <em>timesteps = 10 </em>        
+Finally, we define the usual neural network parameters such as the number of LSTM layers and amount of hidden units in every layer. All in all, our parameters are set to:
+- <em>timesteps = 20 </em>        
 - <em>no_of_batches = 150</em>  
 - <em>no_of_layers = 3 </em>       
 - <em>no_of_units = 10 </em> 
 
 For simplification we assume that every LSTM layer has the same number of hidden units. Many-to-one model requires, that after passing through all LSTM layers the intermediate result is finally processed by a single dense layer, which returns final value $$y$$. That implies that our neural network has the following architecture:
 
-<em>Figure 2: Architecture used in our example </em>
+Layer (type)       | Output Shape   | Param #              | 
+--------------------- | :-------------------: | :-------------------- :| 
+lstm_1 (LSTM)   |(None, 20, 10)            | 480      | 
+lstm_2 (LSTM) | (None, 20, 10) | 840 | 
+lstm_3 (LSTM)| (None, 10)| 840 | 
+dense_1 (Dense)  | (None, 1) | 11 | 
+
+<em>Figure 2: Model used in our example </em>
+
+Side note: it is important to recognize that the shape of the array which is being propagated during the foreward pass in LSTM layers depends on the parameters (no_of_units and timesteps).
 
 ## Retrieving weight matrices from the Keras model
 
