@@ -242,7 +242,7 @@ We run the code with the specified parameters. One can immediately observe, that
 Let's take a look at the results:
 
 {:refdef: style="text-align: center;"}
-![alt text](https://raw.githubusercontent.com/dtransposed/dtransposed.github.io/master/assets/3/Figure_1.png "Example")
+![alt text](https://raw.githubusercontent.com/dtransposed/dtransposed.github.io/master/assets/3/Figure_3.png "Example")
 {: refdef}
 <em>Figure 4: Results from our implementations and Keras overlap tightly </em>
 
