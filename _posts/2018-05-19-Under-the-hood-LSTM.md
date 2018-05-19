@@ -25,7 +25,7 @@ The goal of this tutorial is to perform a forward pass through LSTM network usin
 5. Implementation)
 6. Comparison and summary
 7. The full code in Python
-8. 
+
 ## Architecture and the parameters of the LSTM network
 
 Firstly, let's discuss how an input to the network looks like. A model takes a sequence of __samples__ (observations) as an input and returns a single number (result) as an output. I call one sequence of observations a __batch__. Thus, a single batch is an input sequence to the network. 
@@ -221,7 +221,7 @@ To illustrate the flow of variables for a sample network, which takes batches of
 {:refdef: style="text-align: center;"}
 ![alt text](https://raw.githubusercontent.com/dtransposed/dtransposed.github.io/master/assets/3/Figure_1.gif "Example")
 {: refdef}
-<em>Figure 3: Variable flow through a network</em>
+<em>Figure 3: Variable flow through a network. Blue colour indicates internal state change of an LSTM cell</em>
 
 For every batch, when all samples have passed through the architecture, the last sample enters the dense layer. This results in the final output for the given batch. Additionally, the state of every LSTM layer is reset. This is to simulate what happens in Keras after each batch has been processed. By default, when defining an [LSTM layer](https://keras.io/layers/recurrent/#lstm), the argument <em>stateful= False</em>. If it were True, 
 
