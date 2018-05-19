@@ -7,21 +7,6 @@ tags: [AI, hidden markov model, tutorial, python, programming, psychology]
 image: warehouse.jpg
 ---
 
-## Table of Contents
-
-1. Case formulation
-	1. Environment
-	2. Sensors
-	3. Hidden Markov Models
-2. The solution
-	1. Transition model
-	2. Initial state
-	3. Sensor model
-	4. Results
-	5. Alternative possible solutions
-	6. The code in Python
-
-
 In year 2003 the team of scientists from the Carnegie Mellon university [has created a mobile robot](https://www.cs.cmu.edu/~thrun/3D/mines/groundhog/index.html) called <em>Groundhog</em>, which could explore and create the map of an abandoned coal mine. The rover explored tunnels, which were too toxic for people to enter and where oxygen levels were too low for humans to remain concious. The task was not easy: navigate in the environment, which the robot has not seen before, and simultanously discover and create a map of those unknown tunnels.
 
 {:refdef: style="text-align: center;"}
@@ -37,6 +22,20 @@ Fifteen years later, the problem of constructing a map of an uknown environment,
 <em>Chuck, a robotic warehouse assistant. Perhaps in the near future warehouses will be operated only by sophisticated robots... (source: www.cnbc.com)</em>
 
 The goal of this tutorial is to tackle a simple case of mobile robot localization problem using Hidden Markov Models. Let's use an example of a mobile robot in a warehouse. The agent is randomly placed in an environment and we, its supervisors, cannot observe what happens in the room. The only information we receive are the sensor readings from the robot. 
+
+## Table of Contents
+
+1. Case formulation
+	1. Environment
+	2. Sensors
+	3. Hidden Markov Models
+2. The solution
+	1. Transition model
+	2. Initial state
+	3. Sensor model
+	4. Results
+	5. Alternative possible solutions
+	6. The code in Python
 
 ## Case formulation
 

@@ -7,19 +7,6 @@ tags: [deep learning, neural network, tutorial, python, programming, LSTM, recur
 image: underthehood.jpg
 ---
 
-## Table of Contents
-
-1. Introduction
-2. Architecture and the parameters of the LSTM network
-3. Retrieving weight matrices from the Keras mode
-4. Defining a model in Keras
-5. Defining our custom-made model 
-6. Implementation)
-7. Comparison and summary
-8. The full code in Python
-
-
-## Introduction
 Since I have learned about long short-term memory (LSTM) networks, I have always wanted to apply those algorithms in practice. Recently I had a chance to work on a project which requires deeper understanding of the mathematical foundations behind LSTM models. I have been investigating how LSTMs are implemented in the source code of Keras library in Python. To my surprise, I found out that the implementation is not as straightforward as I thought. There are some interesting differences between the theory I have learned at the university and the actual source code in Keras.
 
 The great Richard Feynman said once: 
@@ -29,6 +16,16 @@ To my mind, this means that one of the best methods to comprehend a concept is t
 
 The goal of this tutorial is to perform a forward pass through LSTM network using two methods. The first approach is to use a model compiled using Keras library. The second method is to extract weights from Keras model and implement the forward pass ourselves using only numpy library. I will only scratch the surface when it comes to the theory behind LSTM networks. For people who are allergic to research papers (otherwise please refer to <em>Hochreiter, S.; Schmidhuber, J. (1997). "Long Short-Term Memory"</em>) the concept has been beautifully explained in [the blog post by Christopher Olah](http://colah.github.io/posts/2015-08-Understanding-LSTMs/). I would also recommend to read a [very elegant tutorial by Aidan Gomez](https://medium.com/@aidangomez/let-s-do-this-f9b699de31d9), where the author shows a numerical example of a forward and backward pass in a LSTM network. My final implementation (code in Python) can be found at the end of this article.
 
+## Table of Contents
+
+1. Architecture and the parameters of the LSTM network
+2. Retrieving weight matrices from the Keras mode
+3. Defining a model in Keras
+4. Defining our custom-made model 
+5. Implementation)
+6. Comparison and summary
+7. The full code in Python
+8. 
 ## Architecture and the parameters of the LSTM network
 
 Firstly, let's discuss how an input to the network looks like. A model takes a sequence of __samples__ (observations) as an input and returns a single number (result) as an output. I call one sequence of observations a __batch__. Thus, a single batch is an input sequence to the network. 
