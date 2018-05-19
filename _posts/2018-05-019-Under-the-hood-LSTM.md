@@ -222,7 +222,7 @@ Firstly, we initialize a model in Keras. The weights are automatically created u
 To illustrate the flow of variables for a sample network, which takes batches of two samples, please see figure 3:
 
 {:refdef: style="text-align: center;"}
-![alt text](https://raw.githubusercontent.com/dtransposed/dtransposed.github.io/master/assets/3/Figure_4.gif "Example")
+![alt text](https://raw.githubusercontent.com/dtransposed/dtransposed.github.io/master/assets/3/Figure_1.gif "Example")
 {: refdef}
 <em>Figure 3: Variable flow through a network</em>
 
@@ -258,4 +258,4 @@ This is only a basic breakdown of an basic LSTM model. It has simple, numerical 
 
 For condensed, full code please visit my [github](https://github.com/dtransposed/dtransposed-blog-codes/blob/master/Numpy%20implementation%20of%20LSTM%20neural%20networks.py).
 
-<em>Source of the cover image: http://www.bleum.com</em>
+<em>Source of the cover image: http://www.partservice.co.uk</em>
