@@ -60,6 +60,9 @@ https://www.gnu.org/philosophy/free-sw.tr.html#TransNote2
 
 <p align="center">
   ![gnu](/ozgur-yazilim-felsefesi/Richard-Stallman.jpg)
+
+  ![alt text](https://raw.githubusercontent.com/hasantezcan/hasantezcan.github.io/master/assets/ozgur-yazilim-felsefesi/Richard-Stallman.jpg "Richard-Stallman")
+
 </p>
 
 ### **GNU ve Richard Stallman**
