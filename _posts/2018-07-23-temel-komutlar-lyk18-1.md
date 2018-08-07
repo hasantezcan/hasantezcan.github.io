@@ -130,12 +130,11 @@ foto
     man ls
   ```
 
-<p align="center">
+
 ![gnu](/assets/posts/man_ls_1.png)
-</p>
-  <p align="center">
-    ![gnu](/img/lyk-gun-1/man_ls_2.png)
-  </p>
+
+![gnu](/assets/posts/man_ls_2.png)
+
 
 Burada da görüldüğü gibi tüm detaylar açıkca belirtilmiş. Öncelikle komutun adı, anatomisi, ve açıklama kısmında da komutla ilgili tüm detaylar. işte tam burda opsiyonlara (OPTION) giriş yapıyoruz.
 
