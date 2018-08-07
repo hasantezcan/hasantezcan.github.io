@@ -18,6 +18,7 @@ menu:
 social:
 - {icon: 'github', link: 'https://www.github.com/hasantezcan'}
 #- {icon: 'facebook', link: 'https://facebook.com/damian.boqunowicz'}
+- {icon: 'twitter', link: 'https://twitter.com/hasantezcann'}
 - {icon: 'linkedin', link: 'https://www.linkedin.com/in/hasantezcann/'}
 - {icon: 'envelope', link: 'mailto:damian.bogunowicz@gmail.com'}
 - {icon: 'rss-square', link: 'feed.xml'}
