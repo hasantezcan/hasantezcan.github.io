@@ -4,7 +4,7 @@ title: "Özgür Yazılım Feslefesi"
 author: "Hasan Tezcan"
 categories: blog
 tags: [GNU/Linux]
-image: /img/ozgur-yazilim-felsefesi/gnu.png
+image: "/img/ozgur-yazilim-felsefesi/gnu.png"
 date:   2018-07-11
 ---
 
