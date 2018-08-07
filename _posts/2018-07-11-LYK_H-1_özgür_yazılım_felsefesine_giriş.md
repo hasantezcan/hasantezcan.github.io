@@ -13,7 +13,6 @@ date:   2018-07-11
 
 ---
 
-# Özgür Yazılım Feslefesi
 
 Özgür yazılım çok geniş ve kapsamlı bir kavramdır. O yüzden bu anlatacaklarım özgür yazılım hakkında daha çok bu kavramı yeni duyanlar için özgür yazılıma bir ısınma mahiyetinde yazılmıştır.
 
