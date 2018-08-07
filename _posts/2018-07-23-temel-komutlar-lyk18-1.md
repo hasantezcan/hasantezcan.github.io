@@ -1,12 +1,14 @@
 ---
 layout: post
-title: "LYK'18 Sistem Yönetimi - I, Gün 1'"
-tags: [GNU]
-subtitle: ""
-background: "/img/ozgur-yazilim-felsefesi/Richard-Stallman.jpg"
+title: "LYK'18 Sistem Yönetimi - I, Gün 1"
+author: "Hasan Tezcan"
+categories: blog
+tags: [GNU/Linux]
+image: "/ozgur-yazilim-felsefesi/Richard-Stallman.jpg"
 date:   2018-07-23
-author: "Hasan TEZCAN"
 ---
+
+
 
 ***Yazan: [hasantezcan](https://github.com/hasantezcan)***
 
@@ -128,9 +130,9 @@ foto
     man ls
   ```
 
-  <p align="center">
-    ![gnu](/img/lyk-gun-1/man_ls_1.png)
-  </p>
+<p align="center">
+![gnu](/assets/posts/man_ls_1.png)
+</p>
   <p align="center">
     ![gnu](/img/lyk-gun-1/man_ls_2.png)
   </p>
