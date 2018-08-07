@@ -58,10 +58,8 @@ https://www.gnu.org/philosophy/free-sw.tr.html#TransNote2
 
 ---
 
-<p align="center">
-  ![alt text](https://raw.githubusercontent.com/hasantezcan/hasantezcan.github.io/master/assets/img/ozgur-yazilim-felsefesi/Richard-Stallman.jpg "Richard-Stallman")
+![alt text](https://raw.githubusercontent.com/hasantezcan/hasantezcan.github.io/master/assets/img/ozgur-yazilim-felsefesi/Richard-Stallman.jpg "Richard-Stallman")
 
-</p>
 
 ### **GNU ve Richard Stallman**
 
