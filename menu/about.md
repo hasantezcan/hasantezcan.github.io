@@ -4,7 +4,7 @@ title: Hakkımda
 image: imageedit_6_6259696792.jpg
 --- 
 {:refdef: style="text-align: center;"}
-![My Image](/assets/hakkimda/my_photo.jpg){height="400px" width="400px"}
+![My Image](/assets/hakkimda/my_photo.jpg){:width="400px" height ="400px"}
 {: refdef}
 
 Merhaba ben Hasan,
