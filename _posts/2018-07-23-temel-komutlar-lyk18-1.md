@@ -131,9 +131,9 @@ foto
   ```
 
 
-![gnu](/assets/posts/man_ls_1.png)
+![gnu](/assets/posts/lyk-gun-1/man_ls_1.png)
 
-![gnu](/assets/posts/man_ls_2.png)
+![gnu](/assets/posts/lyk-gun-1/man_ls_2.png)
 
 
 Burada da görüldüğü gibi tüm detaylar açıkca belirtilmiş. Öncelikle komutun adı, anatomisi, ve açıklama kısmında da komutla ilgili tüm detaylar. işte tam burda opsiyonlara (OPTION) giriş yapıyoruz.
