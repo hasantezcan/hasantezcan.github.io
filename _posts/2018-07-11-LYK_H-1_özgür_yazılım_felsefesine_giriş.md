@@ -54,6 +54,7 @@ https://www.gnu.org/philosophy/free-sw.tr.html#TransNote2
 - Aslında söylemde aynı şeyi çağrıştırsalarda *"open soruce"* kavramı yukarda da bahsetiğim *"free software"* kavramındaki beleş yerine özgür algısını yaratmadığı için **Özgür yazılım** kavramının kullanılması tavsiye ediliyor.
 
 ---
+
 <p align="center">
   ![gnu](/img/ozgur-yazilim-felsefesi/Richard-Stallman.jpg)
 </p>
