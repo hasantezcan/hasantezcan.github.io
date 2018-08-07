@@ -21,7 +21,10 @@ date:   2018-07-11
 
 - “Özgür yazılım” bir özgürlük meselesidir, fiyat değil.
 Bu slogan ingilizcede *free* sözcüğünün hem ücretsiz hem de özgür manasına gelmesinden ortaya çıkıyor.
-      To understand the concept, you should think of “free” as in “free speech,” not as in “free beer”
+
+      
+      	To understand the concept, you should think of “free” as in “free speech,” not as in “free beer”
+
 
 - Özgür yazılım insanları öğrenmeye, öğrendiklerini öğretmeye, kısıtlı ömrümüzde kazandığımız bilgileri gelecek nesillere bilgi birikimi olrak bırakmaya, bir defa yapılmış bir şeyin yapımı için gereken tekniği tekrar tekrar bulunmasına gerek bırakmamamya teşvik eder.
 
@@ -56,7 +59,7 @@ https://www.gnu.org/philosophy/free-sw.tr.html#TransNote2
 ---
 
 <p align="center">
-  ![gnu](/img/ozgur-yazilim-felsefesi/Richard-Stallman.jpg)
+  ![gnu]("/ozgur-yazilim-felsefesi/Richard-Stallman.jpg")
 </p>
 
 ### **GNU ve Richard Stallman**
