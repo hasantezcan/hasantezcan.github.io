@@ -1,6 +1,18 @@
 ---
 layout: post
 title: "Özgür Yazılım Feslefesi"
+author: "Damian Bogunowicz"
+categories: blog
+tags: [AI, Bayes' theorem, mathematics, psychology]
+image: thinker.jpg
+---
+
+
+
+
+---
+layout: post
+title: "Özgür Yazılım Feslefesi"
 tags: [GNU]
 subtitle: "Özgür Yazılım Feslefesi için bir tanıtım yazısıdır."
 background: "/img/ozgur-yazilim-felsefesi/gnu.png"
