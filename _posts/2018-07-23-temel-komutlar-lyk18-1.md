@@ -4,14 +4,10 @@ title: "LYK'18 Sistem Yönetimi - I, Gün 1"
 author: "Hasan Tezcan"
 categories: blog
 tags: [GNU/Linux]
-image: "/ozgur-yazilim-felsefesi/Richard-Stallman.jpg"
+image: "/gnu.png"
 date:   2018-07-23
 ---
-
-
-
 ***Yazan: [hasantezcan](https://github.com/hasantezcan)***
-
 ---
 
 #### LYK 18' 1.Gün Ders Özeti
