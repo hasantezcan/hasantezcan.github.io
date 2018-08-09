@@ -85,10 +85,6 @@ Bir çok lisans vardır Bunlar özgür yazılım lisanları da olabilir özel m�
 
 **Bunların dışında Tescilli Yazılım Lisansları(Proprietary software licenses) da vardır.**
 
-<p align="center">
-  ![gnu](/img/Software_Categories_expanded.svg)
-</p>
-
 ![Software_Categories_expanded](/assets/posts/ozgur-yazılım-felsefesi-ve-temel-kavramlar/Software_Categories_expanded.svg)
 
 
@@ -157,7 +153,7 @@ Richard Stallman'ın kişisel sitesi : [http://www.stallman.org](http://www.stal
 
   Örneğin siber güvenlik alanıyla ilgilenen kullanıcıların "parrot" ya da "Kali Linux" dağıtımlarını tercih etmesinin en temel sebebi budur.
 
-  ![linux-distros](/assets/posts/ozgur-yazılım-felsefesi-ve-temel-kavramlar/linux-distros.png)
+![linux-distros](/assets/posts/ozgur-yazılım-felsefesi-ve-temel-kavramlar/linux-distros.png)
 
   Siz de ilgi alanınıza göre şekillenmiş bir dağıtımı ya da gündelik yaşam için hazırlanmış bir daüıtımı bilgisayarınıza kurarak kullanabilirsiniz.
 
@@ -177,14 +173,14 @@ Richard Stallman'ın kişisel sitesi : [http://www.stallman.org](http://www.stal
 ### **Özgür yazılım hareketinin yazılım dışındaki etkileri...**
 
 1. Wikipedia'yı ortaya çıkartmıştır. - özgür bilgi
-- Raspberry pi - özgür donanım tasarımı
+2. Raspberry pi - özgür donanım tasarımı
   >>özgür donanım değil çünkü donanım tekildir ve paylaşılamaz
 
 
 3. Free beer :D
-- Creative Commons
-- Özgür kitaplar
-- Free software free society
+4. Creative Commons
+5. Özgür kitaplar
+6. Free software free society
 
 ![wikipedia](/assets/posts/ozgur-yazılım-felsefesi-ve-temel-kavramlar/wikipedia.jpg)
 
