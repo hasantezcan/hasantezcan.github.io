@@ -10,26 +10,6 @@ date:   2018-08-09
 ***Yazan: [hasantezcan](https://github.com/hasantezcan)***
 ---
 
-```
->>Doküman İçeriği..
-
-+ * Yazılımın özgürlüğü kavramı
-+ * Yazılım lisansları
-+ * Özgür yazılım vs açık kaynak
-? * Özgür programlama dilleri
-! * İşletim sistemi kavramı ve yapısı
-  * Çekirdek tanımı
-+ * Özgür yazılımların tarihçesi ve felsefesi
-+ * Özgür yazılımların sağladığı kazanımlar
-+ * Özgür yazılımların kullanım alanları
-+ * Dağıtımlar ve Dağıtım Seçimi
-   ** GNU/Linux, FreeBSD, OpenBSD ve özel mülkiyet UNIX işletim sistemleri
-   ** Debian Ailesi
-   ** RedHat Ailesi
-   ** Özelleşmiş Dağıtımlar (pfSense, FreeNAS vs)
-   ** Diğer Dağıtımlar (SuSE, Arch, Gentoo, vs)
-```
-
 ## Yazılımın özgürlüğü kavramı
 
 ### **Özgür Yazılım Nedir ?**
@@ -108,6 +88,8 @@ Bir çok lisans vardır Bunlar özgür yazılım lisanları da olabilir özel m�
 <p align="center">
   ![gnu](/img/Software_Categories_expanded.svg)
 </p>
+
+![Software_Categories_expanded](/assets/posts/ozgur-yazılım-felsefesi-ve-temel-kavramlar/Software_Categories_expanded.svg)
 
 
 ### **Bir yazılımım var ve buna GPL almak istiyorum. Nereye başvuracağım?**
@@ -222,6 +204,28 @@ Richard Stallman'ın kişisel sitesi : [http://www.stallman.org](http://www.stal
 
 - Üretkenliği arttırır
 - Sizi bir şeyler geliştrimeden önce tonlarca para ödemeye zorlamaz. Tüm çalışma ortamınızı ücretsiz bir şekilde size sunar.
+
+
+```
+>>Doküman İçeriği..
+
++ * Yazılımın özgürlüğü kavramı
++ * Yazılım lisansları
++ * Özgür yazılım vs açık kaynak
+? * Özgür programlama dilleri
+! * İşletim sistemi kavramı ve yapısı
+  * Çekirdek tanımı
++ * Özgür yazılımların tarihçesi ve felsefesi
++ * Özgür yazılımların sağladığı kazanımlar
++ * Özgür yazılımların kullanım alanları
++ * Dağıtımlar ve Dağıtım Seçimi
+   ** GNU/Linux, FreeBSD, OpenBSD ve özel mülkiyet UNIX işletim sistemleri
+   ** Debian Ailesi
+   ** RedHat Ailesi
+   ** Özelleşmiş Dağıtımlar (pfSense, FreeNAS vs)
+   ** Diğer Dağıtımlar (SuSE, Arch, Gentoo, vs)
+```
+
 
 ---
 **> Kaynakça**
