@@ -20,9 +20,9 @@ permalink:           none
 plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
-title:		           "DTRANSPOSED"
-description:	       "data science, AI, technology"
-author:              "Damian Bogunowicz"
+title:		           "Hasan Tezcan"
+description:	       "PAUsiber"
+author:              "Hasan Tezcan"
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
 #feed:
