@@ -153,7 +153,7 @@ Richard Stallman'ın kişisel sitesi : [http://www.stallman.org](http://www.stal
 
   Örneğin siber güvenlik alanıyla ilgilenen kullanıcıların "parrot" ya da "Kali Linux" dağıtımlarını tercih etmesinin en temel sebebi budur.
 
-![linux-distros](/assets/posts/ozgur-yazılım-felsefesi-ve-temel-kavramlar/linux-distros.png)
+  ![linux-distros](/assets/posts/ozgur-yazılım-felsefesi-ve-temel-kavramlar/linux-distros.png)
 
   Siz de ilgi alanınıza göre şekillenmiş bir dağıtımı ya da gündelik yaşam için hazırlanmış bir daüıtımı bilgisayarınıza kurarak kullanabilirsiniz.
 
