@@ -155,7 +155,7 @@ ls komutu için seçtiğim iki opsiyonla başlayalım.
   - Peki ne işe yarar bu **"-a"** bakmış olduğumuz dizin içindeki gizli dosyalar dahil tüm dosyaları bize gösterir.
 
   <p align="center">
-    ![gnu](/img/lyk-gun-1/man_ls_3.1.PNG)
+    ![gnu](/img/lyk-gun-1/man_ls_3.1.png)
   </p>
 - İkinci opsiyonumuz ise **-l** opsiyonu.
   - Bu komut ise uzun listeler.
