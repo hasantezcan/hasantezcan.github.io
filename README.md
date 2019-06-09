@@ -6,4 +6,4 @@ thanks for this themes..
 
 You can visit my blog:
 
-[hasantezcan.me](http://www.hasantezcan.me/)
+[hasantezcan.dev](http://www.hasantezcan.dev/)
