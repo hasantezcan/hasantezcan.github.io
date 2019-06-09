@@ -1,12 +1,12 @@
 title: HASAN TEZCAN
-tagline:  
+tagline:
 
 # Authors documented under _data
 
 # Change to true for Disqus comments
 disqus:
   comments: true
-  disqus_shortname: 'https-hasantezcan-github-io'
+  disqus_shortname: 'https-hasantezcan-dev'
 
 google-ID: 'UA-80213386-1'
 
