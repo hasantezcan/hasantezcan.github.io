@@ -6,7 +6,7 @@ tagline:
 # Change to true for Disqus comments
 disqus:
   comments: true
-  disqus_shortname: 'https-hasantezcan-dev'
+  disqus_shortname: 'https-hasantezcan-github-io'
 
 google-ID: 'UA-80213386-1'
 
