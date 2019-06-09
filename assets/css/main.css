@@ -70,9 +70,15 @@ blockquote {
   width: 615px;
 }
 
+@media (max-width: 1080px) {
+  .container {
+    width: 65vw;
+  }
+}
+
 @media (max-width: 1366px) {
   .container {
-    width: 45vw;
+    width: 65vw;
   }
 }
 
