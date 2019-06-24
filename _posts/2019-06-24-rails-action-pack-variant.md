@@ -4,7 +4,7 @@ title: "Rails Action Pack Variants"
 author: "Hasan Tezcan"
 categories: blog
 tags: [Ruby on Rails]
-image: "/assets/posts/rails-action-pack-variant/ruby-on-rails.png"
+image: "ruby-on-rails.png"
 date:   2019-06-24
 ---
 ***Yazan: [hasantezcan](https://github.com/hasantezcan)***
