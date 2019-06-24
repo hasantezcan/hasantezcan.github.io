@@ -16,7 +16,7 @@ date:   2019-06-24
 
 Responsive tasarımların bu çok yetenkli halleri, içinde yüklü miktarda JS, CSS ve HTML kodu bulundurmasına sebep oluyor. Bu durum da özellikle mobil cihazlar için arayüz kullanımlarında hız kayıplarına neden oluyor.
 
-Neyseki **[Ruby on Rails 4.1 ile birlikte](https://github.com/rails/rails/blob/v5.0.0.beta2/actionpack/lib/abstract_controller/callbacks.rb#L190-L193)** `"Action Pack Variants"` adında yeni bir özellik duyurdu. Action Pack Variants **siteye hangi platformdan girdiğinizi tespit eder ve
+Neyseki **[Ruby on Rails 4.1 ile birlikte](https://github.com/rails/rails/pull/18939)** `"Action Pack Variants"` adında yeni bir özellik duyurdu. Action Pack Variants **siteye hangi platformdan girdiğinizi tespit eder ve
 tarayıcınıza hangi sayfayı yükleyeceğine karar verir.** Bu sayede sayfalarınızın yüklenme **hızları artmış** olur.
 
 Bugün de sizlerle Rail Action Pack Variants'ı **Rails 4.1 ve sonrası** projelerde nasıl kullacağını göstermek adına bir uygulama yapacağız.  
