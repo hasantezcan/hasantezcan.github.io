@@ -216,18 +216,13 @@ Bunu yapmanın kolay bir yolu var. Bu örneğe bakarak bunu anlayabilir ve sizde
 ```
 ---------
 
-Anlatımımızın sonuna geldik umarım sizler için faydalı olmuş, çözümü bulup burdan öyle ayrılıyorsunuzdur. Bir daha görüşümek üzre. İyi çalışmalar. :smile:
+- Anlatımımızın sonuna geldik umarım sizler için faydalı olmuş, çözümü bulup burdan öyle ayrılıyorsunuzdur. Bir daha görüşümek üzre. İyi çalışmalar. :smile:
 
+---
+**> Kaynakça**
 
+- ***[Deepak Singh](https://dev.to/spidergears/rails-action-pack-variants-1lc3)***
 
+- ***[richonrails.com](https://richonrails.com/articles/action-pack-variants-in-rails-4-1)***
 
-
-
-Kaynaklar
-----------
-
-[Deepak Singh](https://dev.to/spidergears/rails-action-pack-variants-1lc3)
-
-[richonrails.com](https://richonrails.com/articles/action-pack-variants-in-rails-4-1)
-
-[coderwall.com](https://coderwall.com/p/etlnvg/how-to-use-rails-4-1-actionpack-variants)
+- ***[coderwall.com](https://coderwall.com/p/etlnvg/how-to-use-rails-4-1-actionpack-variants)***
