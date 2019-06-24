@@ -4,7 +4,7 @@ title: "Rails Action Pack Variants"
 author: "Hasan Tezcan"
 categories: blog
 tags: [Ruby on Rails]
-image: "/Richard-Stallman.jpg"
+image: "/assets/posts/rails-action-pack-variant//ruby-on-rails.png"
 date:   2019-06-24
 ---
 ***Yazan: [hasantezcan](https://github.com/hasantezcan)***
@@ -161,6 +161,7 @@ ile google developers tool'u açıyoruz ve ardından. Görüntülemek istediğim
 	<img alt="iphone-view-img" src="/assets/posts/rails-action-pack-variant/iphone-view.png" width="250">
 </p>
 ---
+
 - Evet anasayfamızı her platform için farklı şekilde tasarlayıp görüntüledik`(view katmanı)`. **Peki bunu controller katmanı için de yapmak mümkün mü?**
 
 ### `controller katmanı:`
