@@ -76,12 +76,6 @@ blockquote {
   }
 }
 
-@media (max-width: 1366px) {
-  .container {
-    width: 65vw;
-  }
-}
-
 /*48em*/
 
 @media (max-width: 768px) {
