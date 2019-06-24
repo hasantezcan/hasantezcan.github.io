@@ -7,8 +7,6 @@ tags: [Ruby on Rails]
 image: "ruby-on-rails.png"
 date:   2019-06-24
 ---
-***Yazan: [hasantezcan](https://github.com/hasantezcan)***
----
 
 **Responsive** yapılar, akıllıca tasarlanmış, sayfaların boyutlarına(platformlara) göre şekillenen yetenekli ve esnek tasarım yapılarıdır ve günümüzde de çokca tercih edilmektedir.
 

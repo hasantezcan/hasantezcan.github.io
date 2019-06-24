@@ -7,8 +7,6 @@ tags: [GNU/Linux]
 image: "/gnu.png"
 date:   2018-07-23
 ---
-***Yazan: [hasantezcan](https://github.com/hasantezcan)***
----
 
 #### LYK 18' 1.Gün Ders Özeti
 

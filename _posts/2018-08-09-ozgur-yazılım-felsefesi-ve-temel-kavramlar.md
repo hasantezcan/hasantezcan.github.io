@@ -7,9 +7,6 @@ tags: [GNU/Linux]
 image: "/Richard-Stallman.jpg"
 date:   2018-08-09
 ---
-***Yazan: [hasantezcan](https://github.com/hasantezcan)***
----
-
 ## Yazılımın özgürlüğü kavramı
 
 ### **Özgür Yazılım Nedir ?**
