@@ -23,7 +23,7 @@ plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-t
 title:		           "Hasan Tezcan"
 description:	       ""
 author:              "Hasan Tezcan"
-
+avatar:              /assets/hakkimda/my_photo.jpg
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
 #feed:
 #   path:	     rss-feed.xml

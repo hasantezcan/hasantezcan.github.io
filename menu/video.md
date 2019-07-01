@@ -2,7 +2,12 @@
 layout: page
 title: Video
 ---
-<ul class="posts">
+
+
+Yakında....
+
+
+<!-- <ul class="posts">
   {% for post in site.posts %}
 
     {% unless post.next %}
@@ -21,4 +26,4 @@ title: Video
     </li>
 
   {% endfor %}
-</ul>
+</ul> -->
