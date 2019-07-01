@@ -12,6 +12,7 @@ google-ID: 'UA-142628565-1'
 
 menu:
 - {name: 'Blog', path: 'menu', url: 'blog.html'}
+- {name: 'Videolar', path: 'menu', url: 'video.html'}
 - {name: 'Hakkımda', path: 'menu', url: 'about.html'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
