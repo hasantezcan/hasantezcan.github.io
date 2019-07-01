@@ -14,10 +14,10 @@ date:   2019-06-24
 	<img alt="responsive-gif" src="/assets/posts/rails-action-pack-variant/responsive.gif" width="650">
 </p>
 
-Responsive tasarımların bu çok yetenkli halleri, içinde yüklü miktarda JS, CSS ve HTML kodu bulundurmasına sebep oluyor. Bu durum da özellikle mobil cihazlar için arayüz kullanımlarında hız kayıplarına neden oluyor.
+Responsive tasarımların bu çok yetenkli halleri, içinde **yüklü miktarda** JS, CSS ve HTML kodu bulundurmasına sebep oluyor. Bu durum özellikle de mobil cihazların arayüz kullanımlarında hatrı sayılır hız kayıplarına neden oluyor.
 
-Neyse ki **[Ruby on Rails 4.1 ile birlikte](https://github.com/rails/rails/pull/18939)** `"Action Pack Variants"` adında yeni bir özellik duyurdu. Action Pack Variants **siteye hangi platformdan girdiğinizi tespit eder ve
-tarayıcınıza hangi platformun sayfasını yükleyeceğine karar verir.** Bu sayede sayfalarınızın yüklenme **hızı artmış** olur.
+Neyse ki **[Ruby on Rails 4.1 ile birlikte](https://github.com/rails/rails/pull/18939)** `"Action Pack Variants"` adında yeni bir özellik duyuruldu. Action Pack Variants, **siteye hangi platformdan girdiğinizi tespit eder ve
+tarayıcınıza hangi platformun sayfasını yükleyeceğine karar verir.** Bu sayede sayfaların **yüklenme hızları artmış** olur.
 
 Bugün de sizlerle Rail Action Pack Variants'ı **Rails 4.1 ve sonrası** projelerde nasıl kullacağını göstermek adına bir uygulama yapacağız.  
 
@@ -42,7 +42,7 @@ end
 
 Gerekli hazırlıkları tamamladık. Peki **Action Pack Variantlarını nasıl kullancağız?**
 
-Action Pack Variantları **application controller** içinde **before_action** methodu ile kullanılır. Şimdi siz de `application controller` içine gidip mevcut yapınızı buna uygun şekilde düzenleyin.
+**Application controller** içinde **detect_browser** adında bir method oluşturuyoruz ve içine aşağıda bulunan satırları yapıştırıyoruz. (Ben "detect_browser" olarak isimlendirdim fakat siz başka bir method ismi de verebilirsiniz.) Ve bu oluşturulmuş olduğumuz detect_browser methodunu da **before_action** ile çağırıyoruz.
 
 ```ruby
 class ApplicationController < ActionController::Base
@@ -75,8 +75,6 @@ end
 
 `detect_browser` çağırıldığında `request.variant` olması gerektiği gibi ayarlanır. Biz örneğimizde sayfamıza tablet, telefon ya da masaüstünden mi girdiğini tespit ediyoruz.
 
-> Ayrıca bu yapıyı Internet Explorer versiyonlarını tespit etmek gibi işerlde de kullanabilirsiniz.
-
 > NOT: `before_filter`, `before_action` ile aynı işi yapmaktadır. Rails 5.1 den itibaren de `before_filter` [kullanımdan kaldırılmıştır.](https://github.com/rails/rails/blob/v5.0.0.beta2/actionpack/lib/abstract_controller/callbacks.rb#L190-L193)
 
 
@@ -87,9 +85,9 @@ Bu yapı piyasada bulunan bazı cihazların hangi platforma ait olduğunu tespit
 
 Şimdi ise farklı ekranlarda görmek istediğimiz view katmanlarını oluşturalım. View dosyalarını oluştururken isimlendirmeyi aşağıdaki yapıda oluşturuyoruz.
 
-- **show.html+`platform_adı`.erb**
+#### "**show.html+`platform_adı`.erb**"
 
-Öncelikle varsayılan olan masaüstü view'imizi oluşturalım. Bu kısımda herhangi bir platform adı belitmemize gerek yok.
+Öncelikle **varsayılan olan masaüstü** view'imizi oluşturalım. Bu kısımda herhangi bir platform adı belitmemize gerek yok.
 
 #### `show.html.erb`
 
