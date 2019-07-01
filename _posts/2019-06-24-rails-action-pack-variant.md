@@ -16,8 +16,8 @@ date:   2019-06-24
 
 Responsive tasarımların bu çok yetenkli halleri, içinde yüklü miktarda JS, CSS ve HTML kodu bulundurmasına sebep oluyor. Bu durum da özellikle mobil cihazlar için arayüz kullanımlarında hız kayıplarına neden oluyor.
 
-Neyseki **[Ruby on Rails 4.1 ile birlikte](https://github.com/rails/rails/pull/18939)** `"Action Pack Variants"` adında yeni bir özellik duyurdu. Action Pack Variants **siteye hangi platformdan girdiğinizi tespit eder ve
-tarayıcınıza hangi sayfayı yükleyeceğine karar verir.** Bu sayede sayfalarınızın yüklenme **hızları artmış** olur.
+Neyse ki **[Ruby on Rails 4.1 ile birlikte](https://github.com/rails/rails/pull/18939)** `"Action Pack Variants"` adında yeni bir özellik duyurdu. Action Pack Variants **siteye hangi platformdan girdiğinizi tespit eder ve
+tarayıcınıza hangi platformun sayfasını yükleyeceğine karar verir.** Bu sayede sayfalarınızın yüklenme **hızı artmış** olur.
 
 Bugün de sizlerle Rail Action Pack Variants'ı **Rails 4.1 ve sonrası** projelerde nasıl kullacağını göstermek adına bir uygulama yapacağız.  
 
@@ -89,7 +89,7 @@ Bu yapı piyasada bulunan bazı cihazların hangi platforma ait olduğunu tespit
 
 - **show.html+`platform_adı`.erb**
 
-Öncelikle varsayılan olan masaüstü view'imiz oluşturalım. Bu kısımda herhangi bir platform adı belitmemize gerek yok.
+Öncelikle varsayılan olan masaüstü view'imizi oluşturalım. Bu kısımda herhangi bir platform adı belitmemize gerek yok.
 
 #### `show.html.erb`
 
@@ -129,13 +129,13 @@ Tablet ekranları için de `tablet` etiketini kullanarak view dosyamızı oluşt
 </div>
 ```
 ---
-Evet şuan yapıyı kurmuş bulunmaktayız.
+Evet şu an yapıyı kurmuş bulunmaktayız.
 
 ### `Peki nasıl test edicez?`
 
 Google developer tools'u kullanarak sistemi kolayca test edebilirz.
 
-- İlk olarak varsayılan olarak ayarladığımız. Masaüstü görünümü ile karşılaşıcaz.
+- İlk olarak varsayılan olarak ayarladığımız. Masaüstü görünümü ile karşılaşacağız.
 
 <p align="center">
 	<img alt="os-nedir" src="/assets/posts/rails-action-pack-variant/desktopp-view.png" width="650">
@@ -143,9 +143,9 @@ Google developer tools'u kullanarak sistemi kolayca test edebilirz.
 
 - Diğer platformlardan nasıl göründüğünü görmek için;
 #### `CTRL` + `SHIFT` + `I`
-ile google developers tool'u açıyoruz ve ardından. Görüntülemek istediğimiz platformu resimdeki gibi belirliyoruz.
+ile google developers tool'u açıyoruz ve ardından görüntülemek istediğimiz platformu resimdeki gibi belirliyoruz.
 
-**NOT:** Platform değiştirdikden sonra **sayfayı yenilemeyi** unutmayın! Şuan yaptığımız işlem bir responsive tasarımı simüle etmekten ziyade platform özeline oluşturulmuş **biricik** bir sayfanın görüntüleme işlemidir.
+**NOT:** Platform değiştirdikten sonra **sayfayı yenilemeyi** unutmayın! Şu an yaptığımız işlem bir responsive tasarımı simüle etmekten ziyade platform özeline oluşturulmuş **biricik** bir sayfanın görüntüleme işlemidir.
 
 <p align="center">
 	<img alt="google-developers-tool-img" src="/assets/posts/rails-action-pack-variant/google-developers-tool.png" width="650">
@@ -160,7 +160,7 @@ ile google developers tool'u açıyoruz ve ardından. Görüntülemek istediğim
 </p>
 ---
 
-- Evet anasayfamızı her platform için farklı şekilde tasarlayıp görüntüledik`(view katmanı)`. **Peki bunu controller katmanı için de yapmak mümkün mü?**
+- Evet, anasayfamızı her platform için farklı şekilde tasarlayıp görüntüledik`(view katmanı)`. **Peki bunu controller katmanı için de yapmak mümkün mü?**
 
 ### `controller katmanı:`
 
@@ -190,7 +190,7 @@ end # end class
 
 ### `View katmanında hangi variantın kullanıldığını tespit etmek istersek?`
 
-Bunu yapmanın kolay bir yolu var. Bu örneğe bakarak bunu anlayabilir ve sizde kodunuza buna benzeterek sorununuzu çözebilirsiniz.
+Bunu yapmanın kolay bir yolu var. Bu örneğe bakarak bunu anlayabilir ve siz de kodunuzu buna benzeterek sorununuzu çözebilirsiniz.
 
 ```html
 <!DOCTYPE html>
@@ -214,7 +214,7 @@ Bunu yapmanın kolay bir yolu var. Bu örneğe bakarak bunu anlayabilir ve sizde
 ```
 ---------
 
-- Anlatımımızın sonuna geldik umarım sizler için faydalı olmuş, çözümü bulup burdan öyle ayrılıyorsunuzdur. Bir daha görüşümek üzre. İyi çalışmalar. :smile:
+- Anlatımımızın sonuna geldik umarım sizler için faydalı olmuştur. Bir daha görüşümek üzere. İyi çalışmalar. :)
 
 ---
 **> Kaynakça**
