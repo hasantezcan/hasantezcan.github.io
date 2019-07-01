@@ -8,7 +8,7 @@ disqus:
   comments: false
   disqus_shortname: 'https-hasantezcan-github-io'
 
-google-ID: 'UA-80213386-1'
+google-ID: 'UA-142628565-1'
 
 menu:
 - {name: 'Blog', path: 'menu', url: 'blog.html'}
