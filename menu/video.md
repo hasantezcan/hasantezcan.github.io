@@ -3,8 +3,8 @@ layout: page
 title: Video
 ---
 
-
-Yakında....
+### Yakında....
+Şimdilik [youtube.com/hasantezcan](https://youtube.com/hasantezcan)
 
 
 <!-- <ul class="posts">
