@@ -3,22 +3,22 @@ layout: page
 title: Hakkımda
 ---
 
-## `Hasan Tezcan kimdir ?`
+## Hasan Tezcan kimdir ?
 
 Hasan Tezcan, hali hazırda bilgisayar mühendisliği okuyan, bölümünden memnun, lisans eğtiminden artakalan vakitlerde kendini profesyonel manada geliştirmek için çalışmalar yapan, tüm bunların yanında icra etmekten keyif duyduğu halk danslarını akstamayan, sağlıklı bir insan idealiyle fırsat buldukça spor yapan, öğrendikleri aktarmaktan zevk alan, videolu içerik üretmeyi çok seven bir öğrencidir.[evet, youtube kanalım var:)]
 
 Şu sıralarda Ruby on Rails ile haşırneşir olmaktayım. Ayrıca algortima bilgimi geliştirmeyi hedeflemekte ve bunun için çalışmalar yapmaktayım.
 
-### `Bloglar`
+### Bloglar
 
 Not almayı seviyorum. İleriye dönük yazılı kaynaklar bırakmanın hem kedime hem de topluluğa fayda kattığına inanıyorum. Bazen de edindiğim deneyimleri paylaşıp bir günlük gibi yazılarımı burada biriktiriyorum.
 
-### `Topluluklar Etkinlikler`
+### Topluluklar Etkinlikler
 
 Topluluklar, -eğer seversem- içinde olmaktan çok keyif duyduğum yerler oluyor benim için. Aktif olarak PaüSiber topluluğuna faliyet gösteriyorum geçtiğimiz sene içinde topluluktan arkdaşalarımızla bir çok etkinliğe katıldık, beraber bir çok etkinlik düzenledik. -Bu etkinliklere yazının devamında fotoğraflara birlikte değinicem- Bildiklerimizi birbirimizle paylaştık.
 
 
-### `Katıldıgım etkinlikler`
+### Katıldıgım etkinlikler
 
 - **Rails Girls**
 
