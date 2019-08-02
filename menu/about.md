@@ -5,7 +5,7 @@ title: Hakkımda
 
 ## Hasan Tezcan kimdir ?
 
-Hasan Tezcan, hali hazırda bilgisayar mühendisliği okuyan, bölümünden memnun, lisans eğtiminden artakalan vakitlerde kendini profesyonel manada geliştirmek için çalışmalar yapan, tüm bunların yanında icra etmekten keyif duyduğu halk danslarını akstamayan, sağlıklı bir insan idealiyle fırsat buldukça spor yapan, öğrendikleri aktarmaktan zevk alan, videolu içerik üretmeyi çok seven bir öğrencidir.[evet, youtube kanalım var:)]
+Hasan Tezcan, hali hazırda bilgisayar mühendisliği okuyan, bölümünden memnun, lisans eğtiminden artakalan vakitlerde kendini profesyonel manada geliştirmek için çalışmalar yapan, tüm bunların yanında icra etmekten keyif duyduğu halk danslarını aksatmayan, sağlıklı bir insan idealiyle fırsat buldukça spor yapan, öğrendikleri aktarmaktan zevk alan, videolu içerik üretmeyi çok seven bir öğrencidir.(evet, youtube kanalım var..)
 
 Şu sıralarda Ruby on Rails ile haşırneşir olmaktayım. Ayrıca algortima bilgimi geliştirmeyi hedeflemekte ve bunun için çalışmalar yapmaktayım.
 
@@ -15,7 +15,7 @@ Not almayı seviyorum. İleriye dönük yazılı kaynaklar bırakmanın hem kedi
 
 ### Topluluklar Etkinlikler
 
-Topluluklar, -eğer seversem- içinde olmaktan çok keyif duyduğum yerler oluyor benim için. Aktif olarak PaüSiber topluluğuna faliyet gösteriyorum geçtiğimiz sene içinde topluluktan arkdaşalarımızla bir çok etkinliğe katıldık, beraber bir çok etkinlik düzenledik. -Bu etkinliklere yazının devamında fotoğraflara birlikte değinicem- Bildiklerimizi birbirimizle paylaştık.
+Topluluklar, -eğer seversem- içinde olmaktan çok keyif duyduğum yerler oluyor benim için. Aktif olarak PaüSiber topluluğuna faaliyet gösteriyorum geçtiğimiz sene içinde topluluktan arkadaşlarımızla birçok etkinliğe katıldık, beraber birçok etkinlik düzenledik. -Bu etkinliklere yazının devamında fotoğraflarla birlikte değineceğim- Bildiklerimizi birbirimizle paylaştık.
 
 
 ### Katıldıgım etkinlikler
@@ -30,7 +30,7 @@ Topluluklar, -eğer seversem- içinde olmaktan çok keyif duyduğum yerler oluyo
 	<img alt="responsive-gif" src="/assets/hakkimda/rails_girls_1.png" width="650">
 </p>
 
-- **Hıdırelez kutlamaları 2019 Moldova/Gagavuzya**
+- **Hıdırellez kutlamaları 2019 Moldova/Gagavuzya**
 
 <p align="center">
 	<img alt="responsive-gif" src="/assets/hakkimda/gagavuzya19.jpg" width="650">
