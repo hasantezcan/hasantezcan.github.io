@@ -14,7 +14,7 @@ Bu yazı boyunca temel CPU zamanlama kavramlarından ve bazı CPU zamanlama algo
 
 Tek çekirdekli sistemlerde birim zamanda sadece bir işlem çalışabilir. Diğer işlemlerin çalışabilmesi için işlemci çekirdeklerinin boşalması ve tekrar zamanlanabilir hale gelmesi gerekir. Çoklu programlamanın amacı ise işlemci kullanımını en üst düzeye çıkartmaktır.
 
-Basit bilgisayar sistemlerinde bir işlemin başlayabilmesi için diğeri işlemin bitmesi gerekir. Örnek olarak işlemciye gelen bir I/O işlemi aslında o dakikadan itibaren bir bir başka cihazın işlem biriminde çalışıyor olsa da henüz o cihazdan cevap gelmeyip işlem tamamlanmadığından cevap gelene kadar CPU boşa çalışmış olur. Fakat çoklu programlama ile birlikte zamanı daha verimli kullanmaya başlarız. Birkaç işlem aynı anda bellekte barınabilir ve bu sayede bir işlem beklerken işletim sistemi CPU'yu bu işlemden uzaklaştırıp  CPU'yuya yeni bir işlem verebilir. Böylece işlem gücü boşa harcanmamış olur.
+Basit bilgisayar sistemlerinde bir işlemin başlayabilmesi için diğeri işlemin bitmesi gerekir. Örnek olarak işlemciye gelen bir I/O işlemi aslında o dakikadan itibaren bir bir başka cihazın işlem biriminde çalışıyor olsa da henüz o cihazdan cevap gelmeyip işlem tamamlanmadığından cevap gelene kadar CPU boşa çalışmış olur. Fakat çoklu programlama ile birlikte zamanı daha verimli kullanmaya başlarız. Birkaç işlem aynı anda bellekte barınabilir ve bu sayede bir işlem beklerken işletim sistemi CPU'yu bu işlemden uzaklaştırıp  CPU'ya yeni bir işlem verebilir. Böylece işlem gücü boşa harcanmamış olur.
 
 Kaynakların zamanlanması verimlik bakımından çok önemlidir. Özellikle de en temel bilgisayar kaynağı olan işlemcinin zamanlanması bize büyük ölçüde verim sağlayacaktır.
 > Tekrar Eden CPU ve I/O İşlem Döngüsü
@@ -58,7 +58,7 @@ CPU Scheduler kararlarını işlem;
 
 İşlemleri **Ready Quiden(RAM'den)** CPU'ya yükleyen ardından da **CPU'daki** işlemleri RAM'e kaydeden kaydeden yapı. **Context switch**'i gerçekleştiren birim. Process'leri taşırken kaldığı yerleri kaydedip tekrar çalışma durumda kaldığı yerden devam etmesini sağlar.(Register'ları, program counter'ları kaldığı yerden devam ettirir.)
 
-**Dispatch latency,** dispecher'ların bir programı sonlandırıp diğerini başlatması için gereken süre.(geçikme süresi)
+**Dispatch latency,** dispecher'ların bir programı sonlandırıp diğerini başlatması için gereken süre.(gecikme süresi)
 
 
 ## Scheduling Criteria
@@ -66,11 +66,11 @@ CPU Scheduler kararlarını işlem;
 
 - **CPU utilization** *(İşlemci kullanımı)* **:** İşlemciyi olabildiğince meşgul tutmak.
     - 100 birimlik bir işlem vaktinde CPU'ya bindirebildiğimiz işlem yükü.
-    - Örneğin 100 birimlik bir işlem vaktinde CPU'ya 80 birim iş yaptırmışsam %80'lik bir CPU kullanımımız mevcuttur.
+    - Örneğin 100 birimlik bir işlem vaktinde CPU'ya 80 birim iş yaptırmışsak %80'lik bir CPU kullanımımız mevcuttur.
 
 - **Throughput** *(Üretilen iş)* **:** Birim zamanda bitirdiğimiz işlem sayısı.
 
-- **Turnaraound time** *(Devir zamanı)* **:** Bir işlem sonlanana kadar geçen toplam zaman
+- **Turnaraound time** *(Devir zamanı)* **:** Bir işlem sonlanana kadar geçen toplam zaman.
     - Bir işlemin scheduler tarafından ready kuyruğundan seçilip işleminin bitmesine kadar geçen süre.
     - Başlangıcı ile bitişi arasındaki toplam zaman.
 
@@ -146,7 +146,7 @@ CPU en öncelikli olan işleme tahsis edilir.
 
 Preemptive(Kesilebilen işlem) ise işlem devam etse dahi o an daha öncelikli bir işlem geldiğinde yarıda kesilip öncelikli işlem yapılır.
 
-Nonpreemptive(Kesilemeyen işlem)'lerde iste işlem tamamlandıktan sonra en yüksek öncelik kimde ise CPU'yu o işlem kullanır.
+Nonpreemptive(Kesilemeyen işlem)'lerde ise işlem tamamlandıktan sonra en yüksek öncelik kimde ise CPU'yu o işlem kullanır.
 
 Bu algoritmanın yanında getirdiği bir problem vardır. Bu da **Starvation problemidir(açlık).** Düşük öncelikli bir işlem üzerine ondan daha öncelikli işlemlerin çokça gelmesi durumunda az öncelikli işlemimiz asla CPU'yu kullanamaz. Bu sorunu gidermek için bir çözümde vardır.
 
@@ -174,14 +174,14 @@ Time quantum'a 1 yıl dersek; bu bir yılda sadece bir işlem çalışacak demek
 
 #### `Çok yüksek time quantum belirlersek iş FCFS'a döner.`
 
-Time quantum'u çok düşük belirlememiz halinde de CPU'daki context switchlerin maliyeti artamaya başlıyor. Çünkü time quantum'u küçük belirlememiz çok sık process değişikli yapmamıza sebep oluyor.
+Time quantum'u çok düşük belirlememiz halinde de CPU'daki context switchlerin maliyeti artamaya başlıyor. Çünkü time quantum'u küçük belirlememiz çok sık process değişikliği yapmamıza sebep oluyor.
 
-#### `Çok küçük time quantum belirlemek context switch maliyetini artırır`
+#### `Çok küçük time quantum belirlemek context switch maliyetini artırır.`
 <p align="center">
 	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/quantum_context_switch_relation.png" width="500">
 </p>
 
-## Round Robin Scheduling örneği
+## Round Robin Scheduling örneği;
 
 <p align="center">
 	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_5.png" width="500">
@@ -216,10 +216,10 @@ Time quantum'u çok düşük belirlememiz halinde de CPU'daki context switchleri
 - Hesaplamalarımızı yaptıktan sonra sonuçlarımızın tablodakiler ile örtüştüğünü görmekteyiz.
 
 ---------
-> **NOT:** Anlatım boyunca gördüğünüz soru çözümlerinin tümü, tarafımca Figma'da tasarlanmıştır. Herhangi bir hata görmeniz taktirinde bana ulaşabilirsiniz.  
+> **NOT:** Anlatım boyunca gördüğünüz soru çözümlerinin tümü, tarafımca Figma'da tasarlanmıştır. Herhangi bir hata görmeniz taktirinde bana ulaşabilirsiniz.
 
 
-- Anlatımımızın sonuna geldik umarım sizler için faydalı olmuştur. Bir daha görüşümek üzere. İyi çalışmalar. :)
+- Anlatımımızın sonuna geldik umarım sizler için faydalı olmuştur. Bir daha görüşmek üzere. İyi çalışmalar. :)
 
 ---
 **> Kaynakça**
@@ -246,7 +246,7 @@ linux kernelini gradu bir tez
 
 AĞIRLIKLI RAOUND ROBİNN
 
-hem proslerin priorty var hemn de raoid robin kulnaılıyr
+hem proslerin priorty var hem de raoid robin kullanılıyor
 
 protylere göre quantum time dağıtılıyor.
 
