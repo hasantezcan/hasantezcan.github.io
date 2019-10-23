@@ -7,7 +7,6 @@ tags: [Operating Systems]
 image: "cpu.jpeg"
 date:   2019-10-23
 ---
-> Bölüm 5, CPU Scheduling (İşlemci Zamanlaması) sunumundan çıkartılan özettir.
 
 İşlemci zamanlamak, çoklu işlem yapabilen işletim sistemlerinin temelini oluşturur. Bu işletim sistemleri, CPU kullanımını işlemler arasında değiştirerek bilgisayarlarımızı daha üretken hale getirirler.
 
@@ -54,11 +53,13 @@ CPU Scheduler kararlarını işlem;
 - Diğer durumlar is **preemptive(kesen)**
     - Tüm modern işletim sistemleri Windows, Mac OS, Linux, and UNIX preemptive zamanlama algoritmalarını kullanırlar.
 
+
 ## Dispatcher
 
 İşlemleri **Ready Quiden(RAM'den)** CPU'ya yükleyen ardından da **CPU'daki** işlemleri RAM'e kaydeden kaydeden yapı. **Context switch**'i gerçekleştiren birim. Process'leri taşırken kaldığı yerleri kaydedip tekrar çalışma durumda kaldığı yerden devam etmesini sağlar.(Register'ları, program counter'ları kaldığı yerden devam ettirir.)
 
 **Dispatch latency,** dispecher'ların bir programı sonlandırıp diğerini başlatması için gereken süre.(geçikme süresi)
+
 
 ## Scheduling Criteria
 > Zamanlama Kriterleri
@@ -108,7 +109,7 @@ CPU'nun işlemleri gelme sırasına göre işleme aldığı zamanlama algoritmas
 Bu algoritmada **zorluk** işlemci kullanım sürelerini(burst time) tahmin etmektir.
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_3.png" width="">
+	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_3.png" width="500">
 </p>
 
 **Not:** Bu algortimanın çok verimli çalışmasına karşın sorunu bir işlemin çalışmadan önce burst time'ını bilemeyecek olmamızdır. İşlemlerin ancak çalıştıktan sonra ne kadar süre çalıştığını görebiliriz. Ama bunu anlamak için bazı analiz yöntemleri mevcut. Örneğin önceki verilere göre değerlendirimeler yapılabiliyor. Böylece bir sonraki işlemin ne kadar süreceği tahmin edilmeye çalışılıyor.
@@ -133,7 +134,7 @@ Daha önceki işlemci kulanım süreleri kullanılarak üssel ortalama(exponenti
 Demin çözdüğümüz soruya bir de ready kuyruğuna gelme zamanını(arrival time) eklersek bu sorunun çözümü nasıl değişir?
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_4.png" width="">
+	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_4.png" width="500">
 </p>
 
 ## 3.Priority Scheduling
@@ -155,7 +156,7 @@ Bu algoritmanın yanında getirdiği bir problem vardır. Bu da **Starvation pro
 ### Priority Scheduling Örneği
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_7.png" width="">
+	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_7.png" width="550">
 </p>
 
 ## 4. Round Robin Scheduling, "RR"
@@ -184,7 +185,7 @@ Time quantum'u çok düşük belirlememiz halinde de CPU'daki context switchleri
 ## Round Robin Scheduling örneği
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_5.png" width="">
+	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_5.png" width="500">
 </p>
 
 ## Turnaround Time, Time Quantum ile değişir;
@@ -198,25 +199,35 @@ Time quantum'u çok düşük belirlememiz halinde de CPU'daki context switchleri
 
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_6_0.png" width="">
+	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_6_0.png" width="450">
 </p>
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_6_q3.png" width="">
+	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_6_q3.png" width="500">
 </p>
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_6_q4.png" width="">
+	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_6_q4.png" width="500">
 </p>
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_6_q5.png" width="">
+	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_6_q5.png" width="500">
 </p>
 
-Hesaplamalarımızı yaptıktan sonra sonuçlarımızın tablodakiler ile örtüştüğünü görmekteyiz.
+- Hesaplamalarımızı yaptıktan sonra sonuçlarımızın tablodakiler ile örtüştüğünü görmekteyiz.
+
+---------
+> **NOT:** Anlatım boyunca gördüğünüz soru çözümlerinin tümü, tarafımca Figma'da tasarlanmıştır. Herhangi bir hata görmeniz taktirinde bana ulaşabilirsiniz.  
+
+
+- Anlatımımızın sonuna geldik umarım sizler için faydalı olmuştur. Bir daha görüşümek üzere. İyi çalışmalar. :)
 
 ---
+**> Kaynakça**
 
+- **[Operating System Concepts Tenth Edition](https://www.os-book.com/OS10/)**
+
+<!--
 ```bash
 ## çoklu kuyruklu işlemci zamanlama algoritması
 
@@ -243,4 +254,4 @@ protylere göre quantum time dağıtılıyor.
 44 .sayfa
 
 kernel derlemek
-```
+``` -->
