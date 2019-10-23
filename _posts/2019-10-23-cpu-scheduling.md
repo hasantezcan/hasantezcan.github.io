@@ -80,7 +80,10 @@ CPU Scheduler kararlarını işlem;
 
 > Bu kriterlerden yalnızca "**CPU untilization ve Throughput**" değerinin **fazla** olmasını isteriz. Diğerlerinin değeri ne kadar **az** ise zamanlama optimizasyonları da o oranda iyi olur.
 
+---
+
 # Scheduling Algorithms
+> Zamanlama algoritmaları
 
 ## 1. First-Come, First-Served Scheduling, "FCFS"
 
