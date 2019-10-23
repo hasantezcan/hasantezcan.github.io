@@ -14,7 +14,7 @@ Bu yazı boyunca temel CPU zamanlama kavramlarından ve bazı CPU zamanlama algo
 
 Tek çekirdekli sistemlerde birim zamanda sadece bir işlem çalışabilir. Diğer işlemlerin çalışabilmesi için işlemci çekirdeklerinin boşalması ve tekrar zamanlanabilir hale gelmesi gerekir. Çoklu programlamanın amacı ise işlemci kullanımını en üst düzeye çıkartmaktır.
 
-Basit bilgisayar sistemlerinde bir işlemin başlayabilmesi için diğeri işlemin bitmesi gerekir. Örnek olarak işlemciye gelen bir I/O işlemi aslında o dakikadan itibaren bir bir başka cihazın işlem biriminde çalışıyor olsa da henüz o cihazdan cevap gelmeyip işlem tamamlanmadığından cevap gelene kadar CPU boşa çalışmış olur. Fakat çoklu programlama ile birlikte zamanı daha verimli kullanmaya başlarız. Birkaç işlem aynı anda bellekte barınabilir ve bu sayede bir işlem beklerken işletim sistemi CPU'yu bu işlemden uzaklaştırıp  CPU'yuya yeni bir işlem verebilir. Böylece işlem gücü boşa harcanmamış olur.
+Basit bilgisayar sistemlerinde bir işlemin başlayabilmesi için diğeri işlemin bitmesi gerekir. Örnek olarak işlemciye gelen bir I/O işlemi aslında o dakikadan itibaren bir bir başka cihazın işlem biriminde çalışıyor olsa da henüz o cihazdan cevap gelmeyip işlem tamamlanmadığından cevap gelene kadar CPU boşa çalışmış olur. Fakat çoklu programlama ile birlikte zamanı daha verimli kullanmaya başlarız. Birkaç işlem aynı anda bellekte barınabilir ve bu sayede bir işlem beklerken işletim sistemi CPU'yu bu işlemden uzaklaştırıp  CPU'ya yeni bir işlem verebilir. Böylece işlem gücü boşa harcanmamış olur.
 
 Kaynakların zamanlanması verimlik bakımından çok önemlidir. Özellikle de en temel bilgisayar kaynağı olan işlemcinin zamanlanması bize büyük ölçüde verim sağlayacaktır.
 > Tekrar Eden CPU ve I/O İşlem Döngüsü
@@ -51,12 +51,12 @@ CPU Scheduler kararlarını işlem;
 
 - 1 ve 4 durumlarında yapılan zamanlama **nonpreemptive(kesmeyen)**
 - Diğer durumlar is **preemptive(kesen)**
-    - Tüm modern işletim sistemleri Windows, Mac OS, Linux, and UNIX preemptive zamanlama algoritmalarını kullanırlar.
+    - Tüm modern işletim sistemleri preemptive zamanlama algoritmalarını kullanırlar.
 
 
 ## Dispatcher
 
-İşlemleri **Ready Quiden(RAM'den)** CPU'ya yükleyen ardından da **CPU'daki** işlemleri RAM'e kaydeden kaydeden yapı. **Context switch**'i gerçekleştiren birim. Process'leri taşırken kaldığı yerleri kaydedip tekrar çalışma durumda kaldığı yerden devam etmesini sağlar.(Register'ları, program counter'ları kaldığı yerden devam ettirir.)
+İşlemleri **Ready Quiden(RAM'den)** CPU'ya yükleyen ardından da **CPU'daki** işlemleri RAM'e kaydeden yapı. **Context switch**'i gerçekleştiren birim. Process'leri taşırken kaldığı yerleri kaydedip tekrar çalışma durumunda kaldığı yerden devam etmesini sağlar.(Register'ları, program counter'ları kaldığı yerden devam ettirir.)
 
 **Dispatch latency,** dispecher'ların bir programı sonlandırıp diğerini başlatması için gereken süre.(geçikme süresi)
 
@@ -70,7 +70,7 @@ CPU Scheduler kararlarını işlem;
 
 - **Throughput** *(Üretilen iş)* **:** Birim zamanda bitirdiğimiz işlem sayısı.
 
-- **Turnaraound time** *(Devir zamanı)* **:** Bir işlem sonlanana kadar geçen toplam zaman
+- **Turnaraound time** *(Devir zamanı)* **:** Bir işlem sonlanana kadar geçen toplam zaman.
     - Bir işlemin scheduler tarafından ready kuyruğundan seçilip işleminin bitmesine kadar geçen süre.
     - Başlangıcı ile bitişi arasındaki toplam zaman.
 
@@ -104,7 +104,7 @@ CPU'nun işlemleri gelme sırasına göre işleme aldığı zamanlama algoritmas
 
 ## 2. Shortest-Job-First Scheduling, "SJF"
 
-İşlerimi burst time'ı en küçük olan ilk sırada olcak şekilde sıralar ve işleme bu sırada koyar. SJF en optimal zamanlama algoritmasıdır. Verilen bir iş kümesi için minimum ortalama bekleme süresini(average waiting time) sağlar.
+İşlemlerin burst time'ı en küçük olan ilk sırada olcak şekilde sıralar ve işleme bu sırada koyar. SJF en optimal zamanlama algoritmasıdır. Verilen bir iş kümesi için minimum ortalama bekleme süresini(average waiting time) sağlar.
 
 Bu algoritmada **zorluk** işlemci kullanım sürelerini(burst time) tahmin etmektir.
 
@@ -149,9 +149,9 @@ Preemptive(Kesilebilen işlem) ise işlem devam etse dahi o an daha öncelikli b
 
 Nonpreemptive(Kesilemeyen işlem)'lerde iste işlem tamamlandıktan sonra en yüksek öncelik kimde ise CPU'yu o işlem kullanır.
 
-Bu algoritmanın yanında getirdiği bir problem vardır. Bu da **Starvation problemidir(açlık).** Düşük öncelikli bir işlem üzerine ondan daha öncelikli işlemlerin çokça gelmesi durumunda az öncelikli işlemimiz asla CPU'yu kullanamaz. Bu sorunu gidermek için bir çözümde vardır.
+Bu algoritmanın yanında getirdiği bir problem vardır. Bu da **Starvation problemidir(açlık).** Düşük öncelikli bir işlem üzerine ondan daha öncelikli işlemlerin çokça gelmesi durumunda az öncelikli işlemimiz asla CPU'yu kullanamaz. Bu sorunu gidermek için bir çözüm de vardır.
 
-**Aging yöntemi**(yaşlandırma) önüne aldığı her işlemde bu önceliği az olan işlemimizin önceliğini yavaş yavaş artırırız. Böylece bu önceliksiz işlem de sistem kaynaklarından yararlanabilir.
+**Aging yöntemi**(yaşlandırma) önüne aldığı her işlemde, bu önceliği az olan işlemimizin önceliğini yavaş yavaş artırırız. Böylece bu önceliksiz işlem de sistem kaynaklarından yararlanabilir.
 
 ### Priority Scheduling Örneği
 
