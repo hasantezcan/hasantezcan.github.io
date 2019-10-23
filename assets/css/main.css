@@ -51,6 +51,10 @@ img {
   margin-right: auto;
 }
 
+p {
+  text-align: justify;
+}
+
 head-img {
   max-width: 100%;
   height: auto;

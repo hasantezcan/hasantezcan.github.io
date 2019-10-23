@@ -115,8 +115,7 @@ Bu algoritmada **zorluk** işlemci kullanım sürelerini(burst time) tahmin etme
 **Not:** Bu algortimanın çok verimli çalışmasına karşın sorunu bir işlemin çalışmadan önce burst time'ını bilemeyecek olmamızdır. İşlemlerin ancak çalıştıktan sonra ne kadar süre çalıştığını görebiliriz. Ama bunu anlamak için bazı analiz yöntemleri mevcut. Örneğin önceki verilere göre değerlendirimeler yapılabiliyor. Böylece bir sonraki işlemin ne kadar süreceği tahmin edilmeye çalışılıyor.
 
 ## Determining Length of next CPU
-
-- İşlemci kullanım süresinin belirlenmesi
+> İşlemci kullanım süresinin belirlenmesi
 
 Sadece tahmin edilebilir.
 
