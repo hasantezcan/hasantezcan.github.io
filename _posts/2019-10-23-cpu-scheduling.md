@@ -14,7 +14,7 @@ Bu yazı boyunca temel CPU zamanlama kavramlarından ve bazı CPU zamanlama algo
 
 Tek çekirdekli sistemlerde birim zamanda sadece bir işlem çalışabilir. Diğer işlemlerin çalışabilmesi için işlemci çekirdeklerinin boşalması ve tekrar zamanlanabilir hale gelmesi gerekir. Çoklu programlamanın amacı ise işlemci kullanımını en üst düzeye çıkartmaktır.
 
-Basit bilgisayar sistemlerinde bir işlemin başlayabilmesi için diğeri işlemin bitmesi gerekir. Örnek olarak işlemciye gelen bir I/O işlemi aslında o dakikadan itibaren bir bir başka cihazın işlem biriminde çalışıyor olsa da henüz o cihazdan cevap gelmeyip işlem tamamlanmadığından cevap gelene kadar CPU boşa çalışmış olur. Fakat çoklu programlama ile birlikte zamanı daha verimli kullanmaya başlarız. Birkaç işlem aynı anda bellekte barınabilir ve bu sayede bir işlem beklerken işletim sistemi CPU'yu bu işlemden uzaklaştırıp  CPU'yuya yeni bir işlem verebilir. Böylece işlem gücü boşa harcanmamış olur.
+Basit bilgisayar sistemlerinde bir işlemin başlayabilmesi için diğeri işlemin bitmesi gerekir. Örnek olarak işlemciye gelen bir I/O işlemi aslında o dakikadan itibaren bir bir başka cihazın işlem biriminde çalışıyor olsa da henüz o cihazdan cevap gelmeyip işlem tamamlanmadığından cevap gelene kadar CPU boşa çalışmış olur. Fakat çoklu programlama ile birlikte zamanı daha verimli kullanmaya başlarız. Birkaç işlem aynı anda bellekte barınabilir ve bu sayede bir işlem beklerken işletim sistemi CPU'yu bu işlemden uzaklaştırıp  CPU'ya yeni bir işlem verebilir. Böylece işlem gücü boşa harcanmamış olur.
 
 Kaynakların zamanlanması verimlik bakımından çok önemlidir. Özellikle de en temel bilgisayar kaynağı olan işlemcinin zamanlanması bize büyük ölçüde verim sağlayacaktır.
 > Tekrar Eden CPU ve I/O İşlem Döngüsü
@@ -51,12 +51,12 @@ CPU Scheduler kararlarını işlem;
 
 - 1 ve 4 durumlarında yapılan zamanlama **nonpreemptive(kesmeyen)**
 - Diğer durumlar is **preemptive(kesen)**
-    - Tüm modern işletim sistemleri Windows, Mac OS, Linux, and UNIX preemptive zamanlama algoritmalarını kullanırlar.
+    - Tüm modern işletim sistemleri preemptive zamanlama algoritmalarını kullanırlar.
 
 
 ## Dispatcher
 
-İşlemleri **Ready Quiden(RAM'den)** CPU'ya yükleyen ardından da **CPU'daki** işlemleri RAM'e kaydeden kaydeden yapı. **Context switch**'i gerçekleştiren birim. Process'leri taşırken kaldığı yerleri kaydedip tekrar çalışma durumda kaldığı yerden devam etmesini sağlar.(Register'ları, program counter'ları kaldığı yerden devam ettirir.)
+İşlemleri **Ready Quiden(RAM'den)** CPU'ya yükleyen ardından da **CPU'daki** işlemleri RAM'e kaydeden kaydeden yapı. **Context switch**'i gerçekleştiren birim. Process'leri taşırken kaldığı yerleri kaydedip tekrar çalışma durumunda kaldığı yerden devam etmesini sağlar.(Register'ları, program counter'ları kaldığı yerden devam ettirir.)
 
 **Dispatch latency,** dispecher'ların bir programı sonlandırıp diğerini başlatması için gereken süre.(geçikme süresi)
 
@@ -104,7 +104,7 @@ CPU'nun işlemleri gelme sırasına göre işleme aldığı zamanlama algoritmas
 
 ## 2. Shortest-Job-First Scheduling, "SJF"
 
-İşlerimi burst time'ı en küçük olan ilk sırada olcak şekilde sıralar ve işleme bu sırada koyar. SJF en optimal zamanlama algoritmasıdır. Verilen bir iş kümesi için minimum ortalama bekleme süresini(average waiting time) sağlar.
+İşlemleri burst time'ı en küçük olan ilk sırada olcak şekilde sıralar ve bu sırada işleme koyar. SJF en optimal zamanlama algoritmasıdır. Verilen bir iş kümesi için minimum ortalama bekleme süresini(average waiting time) sağlar.
 
 Bu algoritmada **zorluk** işlemci kullanım sürelerini(burst time) tahmin etmektir.
 
@@ -148,7 +148,7 @@ Preemptive(Kesilebilen işlem) ise işlem devam etse dahi o an daha öncelikli b
 
 Nonpreemptive(Kesilemeyen işlem)'lerde iste işlem tamamlandıktan sonra en yüksek öncelik kimde ise CPU'yu o işlem kullanır.
 
-Bu algoritmanın yanında getirdiği bir problem vardır. Bu da **Starvation problemidir(açlık).** Düşük öncelikli bir işlem üzerine ondan daha öncelikli işlemlerin çokça gelmesi durumunda az öncelikli işlemimiz asla CPU'yu kullanamaz. Bu sorunu gidermek için bir çözümde vardır.
+Bu algoritmanın yanında getirdiği bir problem vardır. Bu da **Starvation problemidir(açlık).** Düşük öncelikli bir işlem üzerine ondan daha öncelikli işlemlerin çokça gelmesi durumunda az öncelikli işlemimiz asla CPU'yu kullanamaz. Bu sorunu gidermek için bir çözüm de vardır.
 
 **Aging yöntemi**(yaşlandırma) önüne aldığı her işlemde bu önceliği az olan işlemimizin önceliğini yavaş yavaş artırırız. Böylece bu önceliksiz işlem de sistem kaynaklarından yararlanabilir.
 
@@ -196,7 +196,6 @@ Time quantum'u çok düşük belirlememiz halinde de CPU'daki context switchleri
 
 ***Hadi bunu kanıtlayalım;***
 
-
 <p align="center">
 	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_6_0.png" width="450">
 </p>
@@ -213,7 +212,22 @@ Time quantum'u çok düşük belirlememiz halinde de CPU'daki context switchleri
 	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_6_q5.png" width="500">
 </p>
 
-- Hesaplamalarımızı yaptıktan sonra sonuçlarımızın tablodakiler ile örtüştüğünü görmekteyiz.
+- Yukarıdaki örneği q=3, q=4 ve q=5 kurallarına uyarak çözüp time quantum değişiminin turnaround time'ı **doğru orantı** ile etkilediğini görmüş olduk. Hesaplamalarımızı da grafik ile kıyaslayıp bir hata yapmadığımızı görmüş olduk.
+
+
+## Multilevel Queue
+Şu ana kadar konuştuğumuz priority ve round-robin scheduling alogritmalarında tek bir kuyruk(queue) kullanılıyordu. Ve işlemler önceliklerine göre değerlendirip işleme konuyorlardı.
+
+Multilevel Queue yönteminde ise ready queue bölünerek başka queue'ler oluşturuyor. Bu aşamadan sonra öncelik sıraları işlem bazında değil de kuyruk bazında değerlendirilmeye başlanıyor. Kuyruklardan birinde çok yoğun işlerin görüldüğü işlemler barındırılırken, bir diğer kuyrukta ise işlem yükü pek de ağır olamayan hafif işler tutulmaya başlanıyor.
+
+İşlemleri öncelik sıralarına göre organize ettikten sonra da her bir kuyruk için başka bir zamanlama algoritması kullanabilir oluyoruz. Mesela işlem gücüne çok ihtiyaç duyduğumuz kuyruklarda (CPU yoğun işlemlerde) **response time** önemli olduğundan buna uygun olan Roud robin algoritmasını tercih ediyoruz. Öte yandan işlem önceliği çok olmayan düşük öncelikli işlemlerin tutulduğu kuyruklarda ise FCFS gibi bir algoritmayı kullanabiliriz.
+
+**foreground (interactive)**, cpu yoğun işlemlerin bulunduğu queue'ler
+**background (batch)**, CPU'nun nispeten daha az kullanıldığı arkaplan işleri
+
+<p align="center">
+	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/multilevel_queue.png" width="500">
+</p>
 
 ---------
 > **NOT:** Anlatım boyunca gördüğünüz soru çözümlerinin tümü, tarafımca Figma'da tasarlanmıştır. Herhangi bir hata görmeniz taktirinde bana ulaşabilirsiniz.  
