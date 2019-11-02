@@ -24,7 +24,7 @@ Kaynakların zamanlanması verimlik bakımından çok önemlidir. Özellikle de 
 </p>
 
 
-## CPU– I/O Burst Cycle
+## `CPU– I/O Burst Cycle`
 
 CPU zamanlamasının başarısı, gözlenen süreç özelliklerine bağlıdır. İşlem yürütme CPU yürütme döngüsünden ve I/O beklemesinden oluşur. İşlemler bu iki durum arasında değişmektedir.
 
@@ -37,7 +37,7 @@ CPU - I/O burst döngüleri cihazdan cihaza değişseler de Figür 5.2 dekine be
 	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/histogram-of-cpu-burst-durations.png" width="450">
 </p>
 
-## CPU Scheduler
+## `CPU Scheduler`
 > *İşlemci zamanlayıcısı*
 
 Bellekte(RAM) çalışmaya hazır halde bekleyen işlemlerden birini seçerek işlemciyi ona ayırır.
@@ -50,18 +50,21 @@ CPU Scheduler kararlarını işlem;
 4. **Sonlandığında(terminates)** verir.
 
 - 1 ve 4 durumlarında yapılan zamanlama **nonpreemptive(kesmeyen)**
-- Diğer durumlar is **preemptive(kesen)**
+- Diğer durumlar ise **preemptive(kesen)**
     - Tüm modern işletim sistemleri preemptive zamanlama algoritmalarını kullanırlar.
 
+<p align="center">
+	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/diagram_of_process_state.png" width="650">
+</p>
 
-## Dispatcher
+## `Dispatcher`
 
-İşlemleri **Ready Quiden(RAM'den)** CPU'ya yükleyen ardından da **CPU'daki** işlemleri RAM'e kaydeden kaydeden yapı. **Context switch**'i gerçekleştiren birim. Process'leri taşırken kaldığı yerleri kaydedip tekrar çalışma durumunda kaldığı yerden devam etmesini sağlar.(Register'ları, program counter'ları kaldığı yerden devam ettirir.)
+İşlemleri **Ready Quiden(RAM'den)** CPU'ya yükleyen ardından da **CPU'daki** işlemleri RAM'e kaydeden yapı. **Context switch**'i gerçekleştiren birim. Process'leri taşırken kaldığı yerleri kaydedip tekrar çalışma durumunda kaldığı yerden devam etmesini sağlar.(Register'ları, program counter'ları kaldığı yerden devam ettirir.)
 
 **Dispatch latency,** dispecher'ların bir programı sonlandırıp diğerini başlatması için gereken süre.(gecikme süresi)
 
 
-## Scheduling Criteria
+## `Scheduling Criteria`
 > Zamanlama Kriterleri
 
 - **CPU utilization** *(İşlemci kullanımı)* **:** İşlemciyi olabildiğince meşgul tutmak.
@@ -70,7 +73,7 @@ CPU Scheduler kararlarını işlem;
 
 - **Throughput** *(Üretilen iş)* **:** Birim zamanda bitirdiğimiz işlem sayısı.
 
-- **Turnaraound time** *(Devir zamanı)* **:** Bir işlem sonlanana kadar geçen toplam zaman.
+- **Turnaraound time** *(Devir zamanı)* **:** Bir işlemin CPU içinde sonlanana kadar geçirdiği toplam zaman.
     - Bir işlemin scheduler tarafından ready kuyruğundan seçilip işleminin bitmesine kadar geçen süre.
     - Başlangıcı ile bitişi arasındaki toplam zaman.
 
@@ -82,12 +85,12 @@ CPU Scheduler kararlarını işlem;
 
 ---
 
-# Scheduling Algorithms
+# `Scheduling Algorithms`
 > Zamanlama algoritmaları
 
-## 1. First-Come, First-Served Scheduling, "FCFS"
+## `1. First-Come, First-Served Scheduling, "FCFS"`
 
-CPU'nun işlemleri gelme sırasına göre işleme aldığı zamanlama algoritmasıdır. FCFS'da ilk gelen iş ilk yapılır o bittikten sonra sıradaki iş alınır ve bu düzen böyle devam eder.
+CPU'nun, işlemleri gelme sırasına göre işleme aldığı zamanlama algoritmasıdır. FCFS'da ilk gelen işlem ilk yapılır, o bittikten sonra sıradaki işlem CPU'ya alınır ve bu düzen böyle devam eder.
 
 - *İşlem önceliği, işlemlerin sıraya girme sıralarına göre belirlenir.*
 
@@ -105,7 +108,7 @@ CPU'nun işlemleri gelme sırasına göre işleme aldığı zamanlama algoritmas
 
 - Burst time'ı küçük olan işlemler ilk olarak işleme alınırsa daha iyi bir optimizasyon sağlanır.
 
-## 2. Shortest-Job-First Scheduling, "SJF"
+## `2. Shortest-Job-First Scheduling, "SJF"`
 
 İşlemleri burst time'ı en küçük olan ilk sırada olcak şekilde sıralar ve bu sırada işleme koyar. SJF en optimal zamanlama algoritmasıdır. Verilen bir iş kümesi için minimum ortalama bekleme süresini(average waiting time) sağlar.
 
@@ -117,7 +120,7 @@ Bu algoritmada **zorluk** işlemci kullanım sürelerini(burst time) tahmin etme
 
 **Not:** Bu algortimanın çok verimli çalışmasına karşın sorunu bir işlemin çalışmadan önce burst time'ını bilemeyecek olmamızdır. İşlemlerin ancak çalıştıktan sonra ne kadar süre çalıştığını görebiliriz. Ama bunu anlamak için bazı analiz yöntemleri mevcut. Örneğin önceki verilere göre değerlendirimeler yapılabiliyor. Böylece bir sonraki işlemin ne kadar süreceği tahmin edilmeye çalışılıyor.
 
-## Determining Length of next CPU
+## `Determining Length of next CPU`
 > İşlemci kullanım süresinin belirlenmesi
 
 Sadece tahmin edilebilir.
@@ -131,7 +134,7 @@ Daha önceki işlemci kulanım süreleri kullanılarak üssel ortalama(exponenti
 - Genelde **α** 1/2 ye eşittir.
 - Preemptive versiyonuna **"shortest-remaining-time-first"** denir.
 
-### Shortest-remaining-time-first örneği
+### `Shortest-remaining-time-first örneği;`
 
 Demin çözdüğümüz soruya bir de ready kuyruğuna gelme zamanını(arrival time) eklersek bu sorunun çözümü nasıl değişir?
 
@@ -139,17 +142,16 @@ Demin çözdüğümüz soruya bir de ready kuyruğuna gelme zamanını(arrival t
 	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_4.png" width="500">
 </p>
 
-## 3.Priority Scheduling
+## `3.Priority Scheduling`
+> Öncelikli Zamanlama
 
-Her bir işleme öncelik sayısı (tamsayı) atanır.
+Her bir işleme öncelik sayısı (tamsayı) atanır. CPU en öncelikli olan işleme tahsis edilir.
 
-CPU en öncelikli olan işleme tahsis edilir.
+- **En yüksek öncelik; en küçük tam sayıya aittir.**, *(kabul bu yöndedir)*
 
-- **En yüksek öncelik = En küçük tam sayı**
+**Preemptive**(Kesilebilen işlem) ise işlem devam etse dahi o an daha öncelikli bir işlem geldiğinde yarıda kesilip öncelikli işlem yapılır.
 
-Preemptive(Kesilebilen işlem) ise işlem devam etse dahi o an daha öncelikli bir işlem geldiğinde yarıda kesilip öncelikli işlem yapılır.
-
-Nonpreemptive(Kesilemeyen işlem)'lerde ise işlem tamamlandıktan sonra en yüksek öncelik kimde ise CPU'yu o işlem kullanır.
+**Nonpreemptive**(Kesilemeyen işlem)'lerde ise işlem tamamlandıktan sonra en yüksek öncelik kimde ise CPU'yu o işlem kullanır.
 
 Bu algoritmanın yanında getirdiği bir problem vardır. Bu da **Starvation problemidir(açlık).** Düşük öncelikli bir işlem üzerine ondan daha öncelikli işlemlerin çokça gelmesi durumunda az öncelikli işlemimiz asla CPU'yu kullanamaz. Bu sorunu gidermek için bir çözüm de vardır.
 
@@ -161,7 +163,9 @@ Bu algoritmanın yanında getirdiği bir problem vardır. Bu da **Starvation pro
 	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_7.png" width="550">
 </p>
 
-## 4. Round Robin Scheduling, "RR"
+
+
+## `4. Round Robin Scheduling, "RR"`
 
 <p align="center">
 	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/bread.png" width="350">
@@ -173,25 +177,24 @@ Bu algoritmanın yanında getirdiği bir problem vardır. Bu da **Starvation pro
 
 Çok yüksek time quantum belirlersek örneğin;
 
-Time quantum'a 1 yıl dersek; bu bir yılda sadece bir işlem çalışacak demek oluyor yani başka bir proses çalışmayacak. Tabi bu durumda işlem bir yıldan önce biteceği için. İşlem bittikten sonra öbür işlem gelecek ... Bir noktadan sonra aslında iş FCFS'a dönmüş oluyor.
+Time quantum'a 1 yıl dersek; bu bir yılda sadece bir işlem çalışacak demek oluyor yani başka bir proses çalışmayacak. Tabi bu durumda işlem bir yıldan önce biteceği için. İşlem bittikten sonra öbür işlem gelecek ... , Bir noktadan sonra aslında iş FCFS'a dönmüş oluyor.
 
-#### `Çok yüksek time quantum belirlersek iş FCFS'a döner.`
+#### `"Çok yüksek time quantum belirlersek iş FCFS'a döner."`
 
 Time quantum'u çok düşük belirlememiz halinde de CPU'daki context switchlerin maliyeti artamaya başlıyor. Çünkü time quantum'u küçük belirlememiz çok sık process değişikliği yapmamıza sebep oluyor.
 
-#### `Çok küçük time quantum belirlemek context switch maliyetini artırır.`
+#### `"Çok küçük time quantum belirlemek context switch maliyetini artırır."`
 <p align="center">
 	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/quantum_context_switch_relation.png" width="500">
 </p>
 
-## Round Robin Scheduling örneği;
+## `Round Robin Scheduling örneği;`
 
 <p align="center">
 	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_5.png" width="500">
 </p>
 
 ## Turnaround Time, Time Quantum ile değişir;
-
 
 <p align="center">
 	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/time_quantum_average_turn_around_time_graphics.png" width="400">
@@ -200,7 +203,7 @@ Time quantum'u çok düşük belirlememiz halinde de CPU'daki context switchleri
 ***Hadi bunu kanıtlayalım;***
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_6_0.png" width="450">
+	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_6_0.png" width="550">
 </p>
 
 <p align="center">
@@ -217,8 +220,7 @@ Time quantum'u çok düşük belirlememiz halinde de CPU'daki context switchleri
 
 - Yukarıdaki örneği q=3, q=4 ve q=5 kurallarına uyarak çözüp time quantum değişiminin turnaround time'ı **doğru orantı** ile etkilediğini görmüş olduk. Hesaplamalarımızı da grafik ile kıyaslayıp bir hata yapmadığımızı görmüş olduk.
 
-
-## Multilevel Queue
+## `Multilevel Queue`
 Şu ana kadar konuştuğumuz priority ve round-robin scheduling alogritmalarında tek bir kuyruk(queue) kullanılıyordu. Ve işlemler önceliklerine göre değerlendirip işleme konuyorlardı.
 
 Multilevel Queue yönteminde ise ready queue bölünerek başka queue'ler oluşturuyor. Bu aşamadan sonra öncelik sıraları işlem bazında değil de kuyruk bazında değerlendirilmeye başlanıyor. Kuyruklardan birinde çok yoğun işlerin görüldüğü işlemler barındırılırken, bir diğer kuyrukta ise işlem yükü pek de ağır olamayan hafif işler tutulmaya başlanıyor.
