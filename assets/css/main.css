@@ -91,9 +91,15 @@ blockquote {
   }
 }
 
+@media (max-width: 1100px) {
+  .container {
+    width: 75vw;
+  }
+}
+
 /*48em*/
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .container {
     width: 90vw;
   }
