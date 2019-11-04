@@ -14,7 +14,7 @@ Bu yazı boyunca temel CPU zamanlama kavramlarından ve bazı CPU zamanlama algo
 
 Tek çekirdekli sistemlerde birim zamanda sadece bir işlem çalışabilir. Diğer işlemlerin çalışabilmesi için işlemci çekirdeklerinin boşalması ve tekrar zamanlanabilir hale gelmesi gerekir. Çoklu programlamanın amacı ise işlemci kullanımını en üst düzeye çıkartmaktır.
 
-Basit bilgisayar sistemlerinde bir işlemin başlayabilmesi için diğeri işlemin bitmesi gerekir. Örnek olarak işlemciye gelen bir I/O işlemi aslında o dakikadan itibaren bir bir başka cihazın işlem biriminde çalışıyor olsa da henüz o cihazdan cevap gelmeyip işlem tamamlanmadığından cevap gelene kadar CPU boşa çalışmış olur. Fakat çoklu programlama ile birlikte zamanı daha verimli kullanmaya başlarız. Birkaç işlem aynı anda bellekte barınabilir ve bu sayede bir işlem beklerken işletim sistemi CPU'yu bu işlemden uzaklaştırıp  CPU'ya yeni bir işlem verebilir. Böylece işlem gücü boşa harcanmamış olur.
+Basit bilgisayar sistemlerinde bir işlemin başlayabilmesi için diğer işlemin bitmesi gerekir. Örnek olarak işlemciye gelen bir I/O işlemi aslında o dakikadan itibaren bir bir başka cihazın işlem biriminde çalışıyor olsa da henüz o cihazdan cevap gelmeyip işlem tamamlanmadığından cevap gelene kadar CPU boşa çalışmış olur. Fakat çoklu programlama ile birlikte zamanı daha verimli kullanmaya başlarız. Birkaç işlem aynı anda bellekte barınabilir ve bu sayede bir işlem beklerken işletim sistemi CPU'yu bu işlemden uzaklaştırıp  CPU'ya yeni bir işlem verebilir. Böylece işlem gücü boşa harcanmamış olur.
 
 Kaynakların zamanlanması verimlik bakımından çok önemlidir. Özellikle de en temel bilgisayar kaynağı olan işlemcinin zamanlanması bize büyük ölçüde verim sağlayacaktır.
 > Tekrar Eden CPU ve I/O İşlem Döngüsü
