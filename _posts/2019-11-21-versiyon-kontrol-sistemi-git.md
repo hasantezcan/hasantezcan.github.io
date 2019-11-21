@@ -91,6 +91,10 @@ $ git config --global user.email "mail_adresiniz"
 
 Şimdi projemizi versiyonlamak için hazırız.
 
+<p align="center">
+	<img alt="git_annotation" src="/assets/posts/versiyon-kontrol-sitemi-git/git_annotation.png" width="650">
+</p>
+
 ### `git init`
 
 Projemizi versiyonlamak için önce proje dizinimize girip ardından da git init komutunu yürütmemiz yeterli.
@@ -107,3 +111,98 @@ $ ls -a
 ```
 
 git yazılımını projemizden başlatıktan sonra projemiz içine gizli halde gelen **git diznini** görmekteyiz. Bu dizin içinde versiyonlamaya dair tüm dosyalar tutuluyor. Bu dosyanın silinmesi halinde tüm versiyonlama işlemlermiz yok olacakıtır.  
+
+---
+
+<p align="center">
+	<img alt="git_areas" src="/assets/posts/versiyon-kontrol-sitemi-git/git_areas.png" width="500">
+</p>
+
+### `git add`
+
+iki tür dosya durumu vardır bunlar **tracked** ve **untracked**
+
+Dosyaları staging area'ya almak için - stage
+
+```bash
+$ git add <dosya_adı>
+```
+
+
+stagin areaden çıkarmak için - unstage
+```bash
+$ git rm --cached <dosya_adı>
+```
+
+bu olaylar direk .git dosyalarına yansır bunu göremek için
+
+ayrı bir terminalde şu komutu çalıştırsanız değişiklerikeri takip edebilrsiniz.
+
+```bash
+$ watch -n .5 tree .git
+```
+
+3 adet git objesi vardır bunlar;
+- blob - collect of date - row data - descreption about the data
+- tree -
+- commit - en of the snapshot versionesed one
+
+[**[3]**](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects)
+
+### `git status`
+
+### `git commit`
+
+> a new snapshot
+
+
+Bir commit geri gider yani HEAD kafasını bir önceki commitin kine eş hale getirir. Son durumdan kalan değişikler untracked hale gelir.
+```bash
+git reset HEAD~
+```
+
+### `git log`
+
+
+
+---
+
+## Branchlar ile çalışmak
+
+## `git brach`
+
+bütün brachları listeler
+
+```bash
+git branch
+```
+
+brach oluşturmak
+
+```bash
+git checkout -b <branch_adi>
+```
+
+local brach silmek
+
+```bash
+git branch -d <branch_adi>
+```
+
+brachdaki güncellemeleri uzak depoya yollar
+```bash
+git push origin <branchname>
+```
+## `git stash`
+
+```bash
+git stash
+
+git stash pop
+```
+
+
+
+kaynakça:
+
+[basic git commands](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
