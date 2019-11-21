@@ -9,7 +9,7 @@ date:   2019-11-21
 ---
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/versiyon-kontrol-sitemi-git/versiyon-kontrol-sitemi-sebep.png" width="400">
+	<img alt="version_kontrol__sistemi" src="/assets/posts/versiyon-kontrol-sitemi-git/versiyon-kontrol-sitemi-sebep.png" width="400">
 </p>
 
 Herhangi bir projeyi geliştiriken böyle bir tablo ile muhakkak karşılaşmışsınızdır. Bu bir ödevi yapmak için olabilir ya da bir şiir yazarken. Projeniz üzerinde yapılan değişiklerinizi bir şekilde saklamak için aslına bu aşamalardan geçen herkes bu görselde olduğu kendi versiyon sistemini geliştirir ve bunu kullanır. Ne kadar verimli olduğu tartışılır ama bir versiyon kontrol sistemine ihtiyaç duyduğumuz ortadadır.
@@ -46,3 +46,15 @@ Bu versiyon kontol sistemlerinden kimileri hala aktif kimileride şu an kulladı
 Bugün biz günümüzde en yaygın kullanılan versiyon kontrol sistemi GIT ile çalışacağız ve projelerimizi git ile yönetmeyi öğreceğiz.
 
 ## Git Nedir?
+
+Git özgür ve dağıtık bir version kontrol sistemidir. GIT, linux'ü geliştiren ekibin o zamanlar kullandıkları [**BitKeeper**](https://www.bitkeeper.org/) adlı proje yönetim araçının ücretsiz lisans anlaşmasının bitmesi ile Linus Toravalds ve ekibinin BitKeeper'ı kullanırken yaşadıkları sıkıntıları da göz ederek tasarladıkları 2005 yılında ortaya çıkan bir versiyon kontrol sistemidir.
+
+Git ismi, Linus Torvalds tarfından Git'in ilk versiyonunun yayımlanması ile verilmişitir. Aslında Git kelimesi İngiliz  ingilicesinde **"aptal"** anlamına gelen argo bir kelime. [**[2]**](https://dictionary.cambridge.org/dictionary/english/git)
+
+<p align="center">
+	<img alt="git_dictionary" src="/assets/posts/versiyon-kontrol-sitemi-git/git_dictionary.png" width="400">
+</p>
+
+Ayrıca Linus Torvalds "**GIT**" isminin açılımını şu şekilde ifade ediyor;
+- Düzgün çalışıp iş gördüğünde ve sizi mutlu ettiğinde **Global Information Tracker**(Küresel bilgi takip sistemi)
+- İstediğiniz gibi çalışmazsa ve sizi çıldırtırsa da **"Goddamn Idiotic Truckload of shit"**
