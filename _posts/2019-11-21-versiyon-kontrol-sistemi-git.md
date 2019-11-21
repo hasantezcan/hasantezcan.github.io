@@ -47,14 +47,63 @@ Bugün biz günümüzde en yaygın kullanılan versiyon kontrol sistemi GIT ile 
 
 ## Git Nedir?
 
-Git özgür ve dağıtık bir version kontrol sistemidir. GIT, linux'ü geliştiren ekibin o zamanlar kullandıkları [**BitKeeper**](https://www.bitkeeper.org/) adlı proje yönetim araçının ücretsiz lisans anlaşmasının bitmesi ile Linus Toravalds ve ekibinin BitKeeper'ı kullanırken yaşadıkları sıkıntıları da göz ederek tasarladıkları 2005 yılında ortaya çıkan bir versiyon kontrol sistemidir.
+[**Git**](https://git-scm.com/) özgür ve dağıtık bir version kontrol sistemidir. GIT, linux'ü geliştiren ekibin o zamanlar kullandıkları [**BitKeeper**](https://www.bitkeeper.org/) adlı proje yönetim araçının ücretsiz lisans anlaşmasının bitmesi ile Linus Toravalds ve ekibinin BitKeeper'ı kullanırken yaşadıkları sıkıntıları da göz ederek tasarladıkları 2005 yılında ortaya çıkan bir versiyon kontrol sistemidir.
 
 Git ismi, Linus Torvalds tarfından Git'in ilk versiyonunun yayımlanması ile verilmişitir. Aslında Git kelimesi İngiliz  ingilicesinde **"aptal"** anlamına gelen argo bir kelime. [**[2]**](https://dictionary.cambridge.org/dictionary/english/git)
 
 <p align="center">
-	<img alt="git_dictionary" src="/assets/posts/versiyon-kontrol-sitemi-git/git_dictionary.png" width="400">
+	<img alt="git_dictionary" src="/assets/posts/versiyon-kontrol-sitemi-git/git_dictionary.png" width="500">
 </p>
 
 Ayrıca Linus Torvalds "**GIT**" isminin açılımını şu şekilde ifade ediyor;
 - Düzgün çalışıp iş gördüğünde ve sizi mutlu ettiğinde **Global Information Tracker**(Küresel bilgi takip sistemi)
 - İstediğiniz gibi çalışmazsa ve sizi çıldırtırsa da **"Goddamn Idiotic Truckload of shit"**
+
+## Git Nasıl kullanılır?
+
+Öncelikle git versioyon kontrol sistemi yazılımının bilgisayarınızda yüklü olması gerekiyor.
+
+Bunu öğrenmek için GNU/Linux bir işletim sistemi kullanıyorsanız paket yöneticiniz ile git programnı aratıp bilgisayarınıza yüklü olup olmadığını öğrenebilirsiniz.
+
+<p align="center">
+	<img alt="git_is_exist" src="/assets/posts/versiyon-kontrol-sitemi-git/git_is_exist.png" width="">
+</p>
+
+Eğer GNU/Linux dışında bir işletim sistemi kullanıyorsanız kurulum aşamalarınıa [**git'in resmi sitesinden**](https://git-scm.com/downloads) bakabilirsiniz.
+
+---
+
+### `git config`
+
+Versiyonlamaya başlamadan önce yazacağımız kodların kimin tarafından yazılıdığının bilinmesi açısından GIT ayarlarımızı yapmamız gerekiyor.
+
+hali hazırdaki git ayarlarını  görmek için
+
+```bash
+$ git config --list
+```
+Henüz bir ayar girmemişseniz boş bir çıktı alacaksınız. Ayarlamak için;
+
+```bash
+$ git config --global user.name "kullanıcı_adınız"
+$ git config --global user.email "mail_adresiniz"
+```
+
+Şimdi projemizi versiyonlamak için hazırız.
+
+### `git init`
+
+Projemizi versiyonlamak için önce proje dizinimize girip ardından da git init komutunu yürütmemiz yeterli.
+
+```bash
+$ git init
+Initialized empty Git repository in /projenin_adresi
+```
+Komutu yürüttükten sonra hiç bir şey değişmemiş gibi görüyor fakat öyle değil.
+
+```bash
+$ ls -a
+.  ..  .git
+```
+
+git yazılımını projemizden başlatıktan sonra projemiz içine gizli halde gelen **git diznini** görmekteyiz. Bu dizin içinde versiyonlamaya dair tüm dosyalar tutuluyor. Bu dosyanın silinmesi halinde tüm versiyonlama işlemlermiz yok olacakıtır.  
