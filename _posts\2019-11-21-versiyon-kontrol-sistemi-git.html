@@ -27,14 +27,15 @@ title: &quot;Versiyon Kontrol Sistemi GIT&quot;
 author: &quot;Hasan Tezcan&quot;
 categories: blog
 tags: [Git]
-image: &quot;git.jpeg&quot;</p>
+image: &quot;/git.png&quot;</p>
 <h2 id="date-2019-11-21">date:   2019-11-21</h2>
+<p>Herhangi bir projeyi geli&#x15F;tiriken b&#xF6;yle bir tablo ile muhakkak kar&#x15F;&#x131;la&#x15F;m&#x131;&#x15F;s&#x131;n&#x131;zd&#x131;r. Bu bir &#xF6;devi yapmak i&#xE7;in olabilir ya da bir &#x15F;iir yazarken. Projeniz &#xFC;zerinde yap&#x131;lan de&#x11F;i&#x15F;iklerinizi bir &#x15F;ekilde saklamak i&#xE7;in asl&#x131;na bu a&#x15F;amalardan ge&#xE7;en herkes bu g&#xF6;rselde oldu&#x11F;u kendi versiyon sistemini geli&#x15F;tirir ve bunu kullan&#x131;r. Ne kadar verimli oldu&#x11F;u tart&#x131;&#x15F;&#x131;l&#x131;r ama bir versiyon kontrol sistemine ihtiya&#xE7; duydu&#x11F;umuz ortadad&#x131;r.</p>
+<p>Bug&#xFC;n sizlerle birlikte var olan versiyon kontrol sitemlerinden ve g&#xFC;n&#xFC;m&#xFC;zde yayg&#x131;n olarak kullan&#x131;lan GIT version kontol sisteminin nas&#x131;l kullan&#x131;ld&#x131;&#x11F;&#x131;ndan bahsedece&#x11F;im.</p>
 <p align="center">
     <img alt="version_kontrol__sistemi" src="/assets/posts/versiyon-kontrol-sitemi-git/versiyon-kontrol-sitemi-sebep.png" width="400">
 </p>
 
-<p>Herhangi bir projeyi geli&#x15F;tiriken b&#xF6;yle bir tablo ile muhakkak kar&#x15F;&#x131;la&#x15F;m&#x131;&#x15F;s&#x131;n&#x131;zd&#x131;r. Bu bir &#xF6;devi yapmak i&#xE7;in olabilir ya da bir &#x15F;iir yazarken. Projeniz &#xFC;zerinde yap&#x131;lan de&#x11F;i&#x15F;iklerinizi bir &#x15F;ekilde saklamak i&#xE7;in asl&#x131;na bu a&#x15F;amalardan ge&#xE7;en herkes bu g&#xF6;rselde oldu&#x11F;u kendi versiyon sistemini geli&#x15F;tirir ve bunu kullan&#x131;r. Ne kadar verimli oldu&#x11F;u tart&#x131;&#x15F;&#x131;l&#x131;r ama bir versiyon kontrol sistemine ihtiya&#xE7; duydu&#x11F;umuz ortadad&#x131;r.</p>
-<p>Bug&#xFC;n sizlerle birlikte var olan versiyon kontrol sitemlerinden ve g&#xFC;n&#xFC;m&#xFC;zde yayg&#x131;n olarak kullan&#x131;lan GIT version kontol sisteminin nas&#x131;l kullan&#x131;ld&#x131;&#x11F;&#x131;ndan bahsedece&#x11F;im.</p>
+
 <h2 id="versiyon-kontrol-sistemi-nedir-">Versiyon Kontrol Sistemi Nedir?</h2>
 <p>Versiyon kontol sistemleri herhangi bir proje &#xFC;zerine &#xE7;al&#x131;&#x15F;&#x131;rken size yapt&#x131;&#x11F;&#x131;n&#x131;z de&#x11F;i&#x15F;iklikler ve yenilikler aras&#x131;nda bo&#x11F;ulmadan temiz bir &#x15F;ekilde &#xE7;al&#x131;&#x15F;abilme imkan&#x131; sunar.</p>
 <p>Version kontol sistemleri ile &#xE7;al&#x131;&#x15F;amay&#x131; &#xF6;&#x11F;rendikten sonra bir proje &#xFC;zerinde zamanda geri gidebilir projenizin falanca zamanki halini o g&#xFC;nk&#xFC; hali ile inceleyebilir ya da projenizin o anki halini bozmadan &#xFC;zerine yeni denemeler yapabilir ve bu denemeniz istedi&#x11F;iniz gibi olursa ana projenize bu &#xF6;zelli&#x11F;i ekleyebilirsiniz.</p>
@@ -89,18 +90,22 @@ image: &quot;git.jpeg&quot;</p>
 <pre><code class="language-bash">$ git config --global user.name &quot;kullan&#x131;c&#x131;_ad&#x131;n&#x131;z&quot;
 $ git config --global user.email &quot;mail_adresiniz&quot;</code></pre>
 <p>&#x15E;imdi projemizi versiyonlamak i&#xE7;in haz&#x131;r&#x131;z.</p>
+<p>Annotation denen bir kavramdan bahsetmek istiyorum. T&#xFC;rk&#xE7;e dipnot demek olan bu kavram yaz&#x131;lan kod sat&#x131;rlar&#x131;n&#x131;n kim taraf&#x131;ndan yaz&#x131;ld&#x131;&#x11F;&#x131;n&#x131; ifade eder. Demin girdi&#x11F;imiz git config&apos;leri (ayarlar&#x131;) bu annotation&apos;larda g&#xF6;z&#xFC;k&#xFC;r. Bu kulland&#x131;&#x11F;&#x131;n&#x131;z ide ya da metin editorlerinde ya kendili&#x11F;inden gelecektir ya da eklenti &#x15F;ekilde kurulabilir.  </p>
 <p align="center">
     <img alt="git_annotation" src="/assets/posts/versiyon-kontrol-sitemi-git/git_annotation.png" width="650">
 </p>
 
+<p>Annotation&apos;lar sayasinde bir projede &#xE7;al&#x131;&#x15F;&#x131;rken okdu&#x11F;unuz kodun kim taraf&#x131;ndan ne zaman yaz&#x131;ld&#x131;&#x11F;&#x131;n&#x131; g&#xF6;rebilirsiniz. Ve diledi&#x11F;iniz zaman bu kod par&#xE7;ac&#x131;klar&#x131; i&#xE7;in kodun sahibi ile belirtti&#x11F;i e-posta adresi ile ilete&#x15F;ime ge&#xE7;ebilirsiniz.</p>
+<p>Yani annotation&apos;lar bir nevi imza g&#xF6;revi g&#xF6;r&#xFC;r.  </p>
 <h3 id="git-init"><code>git init</code></h3>
-<p>Projemizi versiyonlamak i&#xE7;in &#xF6;nce proje dizinimize girip ard&#x131;ndan da git init komutunu y&#xFC;r&#xFC;tmemiz yeterli.</p>
+<p>Projemizi versiyonlamak i&#xE7;in &#xF6;nce proje dizinimize girip ard&#x131;ndan da <code>git init</code> komutunu y&#xFC;r&#xFC;tmemiz yeterli.</p>
 <pre><code class="language-bash">$ git init
 Initialized empty Git repository in /projenin_adresi</code></pre>
-<p>Komutu y&#xFC;r&#xFC;tt&#xFC;kten sonra hi&#xE7; bir &#x15F;ey de&#x11F;i&#x15F;memi&#x15F; gibi g&#xF6;r&#xFC;yor fakat &#xF6;yle de&#x11F;il.</p>
+<p>Komutu y&#xFC;r&#xFC;tt&#xFC;kten sonra projemiz i&#xE7;inde hi&#xE7; bir &#x15F;ey de&#x11F;i&#x15F;memi&#x15F; gibi g&#xF6;r&#xFC;n&#xFC;yor fakat &#xF6;yle de&#x11F;il.</p>
 <pre><code class="language-bash">$ ls -a
 .  ..  .git</code></pre>
-<p>git yaz&#x131;l&#x131;m&#x131;n&#x131; projemizden ba&#x15F;lat&#x131;ktan sonra projemiz i&#xE7;ine gizli halde gelen <strong>git diznini</strong> g&#xF6;rmekteyiz. Bu dizin i&#xE7;inde versiyonlamaya dair t&#xFC;m dosyalar tutuluyor. Bu dosyan&#x131;n silinmesi halinde t&#xFC;m versiyonlama i&#x15F;lemlermiz yok olacak&#x131;t&#x131;r.  </p>
+<p>Git yaz&#x131;l&#x131;m&#x131;n&#x131; projemizden ba&#x15F;lat&#x131;ktan sonra projemiz i&#xE7;ine gizli halde gelen <strong>.git diznini</strong> g&#xF6;rmekteyiz. Bu dizin i&#xE7;inde versiyonlamaya dair t&#xFC;m dosyalar tutuluyor.</p>
+<p>Bu dosyan&#x131;n silinmesi halinde t&#xFC;m versiyonlama i&#x15F;lemlermiz yok olacak&#x131;t&#x131;r. Hatal&#x131; bir git init &#xE7;al&#x131;&#x15F;t&#x131;r&#x131;lmas&#x131; durumunda .git dizinini silmek versiyon kontrol&#xFC;n&#xFC; dizninizden kald&#x131;racakt&#x131;r.</p>
 <hr>
 <p align="center">
     <img alt="git_areas" src="/assets/posts/versiyon-kontrol-sitemi-git/git_areas.png" width="500">

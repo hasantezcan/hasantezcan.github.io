@@ -4,17 +4,19 @@ title: "Versiyon Kontrol Sistemi GIT"
 author: "Hasan Tezcan"
 categories: blog
 tags: [Git]
-image: "git.jpeg"
+image: "/git.png"
 date:   2019-11-21
 ---
+
+
+Herhangi bir projeyi geliştiriken böyle bir tablo ile muhakkak karşılaşmışsınızdır. Bu bir ödevi yapmak için olabilir ya da bir şiir yazarken. Projeniz üzerinde yapılan değişiklerinizi bir şekilde saklamak için aslına bu aşamalardan geçen herkes bu görselde olduğu kendi versiyon sistemini geliştirir ve bunu kullanır. Ne kadar verimli olduğu tartışılır ama bir versiyon kontrol sistemine ihtiyaç duyduğumuz ortadadır.
+
+Bugün sizlerle birlikte var olan versiyon kontrol sitemlerinden ve günümüzde yaygın olarak kullanılan GIT version kontol sisteminin nasıl kullanıldığından bahsedeceğim.
 
 <p align="center">
 	<img alt="version_kontrol__sistemi" src="/assets/posts/versiyon-kontrol-sitemi-git/versiyon-kontrol-sitemi-sebep.png" width="400">
 </p>
 
-Herhangi bir projeyi geliştiriken böyle bir tablo ile muhakkak karşılaşmışsınızdır. Bu bir ödevi yapmak için olabilir ya da bir şiir yazarken. Projeniz üzerinde yapılan değişiklerinizi bir şekilde saklamak için aslına bu aşamalardan geçen herkes bu görselde olduğu kendi versiyon sistemini geliştirir ve bunu kullanır. Ne kadar verimli olduğu tartışılır ama bir versiyon kontrol sistemine ihtiyaç duyduğumuz ortadadır.
-
-Bugün sizlerle birlikte var olan versiyon kontrol sitemlerinden ve günümüzde yaygın olarak kullanılan GIT version kontol sisteminin nasıl kullanıldığından bahsedeceğim.
 
 ## Versiyon Kontrol Sistemi Nedir?
 
@@ -91,28 +93,58 @@ $ git config --global user.email "mail_adresiniz"
 
 Şimdi projemizi versiyonlamak için hazırız.
 
+Annotation denen bir kavramdan bahsetmek istiyorum. Türkçe dipnot demek olan bu kavram yazılan kod satırlarının kim tarafından yazıldığını ifade eder. Demin girdiğimiz git config'leri (ayarları) bu annotation'larda gözükür. Bu kullandığınız ide ya da metin editorlerinde ya kendiliğinden gelecektir ya da eklenti şekilde kurulabilir.  
+
 <p align="center">
 	<img alt="git_annotation" src="/assets/posts/versiyon-kontrol-sitemi-git/git_annotation.png" width="650">
 </p>
 
+Annotation'lar sayasinde bir projede çalışırken okduğunuz kodun kim tarafından ne zaman yazıldığını görebilirsiniz. Ve dilediğiniz zaman bu kod parçacıkları için kodun sahibi ile belirttiği e-posta adresi ile ileteşime geçebilirsiniz.
+
+Yani annotation'lar bir nevi imza görevi görür.  
+
 ### `git init`
 
-Projemizi versiyonlamak için önce proje dizinimize girip ardından da git init komutunu yürütmemiz yeterli.
+Projemizi versiyonlamak için önce proje dizinimize girip ardından da `git init` komutunu yürütmemiz yeterli.
 
 ```bash
 $ git init
 Initialized empty Git repository in /projenin_adresi
 ```
-Komutu yürüttükten sonra hiç bir şey değişmemiş gibi görüyor fakat öyle değil.
+Komutu yürüttükten sonra projemiz içinde hiç bir şey değişmemiş gibi görünüyor fakat öyle değil.
 
 ```bash
 $ ls -a
 .  ..  .git
 ```
 
-git yazılımını projemizden başlatıktan sonra projemiz içine gizli halde gelen **git diznini** görmekteyiz. Bu dizin içinde versiyonlamaya dair tüm dosyalar tutuluyor. Bu dosyanın silinmesi halinde tüm versiyonlama işlemlermiz yok olacakıtır.  
+Git yazılımını projemizden başlatıktan sonra projemiz içine gizli halde gelen **.git diznini** görmekteyiz. Bu dizin içinde versiyonlamaya dair tüm dosyalar tutuluyor.
+
+Bu dosyanın silinmesi halinde tüm versiyonlama işlemlermiz yok olacakıtır. Hatalı bir git init çalıştırılması durumunda .git dizinini silmek versiyon kontrolünü dizninizden kaldıracaktır.
 
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <p align="center">
 	<img alt="git_areas" src="/assets/posts/versiyon-kontrol-sitemi-git/git_areas.png" width="500">
