@@ -183,6 +183,9 @@ $ watch -n .5 tree .git
 
 ### `git status`
 
+
+
+
 ### `git commit`
 
 > a new snapshot
@@ -192,6 +195,10 @@ Bir commit geri gider yani HEAD kafasını bir önceki commitin kine eş hale ge
 ```bash
 git reset HEAD~
 ```
+
+<p align="center">
+<img alt="git_areas" src="/assets/posts/versiyon-kontrol-sitemi-git/cat-dog.png" width="500">
+</p>
 
 ### `git log`
 
