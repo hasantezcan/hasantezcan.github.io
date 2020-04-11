@@ -244,7 +244,7 @@ git stash pop
 
 # `Özel sorunlar ve çözümleri`
 
-## Repo trasnfer etmek
+## Repo transfer etmek
 
 Bunun için iki yol mevcut;
 biri tüm commitlerinizi de saklayıp trasnfer etmek, diğeri de hiç bir commitinizi saklamadan trasfer etmek. 
@@ -363,6 +363,6 @@ Bu aşamadan sonra reponuzu commitleri ile birlikte yeni reponuza transfer taş�
 ..  
 ..  
  
-Kaynakça:
+## `Kaynakça:`
 
-[basic git commands](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
+- [Basic git commands](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
