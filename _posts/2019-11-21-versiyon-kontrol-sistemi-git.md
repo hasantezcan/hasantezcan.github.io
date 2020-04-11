@@ -240,8 +240,129 @@ git stash
 git stash pop
 ```
 
+---
+
+# `Özel sorunlar ve çözümleri`
+
+## Repo trasnfer etmek
+
+Bunun için iki yol mevcut;
+biri tüm commitlerinizi de saklayıp trasnfer etmek, diğeri de hiç bir commitinizi saklamadan trasfer etmek. 
+
+İkinci yol en basit olan hadi onla başlayalım.
+
+## Bir git reposunu commit geçmişSİZ yeni bir repoya taşıma
+
+Repolarımızda git ile ilgli tüm dosyalar `.git` adlı bir dizinde tutulur. Config dosyalarımız, commit geçmişimiz vb. tümü bu dosya içindedir. 
+
+Bizim commitlerimizi saklama gibi bir derdimiz yoksa bu dosyayı silmemiz gerekir ki tüm commitlerden arınalım ve yeni bir başlangıç yapalım.
+
+GNU/Linux sistemlerde gizli dosyaları görmek için `ctrl + h` kısa yolunu kullanabilirsiniz. 
+
+```bash
+rm -rf .git
+```
+
+dedikten sonra repo içindeki tüm dosyaları yeni reponuza yapıştırıp ilk commitinizi atabilirsiniz. 
+
+```
+git add .
+git commit -m "Initial commit"
+```
 
 
-kaynakça:
+## Bir git reposunu commit geçmişi ile beraber yeni bir repoya taşıma
+
+> Git reponuzu commit geçmişi brachları ve tag'ları ile beraber yeni bir repoya yüklemek.
+
+Hadi bu durmu simule edelim elinizde bir repo var ve bu repoyu bambaşka yeni bir repoya taşımak istiyorsunuz. Tüm commitler ile beraber. Taşıyacağınız repo bir başka kişinin reposu olabilir ya da bir organizasyon reposu olabilir. Bu hiç bir şeyi değiştirmez. Peki nasıl yaparız?
+
+`1-` **İlk olarak transfer edeceğiniz repoyu belirleyin. Belli bir reponuz yoksa yeni bir repo oluşturun.**
+
+
+`2-` **Sonrasında eski reponun bir mirror reposunu yaratarak başlayacağız.**
+
+```bash
+git clone --mirror old-repo-url new-repo-name
+```
+
+> `old-repo-url` yazan kısma taşımak istediğiniz reponun url'ini yazın. ve `new-repo-name` yazan yere de trasfer edeceğiniz reponun adını yazın.
+
+
+`3-` **Repoya girin ve eski(orjinal) reponun remote referans bilgisini temizleyin.**
+
+```bash
+cd new-repo-name
+```
+
+Remote referans bilgisini sildiğinizi bu çalıştırılabilir ile kontrol edebilirsiniz. 
+> (Q ya basarak çıkabilirsiniz.)
+
+```bash
+git config --list
+```
+
+```bash
+git remote remove origin
+```
+Bu çalıştırılabiliri çalıştırdıkran sonra remote bilgisinin artık olmadığını göreceksiniz.
+
+
+`4-` **Yeni reponunuzun remote bilgisini ekleme**
+
+Github, gitlab ya da bitbucket uzak reponuz neredeyse uzak reponuzun remote linkini local reponuza bu şekilde ekleyin;
+
+```bash
+git remote add origin new-repo-url
+```
+> `new-repo-url` yerine uzak reponuzun(remote) URL'ini girin.	 
+
+`5-` **Yapılan tüm düzenlemeleri uzak repoya yollayın**
+
+```bash
+git push --all
+git push --tags
+```
+
+`6-` **Uzak deponuzu clone'layın ve üzerinde çalıştığınız repoyu silin**
+
+Bir üst dizine çıkıp üzerinizde çalıştığınız repoyu silin. Bu adımı bu repo üzerinde bu hali ile çalışamadığımız için gerçekleştiriyoruz. Bu haliyle içinde git dosyaları açık şekilde çalışıyor. Ve bu istemediğimiz bir şey.
+
+```bash
+cd ..
+rm -rf new-repo-name
+```
+
+Sonrasında uzak repomuzdan(remote) bilgisayarımıza(local) tekar indiriyoruz. 
+
+```bash 
+git clone new-repo-url
+```
+> `new-repo-url` yerine uzak reponuzun(remote) URL'ini girin.	
+
+
+Bu aşamadan sonra reponuzu commitleri ile birlikte yeni reponuza transfer taşımış bulunuyorsunuz.
+
+
+..   
+..  
+..  
+..   
+..  
+..  
+..   
+..  
+..  
+..   
+..  
+..  
+..   
+..  
+..  
+..   
+..  
+..  
+ 
+Kaynakça:
 
 [basic git commands](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
