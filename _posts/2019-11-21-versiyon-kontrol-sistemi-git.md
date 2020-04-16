@@ -366,3 +366,4 @@ Bu aşamadan sonra reponuzu commitleri ile birlikte yeni reponuza transfer taş�
 ## `Kaynakça:`
 
 - [Basic git commands](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
+- [Atlassian git resource](https://www.atlassian.com/git)
