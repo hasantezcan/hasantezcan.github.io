@@ -197,7 +197,7 @@ git reset HEAD~
 ```
 
 <p align="center">
-<img alt="git_areas" src="/assets/posts/versiyon-kontrol-sitemi-git/cat-dog.png" width="500">
+	<img alt="git_areas" src="/assets/posts/versiyon-kontrol-sitemi-git/cat-dog.png" width="500">
 </p>
 
 ### `git log`
@@ -247,23 +247,23 @@ git stash pop
 ## Repo transfer etmek
 
 Bunun için iki yol mevcut;
-biri tüm commitlerinizi de saklayıp trasnfer etmek, diğeri de hiç bir commitinizi saklamadan trasfer etmek. 
+biri tüm commitlerinizi de saklayıp trasnfer etmek, diğeri de hiç bir commitinizi saklamadan trasfer etmek.
 
 İkinci yol en basit olan hadi onla başlayalım.
 
 ## Bir git reposunu commit geçmişSİZ yeni bir repoya taşıma
 
-Repolarımızda git ile ilgli tüm dosyalar `.git` adlı bir dizinde tutulur. Config dosyalarımız, commit geçmişimiz vb. tümü bu dosya içindedir. 
+Repolarımızda git ile ilgli tüm dosyalar `.git` adlı bir dizinde tutulur. Config dosyalarımız, commit geçmişimiz vb. tümü bu dosya içindedir.
 
 Bizim commitlerimizi saklama gibi bir derdimiz yoksa bu dosyayı silmemiz gerekir ki tüm commitlerden arınalım ve yeni bir başlangıç yapalım.
 
-GNU/Linux sistemlerde gizli dosyaları görmek için `ctrl + h` kısa yolunu kullanabilirsiniz. 
+GNU/Linux sistemlerde gizli dosyaları görmek için `ctrl + h` kısa yolunu kullanabilirsiniz.
 
 ```bash
 rm -rf .git
 ```
 
-dedikten sonra repo içindeki tüm dosyaları yeni reponuza yapıştırıp ilk commitinizi atabilirsiniz. 
+dedikten sonra repo içindeki tüm dosyaları yeni reponuza yapıştırıp ilk commitinizi atabilirsiniz.
 
 ```
 git add .
@@ -295,7 +295,7 @@ git clone --mirror old-repo-url new-repo-name
 cd new-repo-name
 ```
 
-Remote referans bilgisini sildiğinizi bu çalıştırılabilir ile kontrol edebilirsiniz. 
+Remote referans bilgisini sildiğinizi bu çalıştırılabilir ile kontrol edebilirsiniz.
 > (Q ya basarak çıkabilirsiniz.)
 
 ```bash
@@ -333,16 +333,54 @@ cd ..
 rm -rf new-repo-name
 ```
 
-Sonrasında uzak repomuzdan(remote) bilgisayarımıza(local) tekar indiriyoruz. 
+Sonrasında uzak repomuzdan(remote) bilgisayarımıza(local) tekar indiriyoruz.
 
-```bash 
+```bash
 git clone new-repo-url
 ```
-> `new-repo-url` yerine uzak reponuzun(remote) URL'ini girin.	
+> `new-repo-url` yerine uzak reponuzun(remote) URL'ini girin.
 
 
 Bu aşamadan sonra reponuzu commitleri ile birlikte yeni reponuza transfer taşımış bulunuyorsunuz.
 
+---
+
+## Fork edilmis bir repoyu ana repo ile senkron etmek!
+
+Aidiyetligi sizde olmayan bir repoya pull request attınız ve pull requestiniz merge oldu. Üzerine başka değişiklikler yapıldı ya da yapılmadı. Zaten merge olduktan sonra sizin reponuz bir commit geri kalıyor. Ve onu senkron etmeniz gerekiyor.
+
+Bunu nasıl yaparız?
+
+Github kullanıyorsanız arayüzden "Compare" tuşununa basıp bu işlemi gerçekleştirmeniz mümkün.
+
+<p align="center">
+	<img alt="git_areas" src="/assets/posts/versiyon-kontrol-sitemi-git/github-compare.png" width="800">
+</p>
+
+Komut satırı üzerinden nasıl yapılacağına bakalım.
+
+
+```bash
+$ git remote add upstream <original-repo-url>
+```
+
+```bash
+$ git fetch upstream   # update local with upstream
+```
+
+```bash
+$ git diff HEAD..upstream/master     # see diffs between local and upstream/master (if there is no diff then both are in sync)
+```
+```bash
+$ git pull upstream master           # pull upstream's master into local branch
+```
+```bash
+$ git push origin HEAD               # push to your forked repo's remote branch
+```
+[**[0]**](https://stackoverflow.com/questions/41542640/how-to-synchronize-fork-with-original-github-project)
+
+
+
 
 ..   
 ..  
@@ -362,7 +400,7 @@ Bu aşamadan sonra reponuzu commitleri ile birlikte yeni reponuza transfer taş�
 ..   
 ..  
 ..  
- 
+
 ## `Kaynakça:`
 
 - [Basic git commands](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
