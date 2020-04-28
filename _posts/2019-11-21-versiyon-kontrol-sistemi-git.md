@@ -404,3 +404,4 @@ $ git push origin HEAD               # push to your forked repo's remote branch
 ## `Kaynakça:`
 
 - [Basic git commands](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
+- [Atlassian git resource](https://www.atlassian.com/git)
