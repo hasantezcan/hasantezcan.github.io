@@ -20,7 +20,7 @@ Kaynakların zamanlanması verimlik bakımından çok önemlidir. Özellikle de 
 > Tekrar Eden CPU ve I/O İşlem Döngüsü
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/cpu-io-burst-cycle.png" width="300">
+	<img alt="cpu-io-burst-cycle" src="../assets/posts/cpu-scheduling/cpu-io-burst-cycle.png" width="300">
 </p>
 
 
@@ -34,7 +34,7 @@ CPU - I/O burst döngüleri cihazdan cihaza değişseler de Figür 5.2 dekine be
 > CPU zamanının kullanılmasına CPU burst diyoruz.
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/histogram-of-cpu-burst-durations.png" width="450">
+	<img alt="histogram-of-cpu-burst-durations" src="../assets/posts/cpu-scheduling/histogram-of-cpu-burst-durations.png" width="450">
 </p>
 
 ## `CPU Scheduler`
@@ -54,7 +54,7 @@ CPU Scheduler kararlarını işlem;
     - Tüm modern işletim sistemleri preemptive zamanlama algoritmalarını kullanırlar.
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/diagram_of_process_state.png" width="650">
+	<img alt="diagram_of_process_state" src="../assets/posts/cpu-scheduling/diagram_of_process_state.png" width="650">
 </p>
 
 ## `Dispatcher`
@@ -95,13 +95,13 @@ CPU'nun, işlemleri gelme sırasına göre işleme aldığı zamanlama algoritma
 - *İşlem önceliği, işlemlerin sıraya girme sıralarına göre belirlenir.*
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_1.png" width="450">
+	<img alt="question_1" src="../assets/posts/cpu-scheduling/question_1.png" width="450">
 </p>
 
 - İşlem sırasının **"Process 2, Process 3, Process 1"** olması durumunda sonuç nasıl değişirdi?
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_2.png" width="450">
+	<img alt="question_2" src="../assets/posts/cpu-scheduling/question_2.png" width="450">
 </p>
 
 **Convoy effect:**
@@ -115,7 +115,7 @@ CPU'nun, işlemleri gelme sırasına göre işleme aldığı zamanlama algoritma
 Bu algoritmada **zorluk** işlemci kullanım sürelerini(burst time) tahmin etmektir.
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_3.png" width="500">
+	<img alt="question_3" src="../assets/posts/cpu-scheduling/question_3.png" width="500">
 </p>
 
 **Not:** Bu algortimanın çok verimli çalışmasına karşın sorunu bir işlemin çalışmadan önce burst time'ını bilemeyecek olmamızdır. İşlemlerin ancak çalıştıktan sonra ne kadar süre çalıştığını görebiliriz. Ama bunu anlamak için bazı analiz yöntemleri mevcut. Örneğin önceki verilere göre değerlendirimeler yapılabiliyor. Böylece bir sonraki işlemin ne kadar süreceği tahmin edilmeye çalışılıyor.
@@ -128,7 +128,7 @@ Sadece tahmin edilebilir.
 Daha önceki işlemci kulanım süreleri kullanılarak üssel ortalama(exponential averaging) yöntemiyle tahmin edilebilir.
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/determining-length_of_next_cpu.png" width="500">
+	<img alt="determining-length_of_next_cpu" src="../assets/posts/cpu-scheduling/determining-length_of_next_cpu.png" width="500">
 </p>
 
 - Genelde **α** 1/2 ye eşittir.
@@ -139,7 +139,7 @@ Daha önceki işlemci kulanım süreleri kullanılarak üssel ortalama(exponenti
 Demin çözdüğümüz soruya bir de ready kuyruğuna gelme zamanını(arrival time) eklersek bu sorunun çözümü nasıl değişir?
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_4.png" width="500">
+	<img alt="question_4" src="../assets/posts/cpu-scheduling/question_4.png" width="500">
 </p>
 
 ## `3.Priority Scheduling`
@@ -160,15 +160,14 @@ Bu algoritmanın yanında getirdiği bir problem vardır. Bu da **Starvation pro
 ### Priority Scheduling Örneği
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_7.png" width="550">
+	<img alt="question_7" src="../assets/posts/cpu-scheduling/question_7.png" width="550">
 </p>
-
 
 
 ## `4. Round Robin Scheduling, "RR"`
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/bread.png" width="350">
+	<img alt="bread" src="../assets/posts/cpu-scheduling/bread.png" width="350">
 </p>
 
 İşlemlerin belirlenen bir süreye göre sıra sıra işleme sokulmasıdır. İşlemlerin CPU'da kalabileceği maksimum süreye **time quantum** denir. İşlemler time quantum'a göre sıra sıra işleme girer ve çıkarlar. Sırası gelen işlem ready queue'den alınıp CPU'da  işleme konur time quantum süresi bitmesi ardından ready queue'nın sonuna koyulur, ready queue'da hazır bekleyen işlem de CPU'ya verilir. Bir işlemin time quantum'dan önce tamamlanması halinde ise bir sonraki işleme geçilir.
@@ -185,37 +184,37 @@ Time quantum'u çok düşük belirlememiz halinde de CPU'daki context switchleri
 
 #### `"Çok küçük time quantum belirlemek context switch maliyetini artırır."`
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/quantum_context_switch_relation.png" width="500">
+	<img alt="quantum_context_switch_relation" src="../assets/posts/cpu-scheduling/quantum_context_switch_relation.png" width="500">
 </p>
 
 ## `Round Robin Scheduling örneği;`
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_5.png" width="500">
+	<img alt="question_5" src="../assets/posts/cpu-scheduling/question_5.png" width="500">
 </p>
 
 ## Turnaround Time, Time Quantum ile değişir;
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/time_quantum_average_turn_around_time_graphics.png" width="400">
+	<img alt="time_quantum_average_turn_around_time_graphics" src="../assets/posts/cpu-scheduling/time_quantum_average_turn_around_time_graphics.png" width="400">
 </p>
 
 ***Hadi bunu kanıtlayalım;***
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_6_0.png" width="550">
+	<img alt="question_6_0" src="../assets/posts/cpu-scheduling/question_6_0.png" width="550">
 </p>
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_6_q3.png" width="500">
+	<img alt="question_6_q3" src="../assets/posts/cpu-scheduling/question_6_q3.png" width="500">
 </p>
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_6_q4.png" width="500">
+	<img alt="question_6_q4" src="../assets/posts/cpu-scheduling/question_6_q4.png" width="500">
 </p>
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/question_6_q5.png" width="500">
+	<img alt="question_6_q5" src="../assets/posts/cpu-scheduling/question_6_q5.png" width="500">
 </p>
 
 - Yukarıdaki örneği q=3, q=4 ve q=5 kurallarına uyarak çözüp time quantum değişiminin turnaround time'ı **doğru orantı** ile etkilediğini görmüş olduk. Hesaplamalarımızı da grafik ile kıyaslayıp bir hata yapmadığımızı görmüş olduk.
@@ -231,7 +230,7 @@ Multilevel Queue yönteminde ise ready queue bölünerek başka queue'ler oluşt
 **background (batch)**, CPU'nun nispeten daha az kullanıldığı arkaplan işleri
 
 <p align="center">
-	<img alt="responsive-gif" src="/assets/posts/cpu-scheduling/multilevel_queue.png" width="500">
+	<img alt="multilevel_queue" src="../assets/posts/cpu-scheduling/multilevel_queue.png" width="500">
 </p>
 
 ---------
