@@ -10,9 +10,9 @@ date:   2019-10-23
 
 İşlemci zamanlamak, çoklu işlem yapabilen işletim sistemlerinin temelini oluşturur. Bu işletim sistemleri, CPU kullanımını işlemler arasında değiştirerek bilgisayarlarımızı daha üretken hale getirirler.
 
-Bu yazı boyunca temel CPU zamanlama kavramlarından ve bazı CPU zamanlama algoritmalarından bahsedeceğim.
+Bu yazı boyunca temel CPU zamanlama kavramlarından ve bazı CPU zamanlama algoritmalarından bahsedeceğim. Ve bu algoritmalarla ilgili bolca soru çözeceğiz. Hadi başlayalım...
 
-Tek çekirdekli sistemlerde birim zamanda sadece bir işlem çalışabilir. Diğer işlemlerin çalışabilmesi için işlemci çekirdeklerinin boşalması ve tekrar zamanlanabilir hale gelmesi gerekir. Çoklu programlamanın amacı ise işlemci kullanımını en üst düzeye çıkartmaktır.
+**Tek çekirdekli** sistemlerde birim zamanda sadece **bir işlem** çalışabilir. Diğer işlemlerin çalışabilmesi için işlemci çekirdeklerinin boşalması ve tekrar zamanlanabilir hale gelmesi gerekir. Çoklu programlamanın amacı ise işlemci kullanımını en üst düzeye çıkartmaktır.
 
 Basit bilgisayar sistemlerinde bir işlemin başlayabilmesi için diğer işlemin bitmesi gerekir. Örnek olarak işlemciye gelen bir I/O işlemi aslında o dakikadan itibaren bir bir başka cihazın işlem biriminde çalışıyor olsa da henüz o cihazdan cevap gelmeyip işlem tamamlanmadığından cevap gelene kadar CPU boşa çalışmış olur. Fakat çoklu programlama ile birlikte zamanı daha verimli kullanmaya başlarız. Birkaç işlem aynı anda bellekte barınabilir ve bu sayede bir işlem beklerken işletim sistemi CPU'yu bu işlemden uzaklaştırıp  CPU'ya yeni bir işlem verebilir. Böylece işlem gücü boşa harcanmamış olur.
 
@@ -234,9 +234,10 @@ Multilevel Queue yönteminde ise ready queue bölünerek başka queue'ler oluşt
 	<img alt="multilevel_queue" src="../assets/posts/cpu-scheduling/multilevel_queue.png" width="500">
 </p>
 
+#### Daha fazla soru çözümü [için.](../assets/posts/cpu-scheduling/os-2018-midterm-soltion-question5.pdf)
+
 ---------
 > **NOT:** Anlatım boyunca gördüğünüz soru çözümlerinin tümü, tarafımca Figma'da tasarlanmıştır. Herhangi bir hata görmeniz taktirinde bana ulaşabilirsiniz.
-
 
 - Anlatımımızın sonuna geldik umarım sizler için faydalı olmuştur. Bir daha görüşmek üzere. İyi çalışmalar. :)
 
