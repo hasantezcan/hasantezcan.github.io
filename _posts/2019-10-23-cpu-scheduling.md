@@ -182,7 +182,8 @@ Time quantum'a 1 yıl dersek; bu bir yılda sadece bir işlem çalışacak demek
 
 Time quantum'u çok düşük belirlememiz halinde de CPU'daki context switchlerin maliyeti artamaya başlıyor. Çünkü time quantum'u küçük belirlememiz çok sık process değişikliği yapmamıza sebep oluyor.
 
-#### `"Çok küçük time quantum belirlemek context switch maliyetini artırır."`
+#### `"Çok küçük time quantum belirlemek yaşanacak context switch sayısını artırır ve buna bağlı olarak işlem maliyetini artırmış oluruz."`
+
 <p align="center">
 	<img alt="quantum_context_switch_relation" src="../assets/posts/cpu-scheduling/quantum_context_switch_relation.png" width="500">
 </p>
