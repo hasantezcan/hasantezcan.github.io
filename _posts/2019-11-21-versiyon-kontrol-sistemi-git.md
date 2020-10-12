@@ -351,11 +351,11 @@ Aidiyetligi sizde olmayan bir repoya pull request attınız ve pull requestiniz 
 
 Bunu nasıl yaparız?
 
-Github kullanıyorsanız arayüzden "Compare" tuşununa basıp bu işlemi gerçekleştirmeniz mümkün.
+<!-- Github kullanıyorsanız arayüzden "Compare" tuşununa basıp bu işlemi gerçekleştirmeniz mümkün.
 
 <p align="center">
 	<img alt="git_areas" src="/assets/posts/versiyon-kontrol-sitemi-git/github-compare.png" width="800">
-</p>
+</p> -->
 
 Komut satırı üzerinden nasıl yapılacağına bakalım.
 
