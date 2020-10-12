@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "CPU Scheduling"
+title: "CPU Scheduling Konu Anlatımı, Soru Çözümü"
 author: "Hasan Tezcan"
 categories: blog
-tags: [Operating Systems]
+tags: [Operating Systems, türkçe, soru-çözümü, SJF, Round-Robin, işletim sistemleri, bilgisyar-mühendisliği, 3.Sınıf, FCFS, Priority Scheduling, Multilevel Queue, Türkçe-soru-çözümü, Türkçe-Kaynak]
 image: "cpu.jpeg"
 date:   2019-10-23
 ---
