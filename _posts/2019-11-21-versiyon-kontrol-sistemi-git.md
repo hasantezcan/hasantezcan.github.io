@@ -381,7 +381,9 @@ $ git push origin HEAD               # push to your forked repo's remote branch
 
 
 
+## .gitignore dosyası
 
+https://careerkarma.com/blog/gitignore/
 ..   
 ..  
 ..  
