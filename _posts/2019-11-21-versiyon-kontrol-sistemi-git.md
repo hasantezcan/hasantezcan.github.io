@@ -404,6 +404,6 @@ https://careerkarma.com/blog/gitignore/
 ..  
 
 ## `Kaynakça:`
-
+- [7 rules of a great git commit message](https://chris.beams.io/posts/git-commit/#:~:text=The%20seven%20rules%20of%20a%20great%20Git%20commit%20message)
 - [Basic git commands](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
 - [Atlassian git resource](https://www.atlassian.com/git)
