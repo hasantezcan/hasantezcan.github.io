@@ -8,7 +8,7 @@ image: "/DOM-selector.png"
 date:   2020-01-25
 ---
 
-> Bu yazı Kodluyoruz **2021 Earlybird Frontend Bootcamp'ı** sürcinde Kodluyoruz ekibinin hazırladığı video serisi için hazırlanmış bir yazılı kaynaktır. 
+> Bu yazı Kodluyoruz **2021 Earlybird Frontend Bootcamp'ı** sürcinde Kodluyoruz ekibinin hazırladığı [video serisi](https://www.youtube.com/watch?v=OXR6Z3Yo3hk&list=PLGrTHqyRDvx6PqKkqSPwph57HNN4RWgR2&index=15&t=47s) için hazırlanmış bir yazılı kaynaktır. 
 
 Bu yazıda [DOM (Document Object Model)](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) içerisinden öğeleri seçmek için kullanacağımız metotlardan bahsedeceğim.Document Object Model'de öğeler birden fazla yöntem ile seçilebilir. Birinci yöntemimiz olan element id'sini kullanarak şeçme metodu ile başlayalım.
 
@@ -26,7 +26,7 @@ sayafada bulana bu elementi `getElementById()` methodunu kullanarak seçmeye ça
 const unicorn = document.getElementById('unicorn');
 ```
 
-ID'ler büyük-küçük harf duyarlıdır. Bu sayede HTML document içinde biriçiklik gösterir ve her zaman geriye bir eleman döndürür. Bir eşleşme bulamazsa da geriye `null` dönüşünü yapar.
+ID'ler büyük-küçük harf duyarlıdır. Bu sayede HTML document içinde biriciklik gösterir ve her zaman geriye bir eleman döndürür. Bir eşleşme bulamazsa da geriye `null` dönüşünü yapar.
 
 > **DİKKAT:** Seçmek istediğiniz elemanın id'sini yazarken eleman isminin başına **`# işaretini`** yazmanıza gerek yoktur. Yazmanız durumunda id'yi seçemeyeceksinizdir. 
 
@@ -74,14 +74,14 @@ document.getElementsByTagName('*')
 <input type="tel" name="telefon">
 <input type="date" name="tarih">
 ```
-E-posta adıni taşıyan tüm öğeleri getirelim.
+E-posta adını taşıyan tüm öğeleri getirelim.
 
 ```js
 const emails = document.getElementsByName('e-posta');
 // Çıktı: NodeList [input]
 ```
 
-> **Unutmayınki name değeri id'de olduğu gibi birick bir değer taşımaz birden fazla eleman aynı name değerini taşıyabilir.**
+> **Unutmayın ki `name` değeri id'de olduğu gibi biricik bir değer taşımaz. Birden fazla eleman aynı `name` değerini taşıyabilir.**
 
 ## Get Elements By Class Name
 > **Elemanları class isimlerine göre şeçmek**
@@ -130,7 +130,7 @@ console.log(elems.length); // 4
 ```
 
 ### Methoları bir arada kullanabilirsiniz
-Yukarda öğrendiğimiz methodları birarada kullanabiliryoruz. Önce tek bir elemanı seçerek ardından içinde ikinci bir sorugu yapabiliyoruz. Örneğin;
+Yukarıda öğrendiğimiz metodları birarada kullanabiliyoruz. Önce tek bir elemanı seçerek ardından içinde ikinci bir sorugu yapabiliriz. Örneğin;
 
 ```html
 <form id="signup">
