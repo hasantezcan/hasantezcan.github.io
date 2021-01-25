@@ -8,14 +8,16 @@ image: "/DOM-selector.png"
 date:   2020-01-25
 ---
 
-Bu yazıda[DOM (Document Object Model)](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) içerisinden öğeleri seçmek için kullanacağımız metotlardan bahsedeceğim.Document Object Model'de öğeler birden fazla yöntem ile seçilebilir. Birinci yöntemimiz olan element id'sini kullanarak şeçme metodu ile başlayalım.
+> Bu yazı Kodluyoruz **2021 Earlybird Frontend Bootcamp'ı** sürcinde Kodluyoruz ekibinin hazırladığı video serisi için hazırlanmış bir yazılı kaynaktır. 
+
+Bu yazıda [DOM (Document Object Model)](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) içerisinden öğeleri seçmek için kullanacağımız metotlardan bahsedeceğim.Document Object Model'de öğeler birden fazla yöntem ile seçilebilir. Birinci yöntemimiz olan element id'sini kullanarak şeçme metodu ile başlayalım.
 
 ## Get Element By ID
 > **Elemanı ID'sine göre şeçmek**
 
 `document` objesinin `getElementById()` metodu ile sayfada bulunan html elementlerinin ID'leri referans alarak seçme işlemi yapabiliyoruz. Örnek olarak;
 
-```js
+```html
 <div id="unicorn">🦄</div>
 ```
 sayafada bulana bu elementi `getElementById()` methodunu kullanarak seçmeye çalışalım.
