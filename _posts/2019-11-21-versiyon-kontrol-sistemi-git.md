@@ -9,22 +9,25 @@ date:   2019-11-21
 ---
 
 
-Herhangi bir projeyi geliştiriken böyle bir tablo ile muhakkak karşılaşmışsınızdır. Bu bir ödevi yapmak için olabilir ya da bir şiir yazarken. Projeniz üzerinde yapılan değişiklerinizi bir şekilde saklamak için aslına bu aşamalardan geçen herkes bu görselde olduğu kendi versiyon sistemini geliştirir ve bunu kullanır. Ne kadar verimli olduğu tartışılır ama bir versiyon kontrol sistemine ihtiyaç duyduğumuz ortadadır.
-
-Bugün sizlerle birlikte var olan versiyon kontrol sitemlerinden ve günümüzde yaygın olarak kullanılan GIT version kontol sisteminin nasıl kullanıldığından bahsedeceğim.
+Herhangi bir projeyi geliştiriken **`böyle bir tablo` ile muhakkak karşılaşmışsınızdır**. Bu bir ödevi yapmak için olabilir ya da bir şiir yazarken. 
 
 <p align="center">
-	<img alt="version_kontrol__sistemi" src="/assets/posts/versiyon-kontrol-sitemi-git/versiyon-kontrol-sitemi-sebep.png" width="400">
+	<img alt="version_kontrol_sistemi" src="../assets/posts/versiyon-kontrol-sitemi-git/versiyon-kontrol-sitemi-sebep.png" width="400">
 </p>
 
+Projeniz üzerinde yapılan değişiklerinizi bir şekilde saklamak için aslına bu aşamalardan **geçen herkes** bu görselde olduğu ***farkına varmadan*** **`kendi versiyon kontrol sistemini geliştirir!`** ve bunu kullanır. 
+
+Bu ilkel yönetemin ne kadar verimli olduğu tartışılır ama iyi düşünülmiş bir versiyon kontrol sistemine ihtiyaç duyduğumuz ortadadır.
+
+Bugün sizlerle birlikte var olan versiyon kontrol sitemlerinden ve günümüzde yaygın olarak kullanılan GIT version kontol sisteminin nasıl kullanıldığından bahsedeceğim.
 
 ## Versiyon Kontrol Sistemi Nedir?
 
 Versiyon kontol sistemleri herhangi bir proje üzerine çalışırken size yaptığınız değişiklikler ve yenilikler arasında boğulmadan temiz bir şekilde çalışabilme imkanı sunar.
 
-Version kontol sistemleri ile çalışamayı öğrendikten sonra bir proje üzerinde zamanda geri gidebilir projenizin falanca zamanki halini o günkü hali ile inceleyebilir ya da projenizin o anki halini bozmadan üzerine yeni denemeler yapabilir ve bu denemeniz istediğiniz gibi olursa ana projenize bu özelliği ekleyebilirsiniz.
+Version kontol sistemleri ile çalışamayı öğrendikten sonra bir proje üzerinde **zamanda geri gidebilir** projenizin falanca zamanki halini o günkü hali ile inceleyebilir ya da projenizin o anki halini bozmadan üzerine yeni denemeler yapabilir ve bu denemeniz istediğiniz gibi olursa ana projenize bu özelliği ekleyebilirsiniz.
 
-Bu söylediklerimi en başta gördüğümüz insan beyninin direk oluşturduğu versiyon kontrol sistemi ile yapmaya kalkmak bi yerde mantıklı olsa da bu yöntemle devam etmek bir yerden sonra sizi sinir krizlerine sokabilir hata ve hata projeninizi geliştirecem derken çalışır halinden de olmanıza sebep olablir.
+Bu söylediklerimi en başta gördüğümüz insan beyninin direk oluşturduğu versiyon kontrol sistemi ile yapmaya kalkmak bi yerde mantıklı olsa da bu yöntemle devam etmek bir yerden sonra **sizi sinir krizlerine sokabilir** **`hata ve hata projeninizi geliştirecem derken çalışır halinden de olmanıza sebep olablir.`**
 
 Gelin şimdi var olan versiyon sistemlerne bir göz atalım.
 
@@ -32,7 +35,7 @@ Gelin şimdi var olan versiyon sistemlerne bir göz atalım.
 
 - [**SVN**](http://subversion.tigris.org/) : Bu proje şu an kitli durumdadır.
 
-- **Git** : üzerine detaylıca konuşacağımız versiyon kontrol sistemi.
+- **`Git`** : üzerine detaylıca konuşacağımız versiyon kontrol sistemi.
 
 - **Mercurial**
 
@@ -51,24 +54,65 @@ Bugün biz günümüzde en yaygın kullanılan versiyon kontrol sistemi GIT ile 
 
 [**Git**](https://git-scm.com/) özgür ve dağıtık bir version kontrol sistemidir. GIT, linux'ü geliştiren ekibin o zamanlar kullandıkları [**BitKeeper**](https://www.bitkeeper.org/) adlı proje yönetim araçının ücretsiz lisans anlaşmasının bitmesi ile Linus Toravalds ve ekibinin BitKeeper'ı kullanırken yaşadıkları sıkıntıları da göz ederek tasarladıkları 2005 yılında ortaya çıkan bir versiyon kontrol sistemidir.
 
-Git ismi, Linus Torvalds tarfından Git'in ilk versiyonunun yayımlanması ile verilmişitir. Aslında Git kelimesi İngiliz  ingilicesinde **"aptal"** anlamına gelen argo bir kelime. [**[2]**](https://dictionary.cambridge.org/dictionary/english/git)
+Git ismi, [Linus Torvalds tarfından](https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git#:~:text=and%20in%20particular%20Linus%20Torvalds,%20the%20creator%20of%20Linux) Git'in ilk versiyonunun yayımlanması ile verilmişitir. Aslında Git kelimesi İngiliz  ingilicesinde **"aptal"** anlamına gelen argo bir kelime. [**[2]**](https://dictionary.cambridge.org/dictionary/english/git)
+
+**bakınız:** [A Short History of Git](https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git)
 
 <p align="center">
-	<img alt="git_dictionary" src="/assets/posts/versiyon-kontrol-sitemi-git/git_dictionary.png" width="500">
+	<img alt="git_dictionary" src="../assets/posts/versiyon-kontrol-sitemi-git/git_dictionary.png" width="500">
 </p>
 
 Ayrıca Linus Torvalds "**GIT**" isminin açılımını şu şekilde ifade ediyor;
-- Düzgün çalışıp iş gördüğünde ve sizi mutlu ettiğinde **Global Information Tracker**(Küresel bilgi takip sistemi)
+- Düzgün çalışıp iş gördüğünde ve sizi mutlu ettiğinde **Global Information Tracker** (Küresel bilgi takip sistemi)
 - İstediğiniz gibi çalışmazsa ve sizi çıldırtırsa da **"Goddamn Idiotic Truckload of shit"**
+
+## Neden `Versiyon Kontrol Araçları` kullanırız?
+
+Genel olarak bir şeyler üretirken **hızlı hızlı** ilerleme yolunu seçiyoruz. Yazılım geliştiriken de verilen bir ödevi **hızlıca bitirip teslim etmek** çok daha kolayımıza gelebiliyor.
+
+<p align="center">
+	<img alt="" src="../assets/posts/versiyon-kontrol-sitemi-git/fast-chess.gif" width="100%">
+</p>
+
+Ödevlerin kapsamı küçük olduğu zaman bu yaklaşım gerçekten pratik bir çözüm olabiliyor. Fakat işler büyüdüğünde yani **`profesyonelleştiğinde`** hızlı hızlı hareket etmek zorlaşıyor ve **hata payınız git gide büyüyor.**
+
+Böyle büyük çaplı işlerde ya da finansal sorumluluğunuz olan projelerde hata yapma şansınız çok daha az oluyor.
+
+İşte tam bu durumu idare etmek ve yönetmek için **versiyon kontrol** kulanmak kaçınılmaz oluyor. 
+
+Başta angarya gibi gelen **bu süreçin;** bir hata ile karşı karşıya kaldığında ve versiyon kontorlü yaptığınız için bu hataya hızlıca çözüm getirebildiğinizi gördüğünüzde **hiç de angaryadan olmadığını anlıyorsunuz.**
+
+<p align="center">
+	<img alt="" src="../assets/posts/versiyon-kontrol-sitemi-git/kasparov.gif" width="100%">
+</p>
+
+**Satranç oyunu** bu durumu anlamak ve açıklamak için çok güzel bir benzetme.
+
+Eğer bir satranç musabakası izlediyseniz oyuncuların her hamleden sonra tahtanın yanı başındaki bir kağada bir şeyler yazdıklarını görmüşsünüzdur. 
+
+<p align="center">
+	<img alt="" src="../assets/posts/versiyon-kontrol-sitemi-git/chess-game.jpeg" width="100%">
+</p>
+
+Satranç oyuncuları bu kağıtlara oyun esnasında yapılan hamleleri not etmektedirler. İki oyuncuda bu hamleleri kaydeder. Maç sonunda bu kaydedilen hamleler sayesinde o maç baştan sona incelenebilir hale gelir. Yani o maçı her versiyonu ile iki oyuncu kayıt altına almış olur.
+
+<p align="center">
+  <img alt="imgName" src="../assets/posts/versiyon-kontrol-sitemi-git/chess-score-sheet-example.jpeg" width="65%">
+  <br>
+	<em>Chess score sheet example <a href="https://blog.chesshouse.com/how-to-read-and-write-algebraic-chess-notation/">- source</a> </em>
+</p>
+
+Öteyandan arkadaşlar arasında keyfine yapılan hızlı maçlar esnasında. Bu işlemi yapmak sizlere büyük bir angarya olarak gelebilir. İşte burada önemli yaptığınız projenin **sizin için ne kadar önemli olduğudur.**
+
 
 ## Git Nasıl kullanılır?
 
-Öncelikle git versioyon kontrol sistemi yazılımının bilgisayarınızda yüklü olması gerekiyor.
+Öncelikle git versioyon kontrol sistemi yazılımının **bilgisayarınızda yüklü olması** gerekiyor.
 
 Bunu öğrenmek için GNU/Linux bir işletim sistemi kullanıyorsanız paket yöneticiniz ile git programnı aratıp bilgisayarınıza yüklü olup olmadığını öğrenebilirsiniz.
 
 <p align="center">
-	<img alt="git_is_exist" src="/assets/posts/versiyon-kontrol-sitemi-git/git_is_exist.png" width="">
+	<img alt="git_is_exist" src="../assets/posts/versiyon-kontrol-sitemi-git/git_is_exist.png" width="">
 </p>
 
 Eğer GNU/Linux dışında bir işletim sistemi kullanıyorsanız kurulum aşamalarınıa [**git'in resmi sitesinden**](https://git-scm.com/downloads) bakabilirsiniz.
@@ -93,15 +137,19 @@ $ git config --global user.email "mail_adresiniz"
 
 Şimdi projemizi versiyonlamak için hazırız.
 
-Annotation denen bir kavramdan bahsetmek istiyorum. Türkçe dipnot demek olan bu kavram yazılan kod satırlarının kim tarafından yazıldığını ifade eder. Demin girdiğimiz git config'leri (ayarları) bu annotation'larda gözükür. Bu kullandığınız ide ya da metin editorlerinde ya kendiliğinden gelecektir ya da eklenti şekilde kurulabilir.  
+## Annotation
+
+**Annotation** denen bir kavramdan bahsetmek istiyorum. Türkçe dipnot demek olan bu kavram yazılan kod satırlarının kim tarafından yazıldığını ifade eder. Demin girdiğimiz git config'leri (ayarları) bu annotation'larda gözükür. Bu kullandığınız ide ya da metin editorlerinde ya kendiliğinden gelecektir ya da eklenti şekilde kurulabilir.  
 
 <p align="center">
-	<img alt="git_annotation" src="/assets/posts/versiyon-kontrol-sitemi-git/git_annotation.png" width="650">
+	<img alt="git_annotation" src="../assets/posts/versiyon-kontrol-sitemi-git/git_annotation.png" width="100%">
 </p>
 
-Annotation'lar sayasinde bir projede çalışırken okduğunuz kodun kim tarafından ne zaman yazıldığını görebilirsiniz. Ve dilediğiniz zaman bu kod parçacıkları için kodun sahibi ile belirttiği e-posta adresi ile ileteşime geçebilirsiniz.
+Annotation'lar sayasinde bir projede çalışırken okduğunuz kodun **kim tarafından ne zaman yazıldığını görebilirsiniz.** Ve dilediğiniz zaman bu kod parçacıkları için kodun sahibi ile belirttiği e-posta adresi ile ileteşime geçebilirsiniz.
 
 Yani annotation'lar bir nevi imza görevi görür.  
+
+**bakınız:** [vsCode için git lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) eklentisi
 
 ### `git init`
 
@@ -120,35 +168,21 @@ $ ls -a
 
 Git yazılımını projemizden başlatıktan sonra projemiz içine gizli halde gelen **.git diznini** görmekteyiz. Bu dizin içinde versiyonlamaya dair tüm dosyalar tutuluyor.
 
-Bu dosyanın silinmesi halinde tüm versiyonlama işlemlermiz yok olacakıtır. Hatalı bir git init çalıştırılması durumunda .git dizinini silmek versiyon kontrolünü dizninizden kaldıracaktır.
+Bu dosyanın silinmesi halinde tüm versiyonlama işlemlermiz yok olacakıtır.
+
+**`!!!`** Hatalı bir `git init` çalıştırılması durumunda `.git` dizinini silmek **versiyon kontrolünü dizninizden kaldıracaktır.**
 
 ---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p align="center">
-	<img alt="git_areas" src="/assets/posts/versiyon-kontrol-sitemi-git/git_areas.png" width="500">
+	<img alt="git_areas" src="../assets/posts/versiyon-kontrol-sitemi-git/git_areas.png" width="500">
 </p>
+
+## **`Commit`** Nedir ve Nasıl Çalışır?
+
+
+### `git status`
+
 
 ### `git add`
 
@@ -181,7 +215,6 @@ $ watch -n .5 tree .git
 
 [**[3]**](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects)
 
-### `git status`
 
 
 
@@ -197,7 +230,7 @@ git reset HEAD~
 ```
 
 <p align="center">
-	<img alt="git_areas" src="/assets/posts/versiyon-kontrol-sitemi-git/cat-dog.png" width="500">
+	<img alt="git_areas" src="../assets/posts/versiyon-kontrol-sitemi-git/cat-dog.png" width="500">
 </p>
 
 ### `git log`
@@ -240,6 +273,10 @@ git stash
 git stash pop
 ```
 
+## .gitignore dosyası
+
+https://careerkarma.com/blog/gitignore/
+
 ---
 
 # `Özel sorunlar ve çözümleri`
@@ -251,7 +288,7 @@ biri tüm commitlerinizi de saklayıp trasnfer etmek, diğeri de hiç bir commit
 
 İkinci yol en basit olan hadi onla başlayalım.
 
-## Bir git reposunu commit geçmişSİZ yeni bir repoya taşıma
+### Bir git reposunu commit geçmişSİZ yeni bir repoya taşıma
 
 Repolarımızda git ile ilgli tüm dosyalar `.git` adlı bir dizinde tutulur. Config dosyalarımız, commit geçmişimiz vb. tümü bu dosya içindedir.
 
@@ -271,7 +308,7 @@ git commit -m "Initial commit"
 ```
 
 
-## Bir git reposunu commit geçmişi ile beraber yeni bir repoya taşıma
+### Bir git reposunu commit geçmişi ile beraber yeni bir repoya taşıma
 
 > Git reponuzu commit geçmişi brachları ve tag'ları ile beraber yeni bir repoya yüklemek.
 
@@ -354,7 +391,7 @@ Bunu nasıl yaparız?
 <!-- Github kullanıyorsanız arayüzden "Compare" tuşununa basıp bu işlemi gerçekleştirmeniz mümkün.
 
 <p align="center">
-	<img alt="git_areas" src="/assets/posts/versiyon-kontrol-sitemi-git/github-compare.png" width="800">
+	<img alt="git_areas" src="../assets/posts/versiyon-kontrol-sitemi-git/github-compare.png" width="800">
 </p> -->
 
 Komut satırı üzerinden nasıl yapılacağına bakalım.
@@ -381,9 +418,7 @@ $ git push origin HEAD               # push to your forked repo's remote branch
 
 
 
-## .gitignore dosyası
 
-https://careerkarma.com/blog/gitignore/
 ..   
 ..  
 ..  

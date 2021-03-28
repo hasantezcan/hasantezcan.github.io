@@ -179,3 +179,10 @@ https://grantwinney.com/cool-markdown-tricks-for-github/
 https://github.com/grantwinney/BlogCodeSamples/tree/master/GitHubTipsTricks
 
 https://jdhao.github.io/2020/06/01/markdown_writing_tricks/#how-to-color-text
+
+
+
+==== 
+Best markdown table generator 
+
+https://tableconvert.com/
