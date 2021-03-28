@@ -106,6 +106,7 @@ Satranç oyuncuları bu kağıtlara oyun esnasında yapılan hamleleri not etmek
 
 
 ## Git Nasıl kullanılır?
+> **Git'in Temelleri**
 
 Öncelikle git versioyon kontrol sistemi yazılımının **bilgisayarınızda yüklü olması** gerekiyor.
 
@@ -118,38 +119,6 @@ Bunu öğrenmek için GNU/Linux bir işletim sistemi kullanıyorsanız paket yö
 Eğer GNU/Linux dışında bir işletim sistemi kullanıyorsanız kurulum aşamalarınıa [**git'in resmi sitesinden**](https://git-scm.com/downloads) bakabilirsiniz.
 
 ---
-
-### `git config`
-
-Versiyonlamaya başlamadan önce yazacağımız kodların kimin tarafından yazılıdığının bilinmesi açısından GIT ayarlarımızı yapmamız gerekiyor.
-
-hali hazırdaki git ayarlarını  görmek için
-
-```bash
-$ git config --list
-```
-Henüz bir ayar girmemişseniz boş bir çıktı alacaksınız. Ayarlamak için;
-
-```bash
-$ git config --global user.name "kullanıcı_adınız"
-$ git config --global user.email "mail_adresiniz"
-```
-
-Şimdi projemizi versiyonlamak için hazırız.
-
-## Annotation
-
-**Annotation** denen bir kavramdan bahsetmek istiyorum. Türkçe dipnot demek olan bu kavram yazılan kod satırlarının kim tarafından yazıldığını ifade eder. Demin girdiğimiz git config'leri (ayarları) bu annotation'larda gözükür. Bu kullandığınız ide ya da metin editorlerinde ya kendiliğinden gelecektir ya da eklenti şekilde kurulabilir.  
-
-<p align="center">
-	<img alt="git_annotation" src="../assets/posts/versiyon-kontrol-sitemi-git/git_annotation.png" width="100%">
-</p>
-
-Annotation'lar sayasinde bir projede çalışırken okduğunuz kodun **kim tarafından ne zaman yazıldığını görebilirsiniz.** Ve dilediğiniz zaman bu kod parçacıkları için kodun sahibi ile belirttiği e-posta adresi ile ileteşime geçebilirsiniz.
-
-Yani annotation'lar bir nevi imza görevi görür.  
-
-**bakınız:** [vsCode için git lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) eklentisi
 
 ### `git init`
 
@@ -209,9 +178,9 @@ $ watch -n .5 tree .git
 ```
 
 3 adet git objesi vardır bunlar;
-- blob - collect of date - row data - descreption about the data
-- tree -
-- commit - en of the snapshot versionesed one
+- **blob** - collect of date - row data - descreption about the data
+- **tree** - ...
+- **commit** - en of the snapshot versionesed one
 
 [**[3]**](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects)
 
@@ -276,6 +245,42 @@ git stash pop
 ## .gitignore dosyası
 
 https://careerkarma.com/blog/gitignore/
+
+
+
+---
+
+### `git config`
+
+Versiyonlamaya başlamadan önce yazacağımız kodların kimin tarafından yazılıdığının bilinmesi açısından GIT ayarlarımızı yapmamız gerekiyor.
+
+hali hazırdaki git ayarlarını  görmek için
+
+```bash
+$ git config --list
+```
+Henüz bir ayar girmemişseniz boş bir çıktı alacaksınız. Ayarlamak için;
+
+```bash
+$ git config --global user.name "kullanıcı_adınız"
+$ git config --global user.email "mail_adresiniz"
+```
+
+Şimdi projemizi versiyonlamak için hazırız.
+
+## Annotation
+
+**Annotation** denen bir kavramdan bahsetmek istiyorum. Türkçe dipnot demek olan bu kavram yazılan kod satırlarının kim tarafından yazıldığını ifade eder. Demin girdiğimiz git config'leri (ayarları) bu annotation'larda gözükür. Bu kullandığınız ide ya da metin editorlerinde ya kendiliğinden gelecektir ya da eklenti şekilde kurulabilir.  
+
+<p align="center">
+	<img alt="git_annotation" src="../assets/posts/versiyon-kontrol-sitemi-git/git_annotation.png" width="100%">
+</p>
+
+Annotation'lar sayasinde bir projede çalışırken okduğunuz kodun **kim tarafından ne zaman yazıldığını görebilirsiniz.** Ve dilediğiniz zaman bu kod parçacıkları için kodun sahibi ile belirttiği e-posta adresi ile ileteşime geçebilirsiniz.
+
+Yani annotation'lar bir nevi imza görevi görür.  
+
+**bakınız:** [vsCode için git lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) eklentisi
 
 ---
 

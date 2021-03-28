@@ -1,6 +1,94 @@
-- Versiyon Kontrol Sistemi Nedir
-    - Neden bu versiyon kontrol sistemini kullanırız?
-    - İnsanlar GIT kullanmaktan neden çekinirler?
+- Hoş geldiniz 
 
-- UYGULAMA
-  - **Benzetme** - Yarışmalarda satranç oynayan kişilerin. Satranç kağıtlarına not almaları. 
+- **Konumuz**: Versiyon Kontrol Sistemleri
+  - Hayatımda **hiç** versiyon kontrol sistemi **kullanmadım** diyen var mı?
+  - Hayatımızda **farkında olmadan** versiyon kontrol'ü yaptığımız noktalar
+    - Okuldan verilen ödevler; 
+      - > `Kendi versiyon kontol sistemimiz.`
+      - Performans ödevleri
+      - Projeler
+    - **GTA VICE CITY** save'leri 
+      - > Ya da herhangi bir oyun!
+      - Burada da farkında olmadan birileri tarafından yapılmış bir versiyon kontrol sistemini kullanıyordunuz.
+      - Save ediyor - SAVE ederken ona bir isim veriyor.
+      - Sonrasında o save'i load edip oyuna devam ediyordunuz. 
+  - Gördüğünüz gibi aslında herkes versiyon kontrol sistemleri ile çalışmış. Fakat farkında değildiniz.
+
+**Bugün de yazılımda versiyon kontrol nasıl yapılır ona bakacağız.** 
+
+Yazılımda kullanılan versiyon kontrol'e bir güzel örnek de **SATRANÇ OYUNUDUR!**
+
+- Resmi satranç maçlarında oyuncular. Yaptıkları her hamleyi karşılıklı şekilde her hamleden sonra not alırlar burada amaç oyunun adım adım kayıt etmektir. Masada gerçekleşen değişikleri itina ile kaydederler olası bir aksilikte bu kayıtlar kıyaslanarak oyun tekrar oynanabilir. 
+
+- Ama öteyandan arkadaş arasında hızlı oynanan maçlarda bu versiyon sistemini kullanmazlar. Bunu kullanmadaki amacımız o işi sonrasında ne kadar önem verdiğimizdir. Sonraki durumlarda ne kadar dikkate alacağımızdır. 
+  - Bazı noktalarda kişiler **pratikce** halledeceklerinde bu sistemleri kullanmayı **angarya** sayarlar.
+
+---
+
+## Uygulama - `Commit mantığı`
+
+- Projeye başlamak 
+  - **`git init`**
+  - README'yi hazırla.
+    - Başlık **Katılımcılar**.
+    - İkinci dosya ise **kaynaklar** ya da **notlar**.
+  - COMMIT ŞEMASI
+    - ![](2021-03-28-19-34-44.png)
+    - COMMİT ANOLOJİSİ (BENZETMESI)
+    - ![](2021-03-28-19-45-46.png)
+  - **git status**
+  - **git add README.md**
+  - **git status** 
+  - ASLINDA GIT SIZI otomatik olarak takip eder! ayni satrançın da olduğu gibi.
+    - **track**, **untrack** meselesi 
+  - **git commit -m "README.md'yi oluşturur."**
+
+- GİT COMMİT BEST PRACTİES 
+  - https://www.perforce.com/blog/vcs/git-best-practices-git-commit#:~:text=Write%20Short,%20Detailed%20Commit%20Messages
+  - [COMMIT MESAJLARI İÇİN 7 ALTIN KURAL](https://chris.beams.io/posts/git-commit/#:~:text=The%20seven%20rules%20of%20a%20great%20Git%20commit%20message)
+
+  - Katılımcılardan birileri ekle bir tur!
+  - VSCODE ARAYÜZÜ ile bunu yap!
+  
+---
+
+## Working with Branches
+
+- Branch Nedir? 
+  - Ağaç **Dal**ı, **kol**, **şube** gibi manalara gelir. 
+- Nasıl branch oluşturulur?
+  - `git branch branch-adı`
+
+ÖRNEK BRANCH ADI `feature/header`
+  branch'ın adını niye böyle oluşturdum **GIT FLOW**
+  - https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+  - kursun adini tepeye ekle
+  - ```markdown 
+    ## GIT for total beginners Workshop
+    ```
+- Var olan tüm branch'ları görmek için
+  - `git branch -a`  
+- O branch'e gitmek için  **`CHECKOUT`** **ayrilmak**, **yer değiştirmek** gibi ya da **teslim almak** gibi manaları var! 
+  - `git checkout branch-adı`
+
+  - Branch oluşturup direkt içine gitmek için! 
+    - `git checkout -b branch-adı`
+
+### git merge
+> https://www.atlassian.com/git/tutorials/using-branches/git-merge
+
+yeni bracnh'da yapacaklarını yap 
+
+sonra master'a geç 
+
+```bash
+git checkout master
+git merge new-feature
+```
+
+
+
+
+### KAYNAKLAR:
+
+- https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet
