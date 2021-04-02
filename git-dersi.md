@@ -42,6 +42,7 @@ Yazılımda kullanılan versiyon kontrol'e bir güzel örnek de **SATRANÇ OYUNU
   - ASLINDA GIT SIZI otomatik olarak takip eder! ayni satrançın da olduğu gibi.
     - **track**, **untrack** meselesi 
   - **git commit -m "README.md'yi oluşturur."**
+  - **git log** log: sirali kayit
 
 - GİT COMMİT BEST PRACTİES 
   - https://www.perforce.com/blog/vcs/git-best-practices-git-commit#:~:text=Write%20Short,%20Detailed%20Commit%20Messages
@@ -50,6 +51,17 @@ Yazılımda kullanılan versiyon kontrol'e bir güzel örnek de **SATRANÇ OYUNU
   - Katılımcılardan birileri ekle bir tur!
   - VSCODE ARAYÜZÜ ile bunu yap!
   
+
+  - Commit **mesajını değiştrimek** istersen 
+  - `git rebase -i HEAD~3`
+  - reword yaz ve mesaji değiştir.  
+  - *******
+
+  - `git commit --amed --no-edit` yapılan değişiklikleri direk son comit'e yazar!
+  - > https://www.youtube.com/watch?v=ElRzTuYln0M
+
+> rebase ettiğinizde merge commit olmadan devam ediyorsunuz 
+> https://jeffkreeftmeijer.com/git-rebase/git-rebase.png
 ---
 
 ## Working with Branches
@@ -70,6 +82,7 @@ Yazılımda kullanılan versiyon kontrol'e bir güzel örnek de **SATRANÇ OYUNU
   - `git branch -a`  
 - O branch'e gitmek için  **`CHECKOUT`** **ayrilmak**, **yer değiştirmek** gibi ya da **teslim almak** gibi manaları var! 
   - `git checkout branch-adı`
+  - > https://www.atlassian.com/git/tutorials/using-branches/git-checkout
 
   - Branch oluşturup direkt içine gitmek için! 
     - `git checkout -b branch-adı`
@@ -86,9 +99,48 @@ git checkout master
 git merge new-feature
 ```
 
+alternative rebase 
 
+## Bir commit'e geri dönelim ve oradan bir branch açalım!
+git switch 
 
+## Github tanıtımı
+* .gitignore nedir
+  * hemen bir deneme yap! 
+* LİCENSE
+  * Yazılım lisansları
+    * https://hasantezcan.dev/blog/ozgur-yaz%C4%B1l%C4%B1m-felsefesi-ve-temel-kavramlar.html#:~:text=Yazılım%20lisansları:
+* README.md
 
+## REMOTE REPO EKLE
+- tüm remote'ları göster!  
+  - `git remote -v` 
+
+- tüm config'i göster 
+  - `git config --list`
+
+- remote ekle
+  - `git remote add origin git@github.com:hasantezcan/test-lala.git`
+
+remote'a bağalama
+
+- **git push** 
+
+sonra bir de git pull
+
+## PULL REQUEST VE MERGE!
+
+- hacktober fest 
+
+- github student pack 
+
+# SON
+
+- Ödev - REPOYU FORK EDİP HERKES KENDİ ADINI YAZSIN
+- Hatıra fotoğrafı
+- Aket
 ### KAYNAKLAR:
 
+- Atalisan'ın kaynakları gerçekten çok iyi!
 - https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet
+- http://rogerdudler.github.io/git-guide/index.tr.html

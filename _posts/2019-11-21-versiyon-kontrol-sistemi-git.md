@@ -8,18 +8,41 @@ image: "/git.png"
 date:   2019-11-21
 ---
 
+Hoşgeldin bugün versiyon kontrol sistemleri hakkında konuşacağız? Ama önce sana şunu sormak istiyorum;
+## Daha önce hiç versiyon kontrol sistemi kullandın mı? 
+Bugüne kadar hiç bir versiyon kontrol sistemini kullanmadığınızı düşünüyor olabilirsiniz. GIT, GitHub senin için çok yeni kavramlar olabilir! Ama size bu kavramların aslında hiç de öyle gözüktüğü gibi yabancı olan şeyler değil üstelik hayatın olağan akışında denk düşütüğünüz ve üstüne üstlük pratik de ettiğiniz kavramlar olduğunu sizlere izah edeceğim. 
 
-Herhangi bir projeyi geliştiriken **`böyle bir tablo` ile muhakkak karşılaşmışsınızdır**. Bu bir ödevi yapmak için olabilir ya da bir şiir yazarken. 
+Öyleyse haydi başlayalım. 
+
+## Hayatımızda farkında olmadan versiyon kontrol'ü yaptığımız noktalar!
+
+Hayatın olağan akışında kişiler yazılımcı olsun olmasın muhakkak versiyon kontrolleme ile meşgul oluyorlar. Bu tecrübe ilk başlarda bilinçizce ya da bir başka değişle farkında olmadan cereyan ediyor.
+
+### 1- Oyunlardaki `SAVE/LOAD` sistemleri
+
+Oyunlarda yaptığınız save işlemi aslında bir versiyon kontrol işlemidir. Karakterinizin o anki halini kaydeder olası bir durumda kaydettiğiniz yerden devam edersiniz. Bu kayıtlar için bir isim belirleyebilirsiniz. Ve o karakterin birçok durmunu bu save'lerde saklayabilirsiniz.
+
+`GTA Vice City`, `Max Payne` gibi hikaye bazlı oyunlarda bu kullanımı sıkca görürüz. 
+
+<p align="center">
+	<img alt="version_kontrol_sistemi" src="../assets/posts/versiyon-kontrol-sitemi-git/2021-03-31-19-24-55.png" width="100%">
+</p>
+
+### 2- Dijital ödevler
+
+Okuldan verilen (dijital ortamda) herhangi bir ödevi (projeyi) yaparken **`böyle bir tablo` ile muhakkak karşılaşmışsınızdır**.
 
 <p align="center">
 	<img alt="version_kontrol_sistemi" src="../assets/posts/versiyon-kontrol-sitemi-git/versiyon-kontrol-sitemi-sebep.png" width="400">
 </p>
 
-Projeniz üzerinde yapılan değişiklerinizi bir şekilde saklamak için aslına bu aşamalardan **geçen herkes** bu görselde olduğu ***farkına varmadan*** **`kendi versiyon kontrol sistemini geliştirir!`** ve bunu kullanır. 
+Projeniz üzerinde yapılan değişikleri bir şekilde saklamak için bu görselde olduğu gibi ***farkına varmadan*** **`kendi versiyon kontrol sistemini geliştirirsiniz!`** ve bunu bir fiil kullanırsınız.
 
-Bu ilkel yönetemin ne kadar verimli olduğu tartışılır ama iyi düşünülmiş bir versiyon kontrol sistemine ihtiyaç duyduğumuz ortadadır.
+Bu versiyon kontrol sistemi tamemen hayatta kalam dürtileri ile ortaya çıkmış bir yöntemdir. **Ödevinizin çalışan en iyi halini kaybetmeyi asla istemezsiniz.** Ve öyledir ki bu gibi durumlarda karşı karşıya kalan bir çok kişi buna benzer bir yolu kendi kendine keşfederler. Bu akla gelen en ilkel versiyon kontrollemedir. 
 
-Bugün sizlerle birlikte var olan versiyon kontrol sitemlerinden ve günümüzde yaygın olarak kullanılan GIT version kontol sisteminin nasıl kullanıldığından bahsedeceğim.
+Bu ilkel yönetemin, çıkan dosya kaosundan sebep ölçeklendirileblir olmadığı ortadadır ve bu sebeple **`iyi düşünülmiş bir versiyon kontrol sistemine ihtiyaç duyarız!`**
+
+Bugün sizlerle birlikte yazılım alanı için var olan versiyon kontrol sitemlerinden ve günümüzde yaygın olarak kullanılan GIT version kontol sisteminin nasıl kullanıldığından bahsedeceğim.
 
 ## Versiyon Kontrol Sistemi Nedir?
 
@@ -46,7 +69,7 @@ Gelin şimdi var olan versiyon sistemlerne bir göz atalım.
 > [**[0]**](https://www.smashingmagazine.com/2008/09/the-top-7-open-source-version-control-systems/),
 > [**[1]**](https://www.g2.com/categories/version-control-systems?trending=)
 
-Bu versiyon kontol sistemlerinden kimileri hala aktif kimileride şu an kulladığımız versiyon kontrol sistemlerine zamanına ilham olmuş ve şu an ömürlerini doldurmuş durumdadır.
+Bu versiyon kontol sistemlerinden kimileri hala aktif; kimileri de şu an kulladığımız versiyon kontrol sistemlerine zamanında ilham olmuş fakat şu an ömürlerini doldurmuş durumdadırlar.
 
 Bugün biz günümüzde en yaygın kullanılan versiyon kontrol sistemi GIT ile çalışacağız ve projelerimizi git ile yönetmeyi öğreceğiz.
 
@@ -94,7 +117,7 @@ Eğer bir satranç musabakası izlediyseniz oyuncuların her hamleden sonra taht
 	<img alt="" src="../assets/posts/versiyon-kontrol-sitemi-git/chess-game.jpeg" width="100%">
 </p>
 
-Satranç oyuncuları bu kağıtlara oyun esnasında yapılan hamleleri not etmektedirler. İki oyuncuda bu hamleleri kaydeder. Maç sonunda bu kaydedilen hamleler sayesinde o maç baştan sona incelenebilir hale gelir. Yani o maçı her versiyonu ile iki oyuncu kayıt altına almış olur.
+Satranç oyuncuları bu kağıtlara oyun esnasında yapılan hamleleri not etmektedirler. İki oyuncu da bu hamleleri kaydeder. Maç sonunda bu kaydedilen hamleler sayesinde o maç baştan sona incelenebilir hale gelir. Yani o maçı her versiyonu ile iki oyuncu kayıt altına almış olur.
 
 <p align="center">
   <img alt="imgName" src="../assets/posts/versiyon-kontrol-sitemi-git/chess-score-sheet-example.jpeg" width="65%">
@@ -102,15 +125,17 @@ Satranç oyuncuları bu kağıtlara oyun esnasında yapılan hamleleri not etmek
 	<em>Chess score sheet example <a href="https://blog.chesshouse.com/how-to-read-and-write-algebraic-chess-notation/">- source</a> </em>
 </p>
 
-Öteyandan arkadaşlar arasında keyfine yapılan hızlı maçlar esnasında. Bu işlemi yapmak sizlere büyük bir angarya olarak gelebilir. İşte burada önemli yaptığınız projenin **sizin için ne kadar önemli olduğudur.**
+Öteyandan arkadaşlar arasında keyfine yapılan hızlı maçlar esnasında. Bu işlemi yapmak sizlere büyük bir angarya olarak gelebilir. İşte burada karar mekanizması yaptığınız projenin-işin **sizin için ne kadar önemli-değerli-kaybedilemez olduğudur.** 
+
+Kısa süreli ve ileriye dönük bir beklenetiniz olmadığı durumlarda kullanmak gereksiz olabilir. Fakat genel olarak bunun dışındaki tüm durumlarda kulanmakta fayda vardır! :)
 
 
 ## Git Nasıl kullanılır?
 > **Git'in Temelleri**
 
-Öncelikle git versioyon kontrol sistemi yazılımının **bilgisayarınızda yüklü olması** gerekiyor.
+Öncelikle git versiyon kontrol sistemi yazılımının **bilgisayarınızda yüklü olması** gerekiyor.
 
-Bunu öğrenmek için GNU/Linux bir işletim sistemi kullanıyorsanız paket yöneticiniz ile git programnı aratıp bilgisayarınıza yüklü olup olmadığını öğrenebilirsiniz.
+Bu yazılımın bilgisayarınızda var olup olmadığını öğrenmek için GNU/Linux bir işletim sistemi kullanıyorsanız paket yöneticiniz ile git programnı aratıp bilgisayarınıza yüklü olup olmadığını öğrenebilirsiniz.
 
 <p align="center">
 	<img alt="git_is_exist" src="../assets/posts/versiyon-kontrol-sitemi-git/git_is_exist.png" width="">
@@ -135,11 +160,11 @@ $ ls -a
 .  ..  .git
 ```
 
-Git yazılımını projemizden başlatıktan sonra projemiz içine gizli halde gelen **.git diznini** görmekteyiz. Bu dizin içinde versiyonlamaya dair tüm dosyalar tutuluyor.
+Git yazılımını projemizden başlatıktan sonra projemiz içine gizli halde gelen **`.git` dizinini** görmekteyiz. Bu dizin içinde versiyonlamaya dair tüm dosyalar tutuluyor.
 
-Bu dosyanın silinmesi halinde tüm versiyonlama işlemlermiz yok olacakıtır.
+> Bu dosyanın silinmesi halinde tüm versiyonlama işlemlermiz yok olacakıtır.
 
-**`!!!`** Hatalı bir `git init` çalıştırılması durumunda `.git` dizinini silmek **versiyon kontrolünü dizninizden kaldıracaktır.**
+> **`!!!`** Hatalı bir `git init` çalıştırılması durumunda `.git` dizinini silmek **versiyon kontrolünü dizninizden kaldıracaktır.**
 
 ---
 
@@ -148,12 +173,74 @@ Bu dosyanın silinmesi halinde tüm versiyonlama işlemlermiz yok olacakıtır.
 </p>
 
 ## **`Commit`** Nedir ve Nasıl Çalışır?
+GIT aslında bir takip aracıdır. Sizin yaptığınız tüm hamleleri izler. Aynı demin bahsi geçen satranç maçlarında oyuncuların maçları takip ettikileri gibi.
 
+Tabi GIT'in bu takibi yapabilmesi için onu doğru şekilde yönlendrimemiz gerekiyor şimdi bunu nasıl sağlarız onu öğreneceğiz.
+
+Öncelikle değişikliklerin yaşam döngüsünü anlamamız gerekir.
+
+## Değişikliklerin yaşam döngüsü!
+
+<p align="center">
+	<img alt="git_areas" src="../assets/posts/versiyon-kontrol-sitemi-git/2021-03-28-19-34-44.png" width="75%">
+</p>
+
+Üç aşamalı bu yaşam döngüsünün başlangıçı `working directory`'dir. Bu çalışıyor olduğumuz dizini ifade eder. **Bunu vsCode'da çalışırken çalıştığımız dosyalar olarak da düşünebiliriz.** Git comutlarını yürüttüğünüz dizin `working directory` olarak kabul edilir. Bir alt dizine gidip orada işlem yaparsanız `working directory`'yi o dizin olacak şekilde kabul etmiş olursunuz.
+
+Bir sonraki aşama ise `staging area`'dır. Bu yanlızca bir ara aşamadır. `Working directory`'de yaptığınız değişikliklerden versiyonlamak istediklerinizi seçer ve bu aşamaya gönderirsiniz. Yapılan bu değişiklerini bu aşamaya göndermek için; 
+
+```bash
+git add dosya-adı
+``` 
+
+gibi bir söz dizimi kullanılır. Bu sayede sadece o dosya içindeki değişiklikler staging areaya taşınacaktır. Eğer birden fazla dosyayı birden bu alana taşımak isterseniz o zaman 
+
+```bash
+git add .
+```
+
+demeniz yeterli olacaktır. Bu komut o dizin içine yapılan tüm değişikleri staging areaaya taşıyacaktır!
+
+Bundan sonraki aşama ise `.git directory`'dir. Burada yapılan değişikler kaydedir ve paketlenir. Bu paketlenmiş snaphot'lara `commit` adı verilir ve bu commit'lerin oluşma serüvenindeki son adımdır. 
+
+Staging'e (Saheye) çıkarılmış değişikleri versiyonlamak için (commitlemek için) kullanmamız gereken komut ise 
+
+```bash
+git commit -m "Commit mesaji"
+```
+Bu noktadan sonra değişikliklerimiz kayıt edilmiş olacaktır.
+
+..  
+..  
+..  
+
+
+> Bu durumu bir analoji ile ifade etmek istersek...
+## Çay Tepsisi Anolojisi
+
+Bazen commit'lerin oluşum öyküsü biraz soyutca kalabiliyor. Bu sebeple çay tepsisi benzetmesi ile kafalarda biraz daha yer etmesini sağlamamız mümkün olabiliyor.
+
+<p align="center">
+	<img alt="git_areas" src="../assets/posts/versiyon-kontrol-sitemi-git/2021-03-28-19-45-46.png" width="100%">
+</p>
+
+Mutfağı bir çalışma alanı gibi düşünebiliriz burada çay, kahve hazırlanıp salondaki kişilere içmesi için göndermek isteniyor gibi varsayabiliriz. 
+
+Bu durumda bize geçici bir konak lazım olacaktır ki buna tepsi diyebiliriz. Hazırlanan çay kahveler salonda bunları kim içecek diye isimlendirilerek içilmek üzere salona gönderiliyor. 
+
+Bunu bir commitin oluşma aşamaları gibi somutlayabiliriz.
+
+..  
+..  
+..  
 
 ### `git status`
 
+Git status ile projedeki değişikliklerin anlık durumlarını kontrol ederiz. Herhangi bir adımı uygulamadan önce durum bilgisini görmek bizi daha az hataya sevk edecektir.
 
 ### `git add`
+
+> Commit döngüsünde üzerinde durmuş olsak da üzerinden bir defa daha geçebiliriz.
 
 iki tür dosya durumu vardır bunlar **tracked** ve **untracked**
 
@@ -184,15 +271,12 @@ $ watch -n .5 tree .git
 
 [**[3]**](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects)
 
-
-
-
+> Bu konuya ilerleyen zamanlarda daha da detaylıca değiniyor olcağım!
 
 ### `git commit`
 
 > a new snapshot
-
-
+> 
 Bir commit geri gider yani HEAD kafasını bir önceki commitin kine eş hale getirir. Son durumdan kalan değişikler untracked hale gelir.
 ```bash
 git reset HEAD~
@@ -201,6 +285,10 @@ git reset HEAD~
 <p align="center">
 	<img alt="git_areas" src="../assets/posts/versiyon-kontrol-sitemi-git/cat-dog.png" width="500">
 </p>
+
+### Commit mesajı oluşturuken dikkat edilmesi gereken noktalar.
+
+
 
 ### `git log`
 
@@ -443,7 +531,32 @@ $ git push origin HEAD               # push to your forked repo's remote branch
 ..  
 ..  
 
-## `Kaynakça:`
+## `Faydalı Kaynaklar:`
+
+- **https://gitexplorer.com/** ile GIT versiyon kontrolleme komutlarını tanıyabilir ve ihtiyacınız olanı komutu bulma noktasında bu araçtan faydalanabilirsiniz.  
+	<p align="center">
+	<img alt="git_annotation" src="../assets/posts/versiyon-kontrol-sitemi-git/2021-04-02-11-13-45.png" width="100%">
+</p>
+
+- **Pro Git Kitabı** git'in resmi sitesinde ana kaynak olarak göstirmektedir. Belli kısımlarının Türkçe çevirisi de yapılmış durumdadır. http://git-scm.com/book/en/v2
+
+	> Eğer bu çevirinin tamamlanmasına katkı sağlamak isterseniz https://github.com/progit/progit2-tr/issues 
+
+- https://gitimmersion.com/
+- http://gitready.com/
+- https://learngitbranching.js.org/
+- http://vigo.github.io/git-tips/
+- https://aliozgur.gitbooks.io/git101/content/alistirmalar/
+- https://enterprise.github.com/resources
+- https://mesuutt.com/2013/07/git-ipuclari/
+- https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-tr.md
+
 - [7 rules of a great git commit message](https://chris.beams.io/posts/git-commit/#:~:text=The%20seven%20rules%20of%20a%20great%20Git%20commit%20message)
 - [Basic git commands](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
-- [Atlassian git resource](https://www.atlassian.com/git)
+- [Atlassian git source](https://www.atlassian.com/git)
+
+## Cheat Sheets
+- https://gitsheet.wtf/
+- [Temel terminal komutlarına yabancıysanız bu tablodan faydalanabilirsiniz.](https://www.git-tower.com/learn/cheat-sheets/cli/) 
+- [Git Cheat Sheet by Tobias Günther](https://www.git-tower.com/blog/posts/git-cheat-sheet)
+- [The Workflow of Version Control](https://www.git-tower.com/learn/cheat-sheets/vcs-workflow/)
