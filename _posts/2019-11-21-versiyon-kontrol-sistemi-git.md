@@ -510,26 +510,38 @@ $ git push origin HEAD               # push to your forked repo's remote branch
 [**[0]**](https://stackoverflow.com/questions/41542640/how-to-synchronize-fork-with-original-github-project)
 
 
+## Ana uzak repoyu değiştirmek. Change origin remote
+
+Hali hazırda geliştirdiğin codebase'i farklı bir repoya yönlendirebilirsin. Bunu yapmak için;
+
+```bash
+git remote set-url origin git@github.com:REPO/ADRESI
+```
+Bu noktadan sonra orgin adresin degiişmiş olacak. Test etmek için;
+
+```bash
+git remote -v origin
+```
+..   
+..  
+..  
+..   
+..  
+..  
+..   
+..  
+..  
+..   
+..  
+..  
+..   
+..  
+..  
+..   
+..  
+..  
 
 
-..   
-..  
-..  
-..   
-..  
-..  
-..   
-..  
-..  
-..   
-..  
-..  
-..   
-..  
-..  
-..   
-..  
-..  
 
 ## `Faydalı Kaynaklar:`
 
